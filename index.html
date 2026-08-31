@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>observatory.nvim</title>
+<style>
+:root { color-scheme: dark }
+body {
+  margin: 0 auto; padding: 2rem 1.5rem 6rem; max-width: 56rem;
+  background: #0a0a0b; color: #d6d3cc;
+  font: 15px/1.6 system-ui, sans-serif;
+}
+a { color: #8fb8d8 }
+h1 { font-size: 1.6rem; margin: 0 0 .4rem }
+h2 {
+  font-size: 1.15rem; margin: 3.5rem 0 .4rem;
+  padding-top: 1.2rem; border-top: 1px solid #232326;
+}
+p.lede { color: #8d8a84; margin: 0 0 2rem }
+nav { margin: 1.5rem 0 0; color: #8d8a84 }
+nav a { margin-right: .9rem; white-space: nowrap }
+figure { margin: 2rem 0 0 }
+figcaption { margin: 0 0 .5rem }
+figcaption code { font-size: .95rem; color: #d6d3cc }
+figcaption .about { color: #8d8a84 }
+figcaption .stats { color: #6d6a66; font-size: .85rem }
+img {
+  display: block; width: 100%; height: auto;
+  border-radius: 6px; border: 1px solid #232326;
+}
+</style>
+</head>
+<body>
+<h1>observatory.nvim</h1>
+<p class="lede">One sample per scheme, highlighted by Neovim itself with a language server attached and exported straight from the buffer, so the captures, the annotations and the italics and bold are the ones the scheme actually paints rather than a renderer's guess at them.</p>
+<p><a href="https://github.com/moyiz/observatory.nvim">the plugin</a></p>
+<nav><a href="#sky">Sky</a><a href="#solar">Solar system</a><a href="#star">Stars</a><a href="#exo">Exoplanets</a><a href="#nebula">Nebulae</a><a href="#galaxy">Galaxies and deep fields</a><a href="#event">Events</a><a href="#reading">Readings</a><a href="#construction">Constructions</a></nav>
+<h2 id="sky">Sky</h2>
+<figure>
+<figcaption><code>observatory-aurora</code> <span class="about">the green aurora, on its own night sky</span><br><span class="stats">from a measured quantity &middot; 12.5 &Delta;E floor &middot; 9 accents over 200&deg;</span></figcaption>
+<img src="assets/observatory-aurora.png" alt="observatory-aurora" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-aurora-red</code> <span class="about">the rare all-red aurora, green demoted to an accent</span><br><span class="stats">from a measured quantity &middot; 12.0 &Delta;E floor &middot; 8 accents over 232&deg;</span></figcaption>
+<img src="assets/observatory-aurora-red.png" alt="observatory-aurora-red" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-comet</code> <span class="about">two tails, two hue families, nothing in between</span><br><span class="stats">from a measured quantity &middot; 10.7 &Delta;E floor &middot; 7 accents over 197&deg;</span></figcaption>
+<img src="assets/observatory-comet.png" alt="observatory-comet" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-eclipse</code> <span class="about">the corona, almost colorless, with one ruby line</span><br><span class="stats">from a measured quantity &middot; 11.4 &Delta;E floor &middot; 8 accents over 194&deg;</span></figcaption>
+<img src="assets/observatory-eclipse.png" alt="observatory-eclipse" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-hubble</code> <span class="about">the Hubble palette, which lands on the corners of the RGB cube</span><br><span class="stats">from a measured quantity &middot; 13.5 &Delta;E floor &middot; 8 accents over 300&deg;</span></figcaption>
+<img src="assets/observatory-hubble.png" alt="observatory-hubble" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-nacreous</code> <span class="about">iridescent ice at 20 km, and the only pastel here</span><br><span class="stats">from a measured quantity &middot; 12.4 &Delta;E floor &middot; 6 accents over 229&deg;</span></figcaption>
+<img src="assets/observatory-nacreous.png" alt="observatory-nacreous" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-nightsky</code> <span class="about">star colors by spectral class, on a deep blue sky</span><br><span class="stats">from a measured quantity &middot; 10.7 &Delta;E floor &middot; 7 accents over 170&deg;</span></figcaption>
+<img src="assets/observatory-nightsky.png" alt="observatory-nightsky" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-noctilucent</code> <span class="about">sunlight that has already gone below the horizon, seen from 83 km</span><br><span class="stats">from a measured quantity &middot; 21.3 &Delta;E floor &middot; 6 accents over 204&deg;</span></figcaption>
+<img src="assets/observatory-noctilucent.png" alt="observatory-noctilucent" loading="lazy" decoding="async">
+</figure>
+<h2 id="solar">Solar system</h2>
+<figure>
+<figcaption><code>observatory-mercury</code> <span class="about">the enhanced-color globe: tan crust, blue minerals, gold plains</span><br><span class="stats">from an image &middot; 9.5 &Delta;E floor &middot; 8 accents over 234&deg;</span></figcaption>
+<img src="assets/observatory-mercury.png" alt="observatory-mercury" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-mercury-computed</code> <span class="about">the grayest planet, mapped by reflectance unit</span><br><span class="stats">from a measured quantity &middot; 11.3 &Delta;E floor &middot; 8 accents over 197&deg;</span></figcaption>
+<img src="assets/observatory-mercury-computed.png" alt="observatory-mercury-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-venus</code> <span class="about">cream cloud in every direction, and nothing else</span><br><span class="stats">from an image &middot; 10.1 &Delta;E floor &middot; 4 accents over 170&deg;</span></figcaption>
+<img src="assets/observatory-venus.png" alt="observatory-venus" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-venus-computed</code> <span class="about">the cloud deck above, the surface nobody sees below</span><br><span class="stats">from a measured quantity &middot; 15.5 &Delta;E floor &middot; 8 accents over 143&deg;</span></figcaption>
+<img src="assets/observatory-venus-computed.png" alt="observatory-venus-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-earth</code> <span class="about">ocean, vegetation, desert, ice</span><br><span class="stats">from an image &middot; 9.6 &Delta;E floor &middot; 6 accents over 182&deg;</span></figcaption>
+<img src="assets/observatory-earth.png" alt="observatory-earth" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-earth-computed</code> <span class="about">the only world that needs no help finding colors</span><br><span class="stats">from a measured quantity &middot; 11.6 &Delta;E floor &middot; 9 accents over 196&deg;</span></figcaption>
+<img src="assets/observatory-earth-computed.png" alt="observatory-earth-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-luna</code> <span class="about">the full moon: five grays and a warm cast</span><br><span class="stats">from an image &middot; 11.1 &Delta;E floor &middot; 4 accents over 60&deg;</span></figcaption>
+<img src="assets/observatory-luna.png" alt="observatory-luna" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-luna-computed</code> <span class="about">gray, until you stretch it</span><br><span class="stats">from a measured quantity &middot; 12.0 &Delta;E floor &middot; 8 accents over 198&deg;</span></figcaption>
+<img src="assets/observatory-luna-computed.png" alt="observatory-luna-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-mars</code> <span class="about">rust, dust and one bright polar cap</span><br><span class="stats">from an image &middot; 16.5 &Delta;E floor &middot; 5 accents over 177&deg;</span></figcaption>
+<img src="assets/observatory-mars.png" alt="observatory-mars" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-mars-computed</code> <span class="about">rust, with the blue its sunsets actually are</span><br><span class="stats">from a measured quantity &middot; 14.4 &Delta;E floor &middot; 8 accents over 205&deg;</span></figcaption>
+<img src="assets/observatory-mars-computed.png" alt="observatory-mars-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-jupiter</code> <span class="about">zones, belts and the Great Red Spot</span><br><span class="stats">from an image &middot; 17.3 &Delta;E floor &middot; 5 accents over 185&deg;</span></figcaption>
+<img src="assets/observatory-jupiter.png" alt="observatory-jupiter" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-jupiter-computed</code> <span class="about">zones, belts, the red spot and the blue poles</span><br><span class="stats">from a measured quantity &middot; 12.0 &Delta;E floor &middot; 8 accents over 186&deg;</span></figcaption>
+<img src="assets/observatory-jupiter-computed.png" alt="observatory-jupiter-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-io</code> <span class="about">sulfur, ochre and frost, and no blue anywhere</span><br><span class="stats">from an image &middot; 17.7 &Delta;E floor &middot; 6 accents over 18&deg;</span></figcaption>
+<img src="assets/observatory-io.png" alt="observatory-io" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-io-computed</code> <span class="about">sulfur yellow, with frost as the only cool thing on it</span><br><span class="stats">from a measured quantity &middot; 11.5 &Delta;E floor &middot; 7 accents over 193&deg;</span></figcaption>
+<img src="assets/observatory-io-computed.png" alt="observatory-io-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-europa</code> <span class="about">ice, and the rust-brown cracks across it</span><br><span class="stats">from an image &middot; 17.2 &Delta;E floor &middot; 5 accents over 44&deg;</span></figcaption>
+<img src="assets/observatory-europa.png" alt="observatory-europa" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-europa-computed</code> <span class="about">water ice, and whatever the ocean brought up</span><br><span class="stats">from a measured quantity &middot; 11.0 &Delta;E floor &middot; 8 accents over 194&deg;</span></figcaption>
+<img src="assets/observatory-europa-computed.png" alt="observatory-europa-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-ganymede</code> <span class="about">grooved terrain in tan, and the frost at its poles</span><br><span class="stats">from an image &middot; 16.7 &Delta;E floor &middot; 4 accents over 16&deg;</span></figcaption>
+<img src="assets/observatory-ganymede.png" alt="observatory-ganymede" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-ganymede-computed</code> <span class="about">grooved ice over ancient rock</span><br><span class="stats">from a measured quantity &middot; 14.3 &Delta;E floor &middot; 8 accents over 190&deg;</span></figcaption>
+<img src="assets/observatory-ganymede-computed.png" alt="observatory-ganymede-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-callisto</code> <span class="about">the most cratered surface known, in dark tan</span><br><span class="stats">from an image &middot; 18.5 &Delta;E floor &middot; 6 accents over 156&deg;</span></figcaption>
+<img src="assets/observatory-callisto.png" alt="observatory-callisto" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-callisto-computed</code> <span class="about">the oldest surface, and the least to say about it</span><br><span class="stats">from a measured quantity &middot; 17.5 &Delta;E floor &middot; 6 accents over 188&deg;</span></figcaption>
+<img src="assets/observatory-callisto-computed.png" alt="observatory-callisto-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-saturn</code> <span class="about">pale gold, with the rings' shadow laid across it</span><br><span class="stats">from an image &middot; 17.2 &Delta;E floor &middot; 4 accents over 12&deg;</span></figcaption>
+<img src="assets/observatory-saturn.png" alt="observatory-saturn" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-saturn-computed</code> <span class="about">butterscotch, with the blue winter hemisphere</span><br><span class="stats">from a measured quantity &middot; 11.8 &Delta;E floor &middot; 8 accents over 196&deg;</span></figcaption>
+<img src="assets/observatory-saturn-computed.png" alt="observatory-saturn-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-titan</code> <span class="about">a hazy orange orb, which is all anyone sees from outside</span><br><span class="stats">from an image &middot; 16.9 &Delta;E floor &middot; 4 accents over 142&deg;</span></figcaption>
+<img src="assets/observatory-titan.png" alt="observatory-titan" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-titan-computed</code> <span class="about">an orange monochrome; the haze admits nothing else</span><br><span class="stats">from a measured quantity &middot; 10.7 &Delta;E floor &middot; 7 accents over 31&deg;</span></figcaption>
+<img src="assets/observatory-titan-computed.png" alt="observatory-titan-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-enceladus</code> <span class="about">white ice, and the fractures that vent it</span><br><span class="stats">from an image &middot; 11.6 &Delta;E floor &middot; 4 accents over 195&deg;</span></figcaption>
+<img src="assets/observatory-enceladus.png" alt="observatory-enceladus" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-enceladus-computed</code> <span class="about">the brightest surface in the solar system</span><br><span class="stats">from a measured quantity &middot; 14.1 &Delta;E floor &middot; 8 accents over 28&deg;</span></figcaption>
+<img src="assets/observatory-enceladus-computed.png" alt="observatory-enceladus-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-iapetus</code> <span class="about">two-tone: snow on one face, tar on the other</span><br><span class="stats">from an image &middot; 17.1 &Delta;E floor &middot; 6 accents over 141&deg;</span></figcaption>
+<img src="assets/observatory-iapetus.png" alt="observatory-iapetus" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-iapetus-computed</code> <span class="about">two hemispheres, and nothing in between</span><br><span class="stats">from a measured quantity &middot; 15.2 &Delta;E floor &middot; 7 accents over 198&deg;</span></figcaption>
+<img src="assets/observatory-iapetus-computed.png" alt="observatory-iapetus-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-uranus</code> <span class="about">featureless pale cyan, and that is the observation</span><br><span class="stats">from an image &middot; 16.2 &Delta;E floor &middot; 4 accents over 40&deg;</span></figcaption>
+<img src="assets/observatory-uranus.png" alt="observatory-uranus" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-uranus-computed</code> <span class="about">the most featureless palette here, and honestly so</span><br><span class="stats">from a measured quantity &middot; 13.2 &Delta;E floor &middot; 7 accents over 14&deg;</span></figcaption>
+<img src="assets/observatory-uranus-computed.png" alt="observatory-uranus-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-neptune</code> <span class="about">azure, a shade deeper than Uranus and no bluer</span><br><span class="stats">from an image &middot; 10.4 &Delta;E floor &middot; 4 accents over 3&deg;</span></figcaption>
+<img src="assets/observatory-neptune.png" alt="observatory-neptune" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-neptune-computed</code> <span class="about">the iconic blue, which is not quite the real one</span><br><span class="stats">from a measured quantity &middot; 11.4 &Delta;E floor &middot; 8 accents over 54&deg;</span></figcaption>
+<img src="assets/observatory-neptune-computed.png" alt="observatory-neptune-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-triton</code> <span class="about">cantaloupe terrain under a pink nitrogen cap</span><br><span class="stats">from an image &middot; 8.5 &Delta;E floor &middot; 4 accents over 169&deg;</span></figcaption>
+<img src="assets/observatory-triton.png" alt="observatory-triton" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-triton-computed</code> <span class="about">cantaloupe terrain and pink nitrogen frost</span><br><span class="stats">from a measured quantity &middot; 12.9 &Delta;E floor &middot; 8 accents over 176&deg;</span></figcaption>
+<img src="assets/observatory-triton-computed.png" alt="observatory-triton-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-pluto</code> <span class="about">the heart, in cream and tholin tan</span><br><span class="stats">from an image &middot; 18.1 &Delta;E floor &middot; 4 accents over 4&deg;</span></figcaption>
+<img src="assets/observatory-pluto.png" alt="observatory-pluto" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-pluto-computed</code> <span class="about">nitrogen ice, tholin red, and a blue sky</span><br><span class="stats">from a measured quantity &middot; 16.2 &Delta;E floor &middot; 8 accents over 192&deg;</span></figcaption>
+<img src="assets/observatory-pluto-computed.png" alt="observatory-pluto-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-charon</code> <span class="about">gray ice, and one red-brown pole</span><br><span class="stats">from an image &middot; 9.8 &Delta;E floor &middot; 5 accents over 162&deg;</span></figcaption>
+<img src="assets/observatory-charon.png" alt="observatory-charon" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-charon-computed</code> <span class="about">Pluto's tholins, arrived second-hand</span><br><span class="stats">from a measured quantity &middot; 14.7 &Delta;E floor &middot; 8 accents over 190&deg;</span></figcaption>
+<img src="assets/observatory-charon-computed.png" alt="observatory-charon-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-ceres</code> <span class="about">blue-gray regolith around one bright crater</span><br><span class="stats">from an image &middot; 15.8 &Delta;E floor &middot; 4 accents over 130&deg;</span></figcaption>
+<img src="assets/observatory-ceres.png" alt="observatory-ceres" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-ceres-computed</code> <span class="about">bright salt on a very dark world</span><br><span class="stats">from a measured quantity &middot; 18.0 &Delta;E floor &middot; 8 accents over 196&deg;</span></figcaption>
+<img src="assets/observatory-ceres-computed.png" alt="observatory-ceres-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-rings</code> <span class="about">a scan across the annuli, unlit side</span><br><span class="stats">from an image &middot; 18.2 &Delta;E floor &middot; 4 accents over 127&deg;</span></figcaption>
+<img src="assets/observatory-rings.png" alt="observatory-rings" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-arrokoth</code> <span class="about">the reddest thing photographed up close</span><br><span class="stats">from an image &middot; 8.1 &Delta;E floor &middot; 4 accents over 3&deg;</span></figcaption>
+<img src="assets/observatory-arrokoth.png" alt="observatory-arrokoth" loading="lazy" decoding="async">
+</figure>
+<h2 id="star">Stars</h2>
+<figure>
+<figcaption><code>observatory-albireo</code> <span class="about">the color-contrast doubles, and the green that isn't</span><br><span class="stats">from a measured quantity &middot; 18.8 &Delta;E floor &middot; 7 accents over 167&deg;</span></figcaption>
+<img src="assets/observatory-albireo.png" alt="observatory-albireo" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-alphacentauri</code> <span class="about">the nearest three stars, and one flare</span><br><span class="stats">from a measured quantity &middot; 16.9 &Delta;E floor &middot; 5 accents over 168&deg;</span></figcaption>
+<img src="assets/observatory-alphacentauri.png" alt="observatory-alphacentauri" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-betelgeuse</code> <span class="about">a resolved supergiant, mid-dimming, in amber</span><br><span class="stats">from an image &middot; 9.8 &Delta;E floor &middot; 7 accents over 37&deg;</span></figcaption>
+<img src="assets/observatory-betelgeuse.png" alt="observatory-betelgeuse" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-betelgeuse-computed</code> <span class="about">a supergiant, and the dust that dimmed it</span><br><span class="stats">from a measured quantity &middot; 17.8 &Delta;E floor &middot; 6 accents over 2&deg;</span></figcaption>
+<img src="assets/observatory-betelgeuse-computed.png" alt="observatory-betelgeuse-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-nervia</code> <span class="about">the star Eburonia orbits, which is very nearly the Sun</span><br><span class="stats">from an image &middot; 17.0 &Delta;E floor &middot; 5 accents over 2&deg;</span></figcaption>
+<img src="assets/observatory-nervia.png" alt="observatory-nervia" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-nervia-computed</code> <span class="about">the star Eburonia orbits, by its own temperatures</span><br><span class="stats">from a measured quantity &middot; 12.3 &Delta;E floor &middot; 8 accents over 97&deg;</span></figcaption>
+<img src="assets/observatory-nervia-computed.png" alt="observatory-nervia-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-carbon</code> <span class="about">the reddest stars there are, in purity not hue</span><br><span class="stats">from a measured quantity &middot; 16.5 &Delta;E floor &middot; 6 accents over 6&deg;</span></figcaption>
+<img src="assets/observatory-carbon.png" alt="observatory-carbon" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-cepheid</code> <span class="about">a light curve, and no color to speak of</span><br><span class="stats">from a measured quantity &middot; 15.4 &Delta;E floor &middot; 5 accents over 3&deg;</span></figcaption>
+<img src="assets/observatory-cepheid.png" alt="observatory-cepheid" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-etacarinae</code> <span class="about">two lobes of debris from a star that survived its own explosion</span><br><span class="stats">from an image &middot; 16.1 &Delta;E floor &middot; 6 accents over 104&deg;</span></figcaption>
+<img src="assets/observatory-etacarinae.png" alt="observatory-etacarinae" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-etacarinae-computed</code> <span class="about">the Homunculus, and the star inside it</span><br><span class="stats">from a measured quantity &middot; 20.7 &Delta;E floor &middot; 7 accents over 185&deg;</span></figcaption>
+<img src="assets/observatory-etacarinae-computed.png" alt="observatory-etacarinae-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-magnitude</code> <span class="about">the eight brightest stars, with Vega at zero</span><br><span class="stats">from a measured quantity &middot; 15.8 &Delta;E floor &middot; 8 accents over 171&deg;</span></figcaption>
+<img src="assets/observatory-magnitude.png" alt="observatory-magnitude" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-sirius</code> <span class="about">brighter is cooler, for once</span><br><span class="stats">from a measured quantity &middot; 11.2 &Delta;E floor &middot; 6 accents over 3&deg;</span></figcaption>
+<img src="assets/observatory-sirius.png" alt="observatory-sirius" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-v838monocerotis</code> <span class="about">a light echo, which is not an explosion but its shadow on dust</span><br><span class="stats">from an image &middot; 16.9 &Delta;E floor &middot; 8 accents over 180&deg;</span></figcaption>
+<img src="assets/observatory-v838monocerotis.png" alt="observatory-v838monocerotis" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-v838monocerotis-computed</code> <span class="about">one flash, seen at four delays</span><br><span class="stats">from a measured quantity &middot; 16.3 &Delta;E floor &middot; 7 accents over 192&deg;</span></figcaption>
+<img src="assets/observatory-v838monocerotis-computed.png" alt="observatory-v838monocerotis-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-boyajian</code> <span class="about">a dip in a light curve, measured filter by filter</span><br><span class="stats">from a measured quantity &middot; 18.7 &Delta;E floor &middot; 5 accents over 230&deg;</span></figcaption>
+<img src="assets/observatory-boyajian.png" alt="observatory-boyajian" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-przybylski</code> <span class="about">a spectrum full of elements that should not be there</span><br><span class="stats">from a measured quantity &middot; 28.3 &Delta;E floor &middot; 9 accents over 282&deg;</span></figcaption>
+<img src="assets/observatory-przybylski.png" alt="observatory-przybylski" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-ss433</code> <span class="about">one line, two jets, and the half that is invisible</span><br><span class="stats">from a measured quantity &middot; 21.3 &Delta;E floor &middot; 7 accents over 202&deg;</span></figcaption>
+<img src="assets/observatory-ss433.png" alt="observatory-ss433" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-browndwarf</code> <span class="about">not a star, not a planet: a red monochrome</span><br><span class="stats">from an image &middot; 15.8 &Delta;E floor &middot; 7 accents over 101&deg;</span></figcaption>
+<img src="assets/observatory-browndwarf.png" alt="observatory-browndwarf" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-browndwarf-computed</code> <span class="about">the failed stars, and the one honest purple here</span><br><span class="stats">from a measured quantity &middot; 17.5 &Delta;E floor &middot; 6 accents over 145&deg;</span></figcaption>
+<img src="assets/observatory-browndwarf-computed.png" alt="observatory-browndwarf-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-wolfrayet</code> <span class="about">a star shedding itself, in plum and steel</span><br><span class="stats">from an image &middot; 16.2 &Delta;E floor &middot; 6 accents over 144&deg;</span></figcaption>
+<img src="assets/observatory-wolfrayet.png" alt="observatory-wolfrayet" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-wolfrayet-computed</code> <span class="about">the hottest stars there are, and none of it is the continuum</span><br><span class="stats">from a measured quantity &middot; 15.7 &Delta;E floor &middot; 7 accents over 225&deg;</span></figcaption>
+<img src="assets/observatory-wolfrayet-computed.png" alt="observatory-wolfrayet-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-crux</code> <span class="about">the Southern Cross, which is three quarters one color</span><br><span class="stats">from a measured quantity &middot; 20.5 &Delta;E floor &middot; 5 accents over 174&deg;</span></figcaption>
+<img src="assets/observatory-crux.png" alt="observatory-crux" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-arcturus</code> <span class="about">the reference K giant, and the gaps in its light</span><br><span class="stats">from a measured quantity &middot; 17.5 &Delta;E floor &middot; 8 accents over 216&deg;</span></figcaption>
+<img src="assets/observatory-arcturus.png" alt="observatory-arcturus" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-vega</code> <span class="about">the star everything else is measured against</span><br><span class="stats">from a measured quantity &middot; 17.1 &Delta;E floor &middot; 6 accents over 220&deg;</span></figcaption>
+<img src="assets/observatory-vega.png" alt="observatory-vega" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-rigel</code> <span class="about">a blue supergiant, and the dust it lights</span><br><span class="stats">from a measured quantity &middot; 16.7 &Delta;E floor &middot; 7 accents over 198&deg;</span></figcaption>
+<img src="assets/observatory-rigel.png" alt="observatory-rigel" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-deneb</code> <span class="about">one line, in emission and in absorption</span><br><span class="stats">from a measured quantity &middot; 13.9 &Delta;E floor &middot; 7 accents over 250&deg;</span></figcaption>
+<img src="assets/observatory-deneb.png" alt="observatory-deneb" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-mira</code> <span class="about">the first variable, and the band that exaggerates it</span><br><span class="stats">from a measured quantity &middot; 22.6 &Delta;E floor &middot; 7 accents over 178&deg;</span></figcaption>
+<img src="assets/observatory-mira.png" alt="observatory-mira" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-bluedwarf</code> <span class="about">a red dwarf's whole future, in six steps</span><br><span class="stats">from a measured quantity &middot; 19.0 &Delta;E floor &middot; 7 accents over 184&deg;</span></figcaption>
+<img src="assets/observatory-bluedwarf.png" alt="observatory-bluedwarf" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-cooling</code> <span class="about">a white dwarf, from 100,000 K down to nothing</span><br><span class="stats">from a measured quantity &middot; 17.8 &Delta;E floor &middot; 7 accents over 171&deg;</span></figcaption>
+<img src="assets/observatory-cooling.png" alt="observatory-cooling" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-blackdwarf</code> <span class="about">the coldest thing there will ever be, and its last light</span><br><span class="stats">from a measured quantity &middot; 21.5 &Delta;E floor &middot; 6 accents over 169&deg;</span></figcaption>
+<img src="assets/observatory-blackdwarf.png" alt="observatory-blackdwarf" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-straggler</code> <span class="about">one cluster's diagram, and the stars that break it</span><br><span class="stats">from a measured quantity &middot; 17.8 &Delta;E floor &middot; 7 accents over 176&deg;</span></figcaption>
+<img src="assets/observatory-straggler.png" alt="observatory-straggler" loading="lazy" decoding="async">
+</figure>
+<h2 id="exo">Exoplanets</h2>
+<figure>
+<figcaption><code>observatory-trappist</code> <span class="about">bone-dry rock in the habitable zone of a red dwarf</span><br><span class="stats">from an image &middot; 17.6 &Delta;E floor &middot; 5 accents over 174&deg;</span></figcaption>
+<img src="assets/observatory-trappist.png" alt="observatory-trappist" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-trappist-computed</code> <span class="about">seven worlds, and the one small red star lighting them</span><br><span class="stats">from a measured quantity &middot; 16.4 &Delta;E floor &middot; 7 accents over 2&deg;</span></figcaption>
+<img src="assets/observatory-trappist-computed.png" alt="observatory-trappist-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-tres2</code> <span class="about">the darkest world known, and the dimmest palette here</span><br><span class="stats">from an image &middot; 22.0 &Delta;E floor &middot; 5 accents over 17&deg;</span></figcaption>
+<img src="assets/observatory-tres2.png" alt="observatory-tres2" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-hd189733</code> <span class="about">the one exoplanet whose color was measured, and it is blue</span><br><span class="stats">from an image &middot; 15.6 &Delta;E floor &middot; 7 accents over 23&deg;</span></figcaption>
+<img src="assets/observatory-hd189733.png" alt="observatory-hd189733" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-eburonia</code> <span class="about">a hot Neptune in violet and indigo, and its orange dwarf</span><br><span class="stats">from an image &middot; 15.7 &Delta;E floor &middot; 7 accents over 159&deg;</span></figcaption>
+<img src="assets/observatory-eburonia.png" alt="observatory-eburonia" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-kepler56c</code> <span class="about">a red giant, and the planet it is about to swallow</span><br><span class="stats">from an image &middot; 9.2 &Delta;E floor &middot; 8 accents over 69&deg;</span></figcaption>
+<img src="assets/observatory-kepler56c.png" alt="observatory-kepler56c" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-kepler292b</code> <span class="about">a super-Earth as an ocean world, in teal and sea green</span><br><span class="stats">from an image &middot; 17.6 &Delta;E floor &middot; 5 accents over 30&deg;</span></figcaption>
+<img src="assets/observatory-kepler292b.png" alt="observatory-kepler292b" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-kepler20b</code> <span class="about">five planets ranged against Mercury's orbit</span><br><span class="stats">from an image &middot; 17.2 &Delta;E floor &middot; 8 accents over 215&deg;</span></figcaption>
+<img src="assets/observatory-kepler20b.png" alt="observatory-kepler20b" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-hd40307f</code> <span class="about">gray super-Earths under an orange dwarf</span><br><span class="stats">from an image &middot; 17.3 &Delta;E floor &middot; 6 accents over 174&deg;</span></figcaption>
+<img src="assets/observatory-hd40307f.png" alt="observatory-hd40307f" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-kepler90h</code> <span class="about">the eight-planet system, in olive and gold</span><br><span class="stats">from an image &middot; 9.4 &Delta;E floor &middot; 7 accents over 25&deg;</span></figcaption>
+<img src="assets/observatory-kepler90h.png" alt="observatory-kepler90h" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-mintome</code> <span class="about">the pink planet: a giant still glowing from its own formation</span><br><span class="stats">from an image &middot; 16.6 &Delta;E floor &middot; 5 accents over 78&deg;</span></figcaption>
+<img src="assets/observatory-mintome.png" alt="observatory-mintome" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-hd157172b</code> <span class="about">a hot Jupiter being eaten, and the star doing it</span><br><span class="stats">from an image &middot; 16.7 &Delta;E floor &middot; 6 accents over 20&deg;</span></figcaption>
+<img src="assets/observatory-hd157172b.png" alt="observatory-hd157172b" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-gliese3323b</code> <span class="about">sage and slate, with one steel-blue sea</span><br><span class="stats">from an image &middot; 16.7 &Delta;E floor &middot; 6 accents over 205&deg;</span></figcaption>
+<img src="assets/observatory-gliese3323b.png" alt="observatory-gliese3323b" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-kepler1275b</code> <span class="about">a frozen super-Earth in russet, at the edge of the light</span><br><span class="stats">from an image &middot; 9.8 &Delta;E floor &middot; 4 accents over 31&deg;</span></figcaption>
+<img src="assets/observatory-kepler1275b.png" alt="observatory-kepler1275b" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-kepler1328b</code> <span class="about">a terrestrial placeholder in tan and umber</span><br><span class="stats">from an image &middot; 17.6 &Delta;E floor &middot; 4 accents over 25&deg;</span></figcaption>
+<img src="assets/observatory-kepler1328b.png" alt="observatory-kepler1328b" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-kepler438b</code> <span class="about">a superflare sterilising a habitable-zone planet</span><br><span class="stats">from an image &middot; 16.5 &Delta;E floor &middot; 5 accents over 26&deg;</span></figcaption>
+<img src="assets/observatory-kepler438b.png" alt="observatory-kepler438b" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-kepler367b</code> <span class="about">an atmosphere streaming off a small planet, in indigo and amber</span><br><span class="stats">from an image &middot; 9.5 &Delta;E floor &middot; 7 accents over 132&deg;</span></figcaption>
+<img src="assets/observatory-kepler367b.png" alt="observatory-kepler367b" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-sweeps10</code> <span class="about">a Jupiter skimming a spotted red star, ten hours per year</span><br><span class="stats">from an image &middot; 16.8 &Delta;E floor &middot; 6 accents over 42&deg;</span></figcaption>
+<img src="assets/observatory-sweeps10.png" alt="observatory-sweeps10" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-enaiposha</code> <span class="about">a steam world in silhouette against a red dwarf</span><br><span class="stats">from an image &middot; 9.6 &Delta;E floor &middot; 4 accents over 150&deg;</span></figcaption>
+<img src="assets/observatory-enaiposha.png" alt="observatory-enaiposha" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-dimidium</code> <span class="about">the first planet found around a sun-like star, in tan and butterscotch</span><br><span class="stats">from an image &middot; 9.8 &Delta;E floor &middot; 4 accents over 45&deg;</span></figcaption>
+<img src="assets/observatory-dimidium.png" alt="observatory-dimidium" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-tatooine</code> <span class="about">two suns, one silhouette, and every color warm</span><br><span class="stats">from an image &middot; 9.4 &Delta;E floor &middot; 5 accents over 29&deg;</span></figcaption>
+<img src="assets/observatory-tatooine.png" alt="observatory-tatooine" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-osiris</code> <span class="about">a planet boiling away, gold against an ice-blue tail</span><br><span class="stats">from an image &middot; 16.8 &Delta;E floor &middot; 8 accents over 181&deg;</span></figcaption>
+<img src="assets/observatory-osiris.png" alt="observatory-osiris" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-methuselah</code> <span class="about">the oldest planet known, in teal and cobalt</span><br><span class="stats">from an image &middot; 17.4 &Delta;E floor &middot; 6 accents over 190&deg;</span></figcaption>
+<img src="assets/observatory-methuselah.png" alt="observatory-methuselah" loading="lazy" decoding="async">
+</figure>
+<h2 id="nebula">Nebulae</h2>
+<figure>
+<figcaption><code>observatory-catseye</code> <span class="about">concentric shells in lilac and slate, eleven of them</span><br><span class="stats">from an image &middot; 17.4 &Delta;E floor &middot; 5 accents over 136&deg;</span></figcaption>
+<img src="assets/observatory-catseye.png" alt="observatory-catseye" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-catseye-computed</code> <span class="about">a planetary nebula's shells, ordered by ionisation energy</span><br><span class="stats">from a measured quantity &middot; 23.4 &Delta;E floor &middot; 9 accents over 288&deg;</span></figcaption>
+<img src="assets/observatory-catseye-computed.png" alt="observatory-catseye-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-crab</code> <span class="about">a supernova's wreckage: teal synchrotron under gold filaments</span><br><span class="stats">from an image &middot; 9.5 &Delta;E floor &middot; 8 accents over 174&deg;</span></figcaption>
+<img src="assets/observatory-crab.png" alt="observatory-crab" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-crab-computed</code> <span class="about">synchrotron continuum against line filaments</span><br><span class="stats">from a measured quantity &middot; 12.5 &Delta;E floor &middot; 8 accents over 216&deg;</span></figcaption>
+<img src="assets/observatory-crab-computed.png" alt="observatory-crab-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-helix</code> <span class="about">the Eye of God: a rust iris around a periwinkle pupil</span><br><span class="stats">from an image &middot; 9.2 &Delta;E floor &middot; 8 accents over 187&deg;</span></figcaption>
+<img src="assets/observatory-helix.png" alt="observatory-helix" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-helix-computed</code> <span class="about">the Eye of God, and the ten thousand knots in it</span><br><span class="stats">from a measured quantity &middot; 26.1 &Delta;E floor &middot; 7 accents over 221&deg;</span></figcaption>
+<img src="assets/observatory-helix-computed.png" alt="observatory-helix-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-trifid</code> <span class="about">three dust lanes across pink hydrogen, and a blue reflection</span><br><span class="stats">from an image &middot; 15.2 &Delta;E floor &middot; 6 accents over 138&deg;</span></figcaption>
+<img src="assets/observatory-trifid.png" alt="observatory-trifid" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-trifid-computed</code> <span class="about">one star, and the three things dust does to its light</span><br><span class="stats">from a measured quantity &middot; 17.2 &Delta;E floor &middot; 7 accents over 240&deg;</span></figcaption>
+<img src="assets/observatory-trifid-computed.png" alt="observatory-trifid-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-boomerang</code> <span class="about">the coldest known place, and it photographs as warm gray</span><br><span class="stats">from an image &middot; 18.2 &Delta;E floor &middot; 8 accents over 102&deg;</span></figcaption>
+<img src="assets/observatory-boomerang.png" alt="observatory-boomerang" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-boomerang-computed</code> <span class="about">one kelvin, which has no color, so this is borrowed light</span><br><span class="stats">from a measured quantity &middot; 15.3 &Delta;E floor &middot; 6 accents over 158&deg;</span></figcaption>
+<img src="assets/observatory-boomerang-computed.png" alt="observatory-boomerang-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-orion</code> <span class="about">the sharpest view of the nebula, in brick and rose</span><br><span class="stats">from an image &middot; 16.2 &Delta;E floor &middot; 6 accents over 43&deg;</span></figcaption>
+<img src="assets/observatory-orion.png" alt="observatory-orion" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-orion-computed</code> <span class="about">one constellation, measured</span><br><span class="stats">from a measured quantity &middot; 16.7 &Delta;E floor &middot; 7 accents over 234&deg;</span></figcaption>
+<img src="assets/observatory-orion-computed.png" alt="observatory-orion-computed" loading="lazy" decoding="async">
+</figure>
+<h2 id="galaxy">Galaxies and deep fields</h2>
+<figure>
+<figcaption><code>observatory-bimodal</code> <span class="about">galaxies come in two colors, and the gap is not green</span><br><span class="stats">from an image &middot; 18.8 &Delta;E floor &middot; 7 accents over 152&deg;</span></figcaption>
+<img src="assets/observatory-bimodal.png" alt="observatory-bimodal" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-hoag</code> <span class="about">a gold core inside a detached ring, and nothing in between</span><br><span class="stats">from an image &middot; 9.4 &Delta;E floor &middot; 7 accents over 217&deg;</span></figcaption>
+<img src="assets/observatory-hoag.png" alt="observatory-hoag" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-hoag-computed</code> <span class="about">an old core, a young ring, and nothing in between</span><br><span class="stats">from a measured quantity &middot; 15.6 &Delta;E floor &middot; 7 accents over 166&deg;</span></figcaption>
+<img src="assets/observatory-hoag-computed.png" alt="observatory-hoag-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-voorwerp</code> <span class="about">a green ghost lit by a quasar that has already gone out</span><br><span class="stats">from an image &middot; 17.7 &Delta;E floor &middot; 5 accents over 145&deg;</span></figcaption>
+<img src="assets/observatory-voorwerp.png" alt="observatory-voorwerp" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-voorwerp-computed</code> <span class="about">the one green thing, and it is gas rather than a star</span><br><span class="stats">from a measured quantity &middot; 27.3 &Delta;E floor &middot; 7 accents over 262&deg;</span></figcaption>
+<img src="assets/observatory-voorwerp-computed.png" alt="observatory-voorwerp-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-galaxy</code> <span class="about">color as age, across a spiral galaxy</span><br><span class="stats">from an image &middot; 17.0 &Delta;E floor &middot; 7 accents over 171&deg;</span></figcaption>
+<img src="assets/observatory-galaxy.png" alt="observatory-galaxy" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-milkyway</code> <span class="about">our own galaxy from outside, which nobody has seen</span><br><span class="stats">from an image &middot; 16.4 &Delta;E floor &middot; 4 accents over 183&deg;</span></figcaption>
+<img src="assets/observatory-milkyway.png" alt="observatory-milkyway" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-milkyway-computed</code> <span class="about">our own galaxy, whose color was the hardest to measure</span><br><span class="stats">from a measured quantity &middot; 15.9 &Delta;E floor &middot; 7 accents over 151&deg;</span></figcaption>
+<img src="assets/observatory-milkyway-computed.png" alt="observatory-milkyway-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-milkywayparanal</code> <span class="about">the galactic plane over Paranal, in slate and mauve</span><br><span class="stats">from an image &middot; 12.6 &Delta;E floor &middot; 4 accents over 60&deg;</span></figcaption>
+<img src="assets/observatory-milkywayparanal.png" alt="observatory-milkywayparanal" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-deepfield</code> <span class="about">ten thousand galaxies, and four per cent of the frame is lit</span><br><span class="stats">from an image &middot; 9.4 &Delta;E floor &middot; 7 accents over 223&deg;</span></figcaption>
+<img src="assets/observatory-deepfield.png" alt="observatory-deepfield" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-deepfield-computed</code> <span class="about">ten thousand galaxies, sorted by how long the light took</span><br><span class="stats">from a measured quantity &middot; 27.3 &Delta;E floor &middot; 6 accents over 210&deg;</span></figcaption>
+<img src="assets/observatory-deepfield-computed.png" alt="observatory-deepfield-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-deepfieldwebb</code> <span class="about">the first Webb deep field, in amber and steel</span><br><span class="stats">from an image &middot; 15.8 &Delta;E floor &middot; 6 accents over 167&deg;</span></figcaption>
+<img src="assets/observatory-deepfieldwebb.png" alt="observatory-deepfieldwebb" loading="lazy" decoding="async">
+</figure>
+<h2 id="event">Events</h2>
+<figure>
+<figcaption><code>observatory-eventhorizon</code> <span class="about">the first photograph of a black hole, and it is all one hue</span><br><span class="stats">from an image &middot; 16.3 &Delta;E floor &middot; 7 accents over 40&deg;</span></figcaption>
+<img src="assets/observatory-eventhorizon.png" alt="observatory-eventhorizon" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-eventhorizon-computed</code> <span class="about">the colormap the black hole pictures used</span><br><span class="stats">from a measured quantity &middot; 16.9 &Delta;E floor &middot; 8 accents over 58&deg;</span></figcaption>
+<img src="assets/observatory-eventhorizon-computed.png" alt="observatory-eventhorizon-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-jet</code> <span class="about">the same hole four years later, in violet, with its jet</span><br><span class="stats">from an image &middot; 9.3 &Delta;E floor &middot; 8 accents over 132&deg;</span></figcaption>
+<img src="assets/observatory-jet.png" alt="observatory-jet" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-shadow</code> <span class="about">the black hole picture as recorded, which is gray</span><br><span class="stats">from an image &middot; 11.3 &Delta;E floor &middot; 3 accents over 0&deg;</span></figcaption>
+<img src="assets/observatory-shadow.png" alt="observatory-shadow" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-cosmicbackground</code> <span class="about">the oldest light there is, as a temperature map</span><br><span class="stats">from an image &middot; 17.7 &Delta;E floor &middot; 8 accents over 178&deg;</span></figcaption>
+<img src="assets/observatory-cosmicbackground.png" alt="observatory-cosmicbackground" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-cosmicbackground-computed</code> <span class="about">a diverging scale, cold to hot, like the anisotropy maps</span><br><span class="stats">from a measured quantity &middot; 11.0 &Delta;E floor &middot; 8 accents over 201&deg;</span></figcaption>
+<img src="assets/observatory-cosmicbackground-computed.png" alt="observatory-cosmicbackground-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-cosmicbackgroundlegacy</code> <span class="about">the last word on the oldest light, in eight colors</span><br><span class="stats">from an image &middot; 17.3 &Delta;E floor &middot; 8 accents over 170&deg;</span></figcaption>
+<img src="assets/observatory-cosmicbackgroundlegacy.png" alt="observatory-cosmicbackgroundlegacy" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-kilonova</code> <span class="about">two neutron stars merging, and where the gold came from</span><br><span class="stats">from an image &middot; 17.1 &Delta;E floor &middot; 7 accents over 185&deg;</span></figcaption>
+<img src="assets/observatory-kilonova.png" alt="observatory-kilonova" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-kilonova-computed</code> <span class="about">a photosphere crossing the whole stellar locus in five days</span><br><span class="stats">from a measured quantity &middot; 13.6 &Delta;E floor &middot; 6 accents over 171&deg;</span></figcaption>
+<img src="assets/observatory-kilonova-computed.png" alt="observatory-kilonova-computed" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-supernova1987a</code> <span class="about">the nearest supernova in four centuries, ringed</span><br><span class="stats">from an image &middot; 17.8 &Delta;E floor &middot; 5 accents over 195&deg;</span></figcaption>
+<img src="assets/observatory-supernova1987a.png" alt="observatory-supernova1987a" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-cassiopeia</code> <span class="about">a remnant in X-rays, which makes it violet</span><br><span class="stats">from an image &middot; 17.9 &Delta;E floor &middot; 8 accents over 234&deg;</span></figcaption>
+<img src="assets/observatory-cassiopeia.png" alt="observatory-cassiopeia" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-cassiopeiawebb</code> <span class="about">the same remnant in the infrared, which makes it teal and rust</span><br><span class="stats">from an image &middot; 9.5 &Delta;E floor &middot; 8 accents over 207&deg;</span></figcaption>
+<img src="assets/observatory-cassiopeiawebb.png" alt="observatory-cassiopeiawebb" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-tycho</code> <span class="about">the star that proved the heavens change, in crimson and periwinkle</span><br><span class="stats">from an image &middot; 16.9 &Delta;E floor &middot; 8 accents over 96&deg;</span></figcaption>
+<img src="assets/observatory-tycho.png" alt="observatory-tycho" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-nova</code> <span class="about">a white dwarf's surface igniting, hour by week</span><br><span class="stats">from a measured quantity &middot; 17.8 &Delta;E floor &middot; 8 accents over 233&deg;</span></figcaption>
+<img src="assets/observatory-nova.png" alt="observatory-nova" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-brightestofalltime</code> <span class="about">the brightest burst ever recorded, in dust echoes</span><br><span class="stats">from an image &middot; 9.7 &Delta;E floor &middot; 6 accents over 40&deg;</span></figcaption>
+<img src="assets/observatory-brightestofalltime.png" alt="observatory-brightestofalltime" loading="lazy" decoding="async">
+</figure>
+<h2 id="reading">Readings</h2>
+<figure>
+<figcaption><code>observatory-balmer</code> <span class="about">the hydrogen Balmer series, brightness following line strength</span><br><span class="stats">from a measured quantity &middot; 10.8 &Delta;E floor &middot; 7 accents over 176&deg;</span></figcaption>
+<img src="assets/observatory-balmer.png" alt="observatory-balmer" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-doppler</code> <span class="about">one spectral line, seven velocities</span><br><span class="stats">from a measured quantity &middot; 10.6 &Delta;E floor &middot; 8 accents over 265&deg;</span></figcaption>
+<img src="assets/observatory-doppler.png" alt="observatory-doppler" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-pulsar</code> <span class="about">maximum contrast, and pale because of it</span><br><span class="stats">from a measured quantity &middot; 10.3 &Delta;E floor &middot; 7 accents over 224&deg;</span></figcaption>
+<img src="assets/observatory-pulsar.png" alt="observatory-pulsar" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-fraunhofer</code> <span class="about">the Sun's own labelled absorption lines</span><br><span class="stats">from a measured quantity &middot; 29.7 &Delta;E floor &middot; 10 accents over 286&deg;</span></figcaption>
+<img src="assets/observatory-fraunhofer.png" alt="observatory-fraunhofer" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-meteor</code> <span class="about">what the rock was made of, while it lasted</span><br><span class="stats">from a measured quantity &middot; 30.4 &Delta;E floor &middot; 8 accents over 207&deg;</span></figcaption>
+<img src="assets/observatory-meteor.png" alt="observatory-meteor" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-hertzsprungrussell</code> <span class="about">a color-magnitude diagram, both axes used</span><br><span class="stats">from a measured quantity &middot; 17.5 &Delta;E floor &middot; 7 accents over 172&deg;</span></figcaption>
+<img src="assets/observatory-hertzsprungrussell.png" alt="observatory-hertzsprungrussell" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-extinction</code> <span class="about">one blue star behind seven columns of dust</span><br><span class="stats">from a measured quantity &middot; 15.5 &Delta;E floor &middot; 7 accents over 171&deg;</span></figcaption>
+<img src="assets/observatory-extinction.png" alt="observatory-extinction" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-kuiper</code> <span class="about">two populations, and the gap between them</span><br><span class="stats">from a measured quantity &middot; 16.8 &Delta;E floor &middot; 8 accents over 15&deg;</span></figcaption>
+<img src="assets/observatory-kuiper.png" alt="observatory-kuiper" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-plate</code> <span class="about">no color at all, and the five grays that leaves</span><br><span class="stats">from a measured quantity &middot; 12.2 &Delta;E floor &middot; 4 accents over 0&deg;</span></figcaption>
+<img src="assets/observatory-plate.png" alt="observatory-plate" loading="lazy" decoding="async">
+</figure>
+<h2 id="construction">Constructions</h2>
+<figure>
+<figcaption><code>observatory-albedo</code> <span class="about">the solar system, lit by apparent magnitude</span><br><span class="stats">solved for separation &middot; 10.8 &Delta;E floor &middot; 8 accents over 201&deg;</span></figcaption>
+<img src="assets/observatory-albedo.png" alt="observatory-albedo" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-dichroic</code> <span class="about">legible with red-green and blue-yellow color blindness</span><br><span class="stats">solved for separation &middot; 14.2 &Delta;E floor &middot; 7 accents over 248&deg;</span></figcaption>
+<img src="assets/observatory-dichroic.png" alt="observatory-dichroic" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-horizon</code> <span class="about">one line falling into a black hole</span><br><span class="stats">solved for separation &middot; 10.5 &Delta;E floor &middot; 9 accents over 267&deg;</span></figcaption>
+<img src="assets/observatory-horizon.png" alt="observatory-horizon" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-lagrange</code> <span class="about">the palette solved for maximum separation</span><br><span class="stats">solved for separation &middot; 19.1 &Delta;E floor &middot; 10 accents over 270&deg;</span></figcaption>
+<img src="assets/observatory-lagrange.png" alt="observatory-lagrange" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-phi</code> <span class="about">hues at the golden angle, so any subset stays spread</span><br><span class="stats">solved for separation &middot; 20.4 &Delta;E floor &middot; 10 accents over 296&deg;</span></figcaption>
+<img src="assets/observatory-phi.png" alt="observatory-phi" loading="lazy" decoding="async">
+</figure>
+<figure>
+<figcaption><code>observatory-syzygy</code> <span class="about">separation spent where tokens actually touch</span><br><span class="stats">solved for separation &middot; 15.5 &Delta;E floor &middot; 10 accents over 304&deg;</span></figcaption>
+<img src="assets/observatory-syzygy.png" alt="observatory-syzygy" loading="lazy" decoding="async">
+</figure>
+</body>
+</html>
