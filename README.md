@@ -148,7 +148,8 @@ Plugins mostly declare their groups with `hi default link` onto core groups.
 Each integration covers the remainder - hardcoded colors, missing links or links
 I disagree with.
 
-Available integrations:
+<details>
+<summary>Available integrations</summary>
 
 - `aerial`
 - `blink`
@@ -177,11 +178,15 @@ Available integrations:
 - `which_key`
 - `window_picker`
 
+</details>
+
 ## :art: Colorschemes
 
 158 schemes in 9 families, 75 sampled from an image, 77 computed from a measurement and 6 solved for separation alone. Their floors run 8.1 to 30.4 ΔE.
 
 `from` is where the colors came from: an `image`, a `measured` quantity, or `solved` for separation alone. `ΔE` is the closest pair of colors that can appear adjacent -- higher is easier to read. `hue` is the width in degrees of the band the accents occupy, so a small number means a near-monochrome. `n` is how many distinct accents carry the ten syntax roles; fewer means roles deliberately share.
+
+[Browse the whole collection](https://moyiz.github.io/observatory.nvim).
 
 ### Sky
 
@@ -197,6 +202,28 @@ Things that happen in Earth's own sky, none of which hold still long enough to b
 | `observatory-nacreous`    | iridescent ice at 20 km, and the only pastel here                 | measured | 12.4 | 6   | 229 |
 | `observatory-nightsky`    | star colors by spectral class, on a deep blue sky                 | measured | 10.7 | 7   | 170 |
 | `observatory-noctilucent` | sunlight that has already gone below the horizon, seen from 83 km | measured | 21.3 | 6   | 204 |
+
+<details>
+<summary>Gallery</summary>
+<table>
+<tr>
+<td><code>observatory-aurora</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-aurora.png"><img alt="observatory-aurora" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-aurora.png"></a></td>
+<td><code>observatory-aurora-red</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-aurora-red.png"><img alt="observatory-aurora-red" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-aurora-red.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-comet</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-comet.png"><img alt="observatory-comet" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-comet.png"></a></td>
+<td><code>observatory-eclipse</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-eclipse.png"><img alt="observatory-eclipse" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-eclipse.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-hubble</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-hubble.png"><img alt="observatory-hubble" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-hubble.png"></a></td>
+<td><code>observatory-nacreous</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-nacreous.png"><img alt="observatory-nacreous" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-nacreous.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-nightsky</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-nightsky.png"><img alt="observatory-nightsky" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-nightsky.png"></a></td>
+<td><code>observatory-noctilucent</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-noctilucent.png"><img alt="observatory-noctilucent" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-noctilucent.png"></a></td>
+</tr>
+</table>
+</details>
 
 ### Solar system
 
@@ -247,6 +274,96 @@ Eight planets, nine moons, two dwarf planets, one contact binary and one ring sy
 | `observatory-rings`              | a scan across the annuli, unlit side                            | image    | 18.2 | 4   | 127 |
 | `observatory-arrokoth`           | the reddest thing photographed up close                         | image    | 8.1  | 4   | 3   |
 
+<details>
+<summary>Gallery</summary>
+<table>
+<tr>
+<td><code>observatory-mercury</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-mercury.png"><img alt="observatory-mercury" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-mercury.png"></a></td>
+<td><code>observatory-mercury-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-mercury-computed.png"><img alt="observatory-mercury-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-mercury-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-venus</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-venus.png"><img alt="observatory-venus" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-venus.png"></a></td>
+<td><code>observatory-venus-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-venus-computed.png"><img alt="observatory-venus-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-venus-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-earth</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-earth.png"><img alt="observatory-earth" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-earth.png"></a></td>
+<td><code>observatory-earth-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-earth-computed.png"><img alt="observatory-earth-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-earth-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-luna</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-luna.png"><img alt="observatory-luna" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-luna.png"></a></td>
+<td><code>observatory-luna-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-luna-computed.png"><img alt="observatory-luna-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-luna-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-mars</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-mars.png"><img alt="observatory-mars" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-mars.png"></a></td>
+<td><code>observatory-mars-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-mars-computed.png"><img alt="observatory-mars-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-mars-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-jupiter</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-jupiter.png"><img alt="observatory-jupiter" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-jupiter.png"></a></td>
+<td><code>observatory-jupiter-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-jupiter-computed.png"><img alt="observatory-jupiter-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-jupiter-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-io</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-io.png"><img alt="observatory-io" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-io.png"></a></td>
+<td><code>observatory-io-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-io-computed.png"><img alt="observatory-io-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-io-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-europa</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-europa.png"><img alt="observatory-europa" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-europa.png"></a></td>
+<td><code>observatory-europa-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-europa-computed.png"><img alt="observatory-europa-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-europa-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-ganymede</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-ganymede.png"><img alt="observatory-ganymede" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-ganymede.png"></a></td>
+<td><code>observatory-ganymede-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-ganymede-computed.png"><img alt="observatory-ganymede-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-ganymede-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-callisto</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-callisto.png"><img alt="observatory-callisto" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-callisto.png"></a></td>
+<td><code>observatory-callisto-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-callisto-computed.png"><img alt="observatory-callisto-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-callisto-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-saturn</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-saturn.png"><img alt="observatory-saturn" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-saturn.png"></a></td>
+<td><code>observatory-saturn-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-saturn-computed.png"><img alt="observatory-saturn-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-saturn-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-titan</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-titan.png"><img alt="observatory-titan" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-titan.png"></a></td>
+<td><code>observatory-titan-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-titan-computed.png"><img alt="observatory-titan-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-titan-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-enceladus</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-enceladus.png"><img alt="observatory-enceladus" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-enceladus.png"></a></td>
+<td><code>observatory-enceladus-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-enceladus-computed.png"><img alt="observatory-enceladus-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-enceladus-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-iapetus</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-iapetus.png"><img alt="observatory-iapetus" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-iapetus.png"></a></td>
+<td><code>observatory-iapetus-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-iapetus-computed.png"><img alt="observatory-iapetus-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-iapetus-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-uranus</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-uranus.png"><img alt="observatory-uranus" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-uranus.png"></a></td>
+<td><code>observatory-uranus-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-uranus-computed.png"><img alt="observatory-uranus-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-uranus-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-neptune</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-neptune.png"><img alt="observatory-neptune" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-neptune.png"></a></td>
+<td><code>observatory-neptune-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-neptune-computed.png"><img alt="observatory-neptune-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-neptune-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-triton</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-triton.png"><img alt="observatory-triton" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-triton.png"></a></td>
+<td><code>observatory-triton-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-triton-computed.png"><img alt="observatory-triton-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-triton-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-pluto</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-pluto.png"><img alt="observatory-pluto" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-pluto.png"></a></td>
+<td><code>observatory-pluto-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-pluto-computed.png"><img alt="observatory-pluto-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-pluto-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-charon</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-charon.png"><img alt="observatory-charon" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-charon.png"></a></td>
+<td><code>observatory-charon-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-charon-computed.png"><img alt="observatory-charon-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-charon-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-ceres</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-ceres.png"><img alt="observatory-ceres" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-ceres.png"></a></td>
+<td><code>observatory-ceres-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-ceres-computed.png"><img alt="observatory-ceres-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-ceres-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-rings</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-rings.png"><img alt="observatory-rings" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-rings.png"></a></td>
+<td><code>observatory-arrokoth</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-arrokoth.png"><img alt="observatory-arrokoth" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-arrokoth.png"></a></td>
+</tr>
+</table>
+</details>
+
 ### Stars
 
 Temperatures, color indices and light curves, which is most of what a star gives you from this distance -- plus a spectrum full of elements that should not be there, a jet at a quarter of light speed, a dip measured filter by filter, and two atmospheres cool enough that the visible band is almost the wrong place to look. The Planckian locus barely turns, so several of these are near-monochromes and say so. Four end states sit here too: a white dwarf's whole cooling track, the cold nothing at the end of it and the last supernovae in the universe, the blue-white star a red dwarf becomes after trillions of years, and the stars in a globular cluster that are hotter than their own age allows.
@@ -285,6 +402,75 @@ Temperatures, color indices and light curves, which is most of what a star gives
 | `observatory-blackdwarf`               | the coldest thing there will ever be, and its last light        | measured | 21.5 | 6   | 169 |
 | `observatory-straggler`                | one cluster's diagram, and the stars that break it              | measured | 17.8 | 7   | 176 |
 
+<details>
+<summary>Gallery</summary>
+<table>
+<tr>
+<td><code>observatory-albireo</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-albireo.png"><img alt="observatory-albireo" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-albireo.png"></a></td>
+<td><code>observatory-alphacentauri</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-alphacentauri.png"><img alt="observatory-alphacentauri" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-alphacentauri.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-betelgeuse</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-betelgeuse.png"><img alt="observatory-betelgeuse" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-betelgeuse.png"></a></td>
+<td><code>observatory-betelgeuse-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-betelgeuse-computed.png"><img alt="observatory-betelgeuse-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-betelgeuse-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-nervia</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-nervia.png"><img alt="observatory-nervia" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-nervia.png"></a></td>
+<td><code>observatory-nervia-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-nervia-computed.png"><img alt="observatory-nervia-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-nervia-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-carbon</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-carbon.png"><img alt="observatory-carbon" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-carbon.png"></a></td>
+<td><code>observatory-cepheid</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-cepheid.png"><img alt="observatory-cepheid" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-cepheid.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-etacarinae</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-etacarinae.png"><img alt="observatory-etacarinae" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-etacarinae.png"></a></td>
+<td><code>observatory-etacarinae-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-etacarinae-computed.png"><img alt="observatory-etacarinae-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-etacarinae-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-magnitude</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-magnitude.png"><img alt="observatory-magnitude" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-magnitude.png"></a></td>
+<td><code>observatory-sirius</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-sirius.png"><img alt="observatory-sirius" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-sirius.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-v838monocerotis</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-v838monocerotis.png"><img alt="observatory-v838monocerotis" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-v838monocerotis.png"></a></td>
+<td><code>observatory-v838monocerotis-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-v838monocerotis-computed.png"><img alt="observatory-v838monocerotis-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-v838monocerotis-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-boyajian</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-boyajian.png"><img alt="observatory-boyajian" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-boyajian.png"></a></td>
+<td><code>observatory-przybylski</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-przybylski.png"><img alt="observatory-przybylski" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-przybylski.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-ss433</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-ss433.png"><img alt="observatory-ss433" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-ss433.png"></a></td>
+<td><code>observatory-browndwarf</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-browndwarf.png"><img alt="observatory-browndwarf" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-browndwarf.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-browndwarf-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-browndwarf-computed.png"><img alt="observatory-browndwarf-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-browndwarf-computed.png"></a></td>
+<td><code>observatory-wolfrayet</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-wolfrayet.png"><img alt="observatory-wolfrayet" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-wolfrayet.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-wolfrayet-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-wolfrayet-computed.png"><img alt="observatory-wolfrayet-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-wolfrayet-computed.png"></a></td>
+<td><code>observatory-crux</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-crux.png"><img alt="observatory-crux" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-crux.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-arcturus</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-arcturus.png"><img alt="observatory-arcturus" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-arcturus.png"></a></td>
+<td><code>observatory-vega</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-vega.png"><img alt="observatory-vega" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-vega.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-rigel</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-rigel.png"><img alt="observatory-rigel" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-rigel.png"></a></td>
+<td><code>observatory-deneb</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-deneb.png"><img alt="observatory-deneb" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-deneb.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-mira</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-mira.png"><img alt="observatory-mira" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-mira.png"></a></td>
+<td><code>observatory-bluedwarf</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-bluedwarf.png"><img alt="observatory-bluedwarf" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-bluedwarf.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-cooling</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-cooling.png"><img alt="observatory-cooling" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-cooling.png"></a></td>
+<td><code>observatory-blackdwarf</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-blackdwarf.png"><img alt="observatory-blackdwarf" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-blackdwarf.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-straggler</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-straggler.png"><img alt="observatory-straggler" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-straggler.png"></a></td>
+</tr>
+</table>
+</details>
+
 ### Exoplanets
 
 Nobody has resolved any of these worlds, so each palette comes from the artist's impression the mission published, which is what a search returns. Six of them share artwork: NASA serves one illustration per planet class, so three super-Earths and two gas giants are drawn by the same files. Those schemes are shipped anyway, declared siblings, and each header says which frame it shares and with whom. Four of them are the planets people know by a name instead of a designation, and each of those has release art of its own.
@@ -315,6 +501,59 @@ Nobody has resolved any of these worlds, so each palette comes from the artist's
 | `observatory-osiris`            | a planet boiling away, gold against an ice-blue tail                   | image    | 16.8 | 8   | 181 |
 | `observatory-methuselah`        | the oldest planet known, in teal and cobalt                            | image    | 17.4 | 6   | 190 |
 
+<details>
+<summary>Gallery</summary>
+<table>
+<tr>
+<td><code>observatory-trappist</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-trappist.png"><img alt="observatory-trappist" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-trappist.png"></a></td>
+<td><code>observatory-trappist-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-trappist-computed.png"><img alt="observatory-trappist-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-trappist-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-tres2</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-tres2.png"><img alt="observatory-tres2" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-tres2.png"></a></td>
+<td><code>observatory-hd189733</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-hd189733.png"><img alt="observatory-hd189733" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-hd189733.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-eburonia</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-eburonia.png"><img alt="observatory-eburonia" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-eburonia.png"></a></td>
+<td><code>observatory-kepler56c</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler56c.png"><img alt="observatory-kepler56c" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler56c.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-kepler292b</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler292b.png"><img alt="observatory-kepler292b" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler292b.png"></a></td>
+<td><code>observatory-kepler20b</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler20b.png"><img alt="observatory-kepler20b" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler20b.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-hd40307f</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-hd40307f.png"><img alt="observatory-hd40307f" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-hd40307f.png"></a></td>
+<td><code>observatory-kepler90h</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler90h.png"><img alt="observatory-kepler90h" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler90h.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-mintome</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-mintome.png"><img alt="observatory-mintome" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-mintome.png"></a></td>
+<td><code>observatory-hd157172b</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-hd157172b.png"><img alt="observatory-hd157172b" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-hd157172b.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-gliese3323b</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-gliese3323b.png"><img alt="observatory-gliese3323b" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-gliese3323b.png"></a></td>
+<td><code>observatory-kepler1275b</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler1275b.png"><img alt="observatory-kepler1275b" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler1275b.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-kepler1328b</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler1328b.png"><img alt="observatory-kepler1328b" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler1328b.png"></a></td>
+<td><code>observatory-kepler438b</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler438b.png"><img alt="observatory-kepler438b" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler438b.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-kepler367b</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler367b.png"><img alt="observatory-kepler367b" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-kepler367b.png"></a></td>
+<td><code>observatory-sweeps10</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-sweeps10.png"><img alt="observatory-sweeps10" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-sweeps10.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-enaiposha</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-enaiposha.png"><img alt="observatory-enaiposha" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-enaiposha.png"></a></td>
+<td><code>observatory-dimidium</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-dimidium.png"><img alt="observatory-dimidium" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-dimidium.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-tatooine</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-tatooine.png"><img alt="observatory-tatooine" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-tatooine.png"></a></td>
+<td><code>observatory-osiris</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-osiris.png"><img alt="observatory-osiris" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-osiris.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-methuselah</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-methuselah.png"><img alt="observatory-methuselah" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-methuselah.png"></a></td>
+</tr>
+</table>
+</details>
+
 ### Nebulae
 
 Clouds of gas, sampled from the press image each one is known by and paired with the emission lines that image was taken through. Narrowband false color is the rule rather than the exception here: the filters that resolve a nebula's structure sit at wavelengths the eye does not separate, so the Hubble-palette version is both the only one and the familiar one.
@@ -334,6 +573,36 @@ Clouds of gas, sampled from the press image each one is known by and paired with
 | `observatory-orion`              | the sharpest view of the nebula, in brick and rose            | image    | 16.2 | 6   | 43  |
 | `observatory-orion-computed`     | one constellation, measured                                   | measured | 16.7 | 7   | 234 |
 
+<details>
+<summary>Gallery</summary>
+<table>
+<tr>
+<td><code>observatory-catseye</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-catseye.png"><img alt="observatory-catseye" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-catseye.png"></a></td>
+<td><code>observatory-catseye-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-catseye-computed.png"><img alt="observatory-catseye-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-catseye-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-crab</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-crab.png"><img alt="observatory-crab" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-crab.png"></a></td>
+<td><code>observatory-crab-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-crab-computed.png"><img alt="observatory-crab-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-crab-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-helix</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-helix.png"><img alt="observatory-helix" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-helix.png"></a></td>
+<td><code>observatory-helix-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-helix-computed.png"><img alt="observatory-helix-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-helix-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-trifid</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-trifid.png"><img alt="observatory-trifid" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-trifid.png"></a></td>
+<td><code>observatory-trifid-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-trifid-computed.png"><img alt="observatory-trifid-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-trifid-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-boomerang</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-boomerang.png"><img alt="observatory-boomerang" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-boomerang.png"></a></td>
+<td><code>observatory-boomerang-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-boomerang-computed.png"><img alt="observatory-boomerang-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-boomerang-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-orion</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-orion.png"><img alt="observatory-orion" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-orion.png"></a></td>
+<td><code>observatory-orion-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-orion-computed.png"><img alt="observatory-orion-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-orion-computed.png"></a></td>
+</tr>
+</table>
+</details>
+
 ### Galaxies and deep fields
 
 Whole stellar populations, which average out paler than any single star; one cloud of gas that is genuinely green; the galaxy that was hardest to measure because we are inside it, both as an illustration and as a photograph from the ground; and two deep fields, Hubble's and Webb's.
@@ -352,6 +621,36 @@ Whole stellar populations, which average out paler than any single star; one clo
 | `observatory-deepfield`          | ten thousand galaxies, and four per cent of the frame is lit | image    | 9.4  | 7   | 223 |
 | `observatory-deepfield-computed` | ten thousand galaxies, sorted by how long the light took     | measured | 27.3 | 6   | 210 |
 | `observatory-deepfieldwebb`      | the first Webb deep field, in amber and steel                | image    | 15.8 | 6   | 167 |
+
+<details>
+<summary>Gallery</summary>
+<table>
+<tr>
+<td><code>observatory-bimodal</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-bimodal.png"><img alt="observatory-bimodal" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-bimodal.png"></a></td>
+<td><code>observatory-hoag</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-hoag.png"><img alt="observatory-hoag" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-hoag.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-hoag-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-hoag-computed.png"><img alt="observatory-hoag-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-hoag-computed.png"></a></td>
+<td><code>observatory-voorwerp</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-voorwerp.png"><img alt="observatory-voorwerp" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-voorwerp.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-voorwerp-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-voorwerp-computed.png"><img alt="observatory-voorwerp-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-voorwerp-computed.png"></a></td>
+<td><code>observatory-galaxy</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-galaxy.png"><img alt="observatory-galaxy" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-galaxy.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-milkyway</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-milkyway.png"><img alt="observatory-milkyway" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-milkyway.png"></a></td>
+<td><code>observatory-milkyway-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-milkyway-computed.png"><img alt="observatory-milkyway-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-milkyway-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-milkywayparanal</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-milkywayparanal.png"><img alt="observatory-milkywayparanal" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-milkywayparanal.png"></a></td>
+<td><code>observatory-deepfield</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-deepfield.png"><img alt="observatory-deepfield" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-deepfield.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-deepfield-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-deepfield-computed.png"><img alt="observatory-deepfield-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-deepfield-computed.png"></a></td>
+<td><code>observatory-deepfieldwebb</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-deepfieldwebb.png"><img alt="observatory-deepfieldwebb" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-deepfieldwebb.png"></a></td>
+</tr>
+</table>
+</details>
 
 ### Events
 
@@ -375,6 +674,43 @@ Things that happened, or are still happening. Two of these are the same black ho
 | `observatory-nova`                      | a white dwarf's surface igniting, hour by week                     | measured | 17.8 | 8   | 233 |
 | `observatory-brightestofalltime`        | the brightest burst ever recorded, in dust echoes                  | image    | 9.7  | 6   | 40  |
 
+<details>
+<summary>Gallery</summary>
+<table>
+<tr>
+<td><code>observatory-eventhorizon</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-eventhorizon.png"><img alt="observatory-eventhorizon" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-eventhorizon.png"></a></td>
+<td><code>observatory-eventhorizon-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-eventhorizon-computed.png"><img alt="observatory-eventhorizon-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-eventhorizon-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-jet</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-jet.png"><img alt="observatory-jet" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-jet.png"></a></td>
+<td><code>observatory-shadow</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-shadow.png"><img alt="observatory-shadow" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-shadow.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-cosmicbackground</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-cosmicbackground.png"><img alt="observatory-cosmicbackground" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-cosmicbackground.png"></a></td>
+<td><code>observatory-cosmicbackground-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-cosmicbackground-computed.png"><img alt="observatory-cosmicbackground-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-cosmicbackground-computed.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-cosmicbackgroundlegacy</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-cosmicbackgroundlegacy.png"><img alt="observatory-cosmicbackgroundlegacy" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-cosmicbackgroundlegacy.png"></a></td>
+<td><code>observatory-kilonova</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-kilonova.png"><img alt="observatory-kilonova" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-kilonova.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-kilonova-computed</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-kilonova-computed.png"><img alt="observatory-kilonova-computed" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-kilonova-computed.png"></a></td>
+<td><code>observatory-supernova1987a</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-supernova1987a.png"><img alt="observatory-supernova1987a" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-supernova1987a.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-cassiopeia</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-cassiopeia.png"><img alt="observatory-cassiopeia" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-cassiopeia.png"></a></td>
+<td><code>observatory-cassiopeiawebb</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-cassiopeiawebb.png"><img alt="observatory-cassiopeiawebb" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-cassiopeiawebb.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-tycho</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-tycho.png"><img alt="observatory-tycho" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-tycho.png"></a></td>
+<td><code>observatory-nova</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-nova.png"><img alt="observatory-nova" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-nova.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-brightestofalltime</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-brightestofalltime.png"><img alt="observatory-brightestofalltime" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-brightestofalltime.png"></a></td>
+</tr>
+</table>
+</details>
+
 ### Readings
 
 What an instrument recorded rather than what a body looks like, so there is no portrait to be faithful to: a spectrum, a diagram, a population, a photographic emulsion. Hue, and in several cases brightness too, comes from the measured quantity itself, and where the derivation fixes the order of the ladder the solver may respace it but never reorder it.
@@ -391,6 +727,31 @@ What an instrument recorded rather than what a body looks like, so there is no p
 | `observatory-kuiper`             | two populations, and the gap between them                      | measured | 16.8 | 8   | 15  |
 | `observatory-plate`              | no color at all, and the five grays that leaves                | measured | 12.2 | 4   | 0   |
 
+<details>
+<summary>Gallery</summary>
+<table>
+<tr>
+<td><code>observatory-balmer</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-balmer.png"><img alt="observatory-balmer" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-balmer.png"></a></td>
+<td><code>observatory-doppler</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-doppler.png"><img alt="observatory-doppler" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-doppler.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-pulsar</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-pulsar.png"><img alt="observatory-pulsar" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-pulsar.png"></a></td>
+<td><code>observatory-fraunhofer</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-fraunhofer.png"><img alt="observatory-fraunhofer" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-fraunhofer.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-meteor</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-meteor.png"><img alt="observatory-meteor" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-meteor.png"></a></td>
+<td><code>observatory-hertzsprungrussell</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-hertzsprungrussell.png"><img alt="observatory-hertzsprungrussell" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-hertzsprungrussell.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-extinction</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-extinction.png"><img alt="observatory-extinction" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-extinction.png"></a></td>
+<td><code>observatory-kuiper</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-kuiper.png"><img alt="observatory-kuiper" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-kuiper.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-plate</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-plate.png"><img alt="observatory-plate" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-plate.png"></a></td>
+</tr>
+</table>
+</details>
+
 ### Constructions
 
 Of nothing at all, and built to a specification instead: the contrast ladder is fixed and the hues are computed, subject to a separation floor and a minimum distance in the chroma plane.
@@ -403,6 +764,24 @@ Of nothing at all, and built to a specification instead: the contrast ladder is 
 | `observatory-lagrange` | the palette solved for maximum separation              | solved | 19.1 | 10  | 270 |
 | `observatory-phi`      | hues at the golden angle, so any subset stays spread   | solved | 20.4 | 10  | 296 |
 | `observatory-syzygy`   | separation spent where tokens actually touch           | solved | 15.5 | 10  | 304 |
+
+<details>
+<summary>Gallery</summary>
+<table>
+<tr>
+<td><code>observatory-albedo</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-albedo.png"><img alt="observatory-albedo" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-albedo.png"></a></td>
+<td><code>observatory-dichroic</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-dichroic.png"><img alt="observatory-dichroic" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-dichroic.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-horizon</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-horizon.png"><img alt="observatory-horizon" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-horizon.png"></a></td>
+<td><code>observatory-lagrange</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-lagrange.png"><img alt="observatory-lagrange" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-lagrange.png"></a></td>
+</tr>
+<tr>
+<td><code>observatory-phi</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-phi.png"><img alt="observatory-phi" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-phi.png"></a></td>
+<td><code>observatory-syzygy</code><br><a href="https://moyiz.github.io/observatory.nvim/assets/observatory-syzygy.png"><img alt="observatory-syzygy" width="340" src="https://moyiz.github.io/observatory.nvim/assets/observatory-syzygy.png"></a></td>
+</tr>
+</table>
+</details>
 
 ## :notebook: Recipes
 
