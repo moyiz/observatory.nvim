@@ -824,6 +824,40 @@ vim.keymap.set("n", "[o", function()
 end)
 ```
 
+Many subjects share a look -- there are a lot of amber stars and gray moons --
+so each entry lists the schemes nearest to it on screen as `similar`, and the
+ones meant to be close, like a subject and its `-computed` twin, as `siblings`.
+More like the current scheme, or something that is not:
+
+```lua
+local function current()
+  for _, s in ipairs(require "observatory.schemes") do
+    if s.name == vim.g.colors_name then
+      return s
+    end
+  end
+end
+
+vim.api.nvim_create_user_command("ObservatoryLike", function()
+  local s = current()
+  if s then
+    vim.cmd.colorscheme(s.similar[math.random(#s.similar)])
+  end
+end, {})
+
+vim.api.nvim_create_user_command("ObservatoryUnlike", function()
+  local s = current() or { name = "", family = "", similar = {}, siblings = {} }
+  local near = { [s.name] = true }
+  for _, n in ipairs(vim.list_extend(vim.list_extend({}, s.similar), s.siblings)) do
+    near[n] = true
+  end
+  local pool = vim.tbl_filter(function(o)
+    return not near[o.name] and o.family ~= s.family
+  end, require "observatory.schemes")
+  vim.cmd.colorscheme(pool[math.random(#pool)].name)
+end, {})
+```
+
 A picker with nothing installed, over `vim.ui.select`:
 
 ```lua

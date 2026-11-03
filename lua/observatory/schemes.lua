@@ -7,6 +7,11 @@
 -- occupy, `floor` the smallest CIE76 distance between any two of its
 -- syntax colors, and `chroma` their mean saturation in Lab terms.
 -- Sort or filter on any of them.
+--
+-- `similar` is the five schemes that look most like this one on screen,
+-- nearest first, measured as the mean color difference per character
+-- of a typical buffer. `siblings` are the ones meant to be close: the
+-- same subject computed and photographed, or seen twice.
 
 return {
   {
@@ -21,6 +26,14 @@ return {
     text_cr = 15.40,
     top_cr = 11.80,
     warm = 1,
+    siblings = { "observatory-aurora-red" },
+    similar = {
+      "observatory-hubble",
+      "observatory-kepler292b",
+      "observatory-enceladus-computed",
+      "observatory-uranus-computed",
+      "observatory-meteor",
+    },
   },
   {
     name = "observatory-aurora-red",
@@ -34,6 +47,14 @@ return {
     text_cr = 15.44,
     top_cr = 11.84,
     warm = 5,
+    siblings = { "observatory-aurora" },
+    similar = {
+      "observatory-tycho",
+      "observatory-browndwarf",
+      "observatory-cassiopeia",
+      "observatory-boomerang",
+      "observatory-mercury-computed",
+    },
   },
   {
     name = "observatory-comet",
@@ -47,6 +68,14 @@ return {
     text_cr = 15.40,
     top_cr = 12.19,
     warm = 2,
+    siblings = {},
+    similar = {
+      "observatory-doppler",
+      "observatory-osiris",
+      "observatory-io-computed",
+      "observatory-hertzsprungrussell",
+      "observatory-etacarinae-computed",
+    },
   },
   {
     name = "observatory-eclipse",
@@ -60,6 +89,14 @@ return {
     text_cr = 10.56,
     top_cr = 15.24,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-cosmicbackground-computed",
+      "observatory-nightsky",
+      "observatory-luna-computed",
+      "observatory-cooling",
+      "observatory-triton-computed",
+    },
   },
   {
     name = "observatory-hubble",
@@ -73,6 +110,14 @@ return {
     text_cr = 15.36,
     top_cr = 12.01,
     warm = 1,
+    siblings = {},
+    similar = {
+      "observatory-aurora",
+      "observatory-horizon",
+      "observatory-comet",
+      "observatory-neptune-computed",
+      "observatory-europa-computed",
+    },
   },
   {
     name = "observatory-nacreous",
@@ -86,6 +131,14 @@ return {
     text_cr = 14.57,
     top_cr = 16.92,
     warm = 2,
+    siblings = {},
+    similar = {
+      "observatory-luna",
+      "observatory-triton-computed",
+      "observatory-shadow",
+      "observatory-plate",
+      "observatory-enceladus",
+    },
   },
   {
     name = "observatory-nightsky",
@@ -99,6 +152,14 @@ return {
     text_cr = 10.58,
     top_cr = 15.33,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-eclipse",
+      "observatory-hertzsprungrussell",
+      "observatory-cooling",
+      "observatory-enceladus",
+      "observatory-shadow",
+    },
   },
   {
     name = "observatory-noctilucent",
@@ -112,6 +173,14 @@ return {
     text_cr = 11.98,
     top_cr = 14.48,
     warm = 2,
+    siblings = {},
+    similar = {
+      "observatory-callisto-computed",
+      "observatory-crux",
+      "observatory-hoag-computed",
+      "observatory-hd40307f",
+      "observatory-boomerang-computed",
+    },
   },
   {
     name = "observatory-mercury",
@@ -125,6 +194,14 @@ return {
     text_cr = 12.46,
     top_cr = 16.90,
     warm = 4,
+    siblings = { "observatory-mercury-computed" },
+    similar = {
+      "observatory-cassiopeiawebb",
+      "observatory-charon",
+      "observatory-luna",
+      "observatory-cosmicbackground",
+      "observatory-kilonova",
+    },
   },
   {
     name = "observatory-mercury-computed",
@@ -138,6 +215,14 @@ return {
     text_cr = 12.66,
     top_cr = 16.94,
     warm = 3,
+    siblings = { "observatory-mercury" },
+    similar = {
+      "observatory-v838monocerotis-computed",
+      "observatory-callisto-computed",
+      "observatory-ceres-computed",
+      "observatory-charon-computed",
+      "observatory-sirius",
+    },
   },
   {
     name = "observatory-venus",
@@ -151,6 +236,14 @@ return {
     text_cr = 9.97,
     top_cr = 16.93,
     warm = 3,
+    siblings = { "observatory-venus-computed" },
+    similar = {
+      "observatory-shadow",
+      "observatory-plate",
+      "observatory-luna",
+      "observatory-enceladus",
+      "observatory-trifid",
+    },
   },
   {
     name = "observatory-venus-computed",
@@ -164,6 +257,14 @@ return {
     text_cr = 13.10,
     top_cr = 15.77,
     warm = 7,
+    siblings = { "observatory-venus" },
+    similar = {
+      "observatory-sweeps10",
+      "observatory-pluto-computed",
+      "observatory-trappist-computed",
+      "observatory-blackdwarf",
+      "observatory-mars",
+    },
   },
   {
     name = "observatory-earth",
@@ -177,6 +278,14 @@ return {
     text_cr = 12.32,
     top_cr = 16.87,
     warm = 2,
+    siblings = { "observatory-earth-computed" },
+    similar = {
+      "observatory-hd40307f",
+      "observatory-crux",
+      "observatory-uranus",
+      "observatory-magnitude",
+      "observatory-methuselah",
+    },
   },
   {
     name = "observatory-earth-computed",
@@ -190,6 +299,14 @@ return {
     text_cr = 12.40,
     top_cr = 16.93,
     warm = 2,
+    siblings = { "observatory-earth" },
+    similar = {
+      "observatory-mercury-computed",
+      "observatory-europa-computed",
+      "observatory-ceres-computed",
+      "observatory-v838monocerotis-computed",
+      "observatory-charon-computed",
+    },
   },
   {
     name = "observatory-luna",
@@ -203,6 +320,14 @@ return {
     text_cr = 12.47,
     top_cr = 16.85,
     warm = 3,
+    siblings = { "observatory-luna-computed" },
+    similar = {
+      "observatory-cepheid",
+      "observatory-shadow",
+      "observatory-triton",
+      "observatory-venus",
+      "observatory-plate",
+    },
   },
   {
     name = "observatory-luna-computed",
@@ -216,6 +341,14 @@ return {
     text_cr = 12.39,
     top_cr = 16.93,
     warm = 4,
+    siblings = { "observatory-luna" },
+    similar = {
+      "observatory-cosmicbackground-computed",
+      "observatory-eclipse",
+      "observatory-cooling",
+      "observatory-ganymede-computed",
+      "observatory-shadow",
+    },
   },
   {
     name = "observatory-mars",
@@ -229,6 +362,14 @@ return {
     text_cr = 12.10,
     top_cr = 16.93,
     warm = 4,
+    siblings = { "observatory-mars-computed" },
+    similar = {
+      "observatory-sweeps10",
+      "observatory-kepler1275b",
+      "observatory-arrokoth",
+      "observatory-dimidium",
+      "observatory-io",
+    },
   },
   {
     name = "observatory-mars-computed",
@@ -242,6 +383,14 @@ return {
     text_cr = 12.40,
     top_cr = 16.85,
     warm = 4,
+    siblings = { "observatory-mars" },
+    similar = {
+      "observatory-jupiter-computed",
+      "observatory-cepheid",
+      "observatory-etacarinae",
+      "observatory-luna",
+      "observatory-kepler1275b",
+    },
   },
   {
     name = "observatory-jupiter",
@@ -255,6 +404,14 @@ return {
     text_cr = 13.53,
     top_cr = 14.76,
     warm = 4,
+    siblings = { "observatory-jupiter-computed" },
+    similar = {
+      "observatory-rings",
+      "observatory-kepler1328b",
+      "observatory-cepheid",
+      "observatory-tatooine",
+      "observatory-pluto",
+    },
   },
   {
     name = "observatory-jupiter-computed",
@@ -268,6 +425,14 @@ return {
     text_cr = 12.50,
     top_cr = 16.85,
     warm = 6,
+    siblings = { "observatory-jupiter" },
+    similar = {
+      "observatory-mars-computed",
+      "observatory-cepheid",
+      "observatory-luna",
+      "observatory-saturn-computed",
+      "observatory-callisto",
+    },
   },
   {
     name = "observatory-io",
@@ -281,6 +446,14 @@ return {
     text_cr = 13.61,
     top_cr = 16.85,
     warm = 6,
+    siblings = { "observatory-io-computed" },
+    similar = {
+      "observatory-nervia",
+      "observatory-rings",
+      "observatory-mars",
+      "observatory-kepler1328b",
+      "observatory-kepler1275b",
+    },
   },
   {
     name = "observatory-io-computed",
@@ -294,6 +467,14 @@ return {
     text_cr = 15.44,
     top_cr = 14.23,
     warm = 5,
+    siblings = { "observatory-io" },
+    similar = {
+      "observatory-titan-computed",
+      "observatory-trappist-computed",
+      "observatory-blackdwarf",
+      "observatory-eventhorizon",
+      "observatory-pluto-computed",
+    },
   },
   {
     name = "observatory-europa",
@@ -307,6 +488,14 @@ return {
     text_cr = 12.61,
     top_cr = 16.89,
     warm = 4,
+    siblings = { "observatory-europa-computed" },
+    similar = {
+      "observatory-kepler1328b",
+      "observatory-ganymede",
+      "observatory-pluto",
+      "observatory-callisto",
+      "observatory-saturn",
+    },
   },
   {
     name = "observatory-europa-computed",
@@ -320,6 +509,14 @@ return {
     text_cr = 12.71,
     top_cr = 16.92,
     warm = 4,
+    siblings = { "observatory-europa" },
+    similar = {
+      "observatory-ganymede-computed",
+      "observatory-callisto-computed",
+      "observatory-luna-computed",
+      "observatory-albedo",
+      "observatory-ceres-computed",
+    },
   },
   {
     name = "observatory-ganymede",
@@ -333,6 +530,14 @@ return {
     text_cr = 13.10,
     top_cr = 16.91,
     warm = 4,
+    siblings = { "observatory-ganymede-computed" },
+    similar = {
+      "observatory-pluto",
+      "observatory-saturn",
+      "observatory-titan",
+      "observatory-callisto",
+      "observatory-luna",
+    },
   },
   {
     name = "observatory-ganymede-computed",
@@ -346,6 +551,14 @@ return {
     text_cr = 11.32,
     top_cr = 16.80,
     warm = 3,
+    siblings = { "observatory-ganymede" },
+    similar = {
+      "observatory-callisto-computed",
+      "observatory-hoag-computed",
+      "observatory-methuselah",
+      "observatory-hd40307f",
+      "observatory-europa-computed",
+    },
   },
   {
     name = "observatory-callisto",
@@ -359,6 +572,14 @@ return {
     text_cr = 13.67,
     top_cr = 16.96,
     warm = 3,
+    siblings = { "observatory-callisto-computed" },
+    similar = {
+      "observatory-pluto",
+      "observatory-rings",
+      "observatory-saturn",
+      "observatory-ganymede",
+      "observatory-titan",
+    },
   },
   {
     name = "observatory-callisto-computed",
@@ -372,6 +593,14 @@ return {
     text_cr = 10.41,
     top_cr = 17.00,
     warm = 3,
+    siblings = { "observatory-callisto" },
+    similar = {
+      "observatory-ceres-computed",
+      "observatory-ganymede-computed",
+      "observatory-mercury-computed",
+      "observatory-noctilucent",
+      "observatory-v838monocerotis-computed",
+    },
   },
   {
     name = "observatory-saturn",
@@ -385,6 +614,14 @@ return {
     text_cr = 12.93,
     top_cr = 17.04,
     warm = 4,
+    siblings = { "observatory-saturn-computed" },
+    similar = {
+      "observatory-pluto",
+      "observatory-ganymede",
+      "observatory-tatooine",
+      "observatory-titan",
+      "observatory-callisto",
+    },
   },
   {
     name = "observatory-saturn-computed",
@@ -398,6 +635,14 @@ return {
     text_cr = 12.57,
     top_cr = 16.94,
     warm = 6,
+    siblings = { "observatory-saturn" },
+    similar = {
+      "observatory-jupiter-computed",
+      "observatory-mars-computed",
+      "observatory-rings",
+      "observatory-titan",
+      "observatory-kepler90h",
+    },
   },
   {
     name = "observatory-titan",
@@ -411,6 +656,14 @@ return {
     text_cr = 12.83,
     top_cr = 16.87,
     warm = 3,
+    siblings = { "observatory-titan-computed" },
+    similar = {
+      "observatory-pluto",
+      "observatory-ganymede",
+      "observatory-rings",
+      "observatory-saturn",
+      "observatory-callisto",
+    },
   },
   {
     name = "observatory-titan-computed",
@@ -424,6 +677,14 @@ return {
     text_cr = 11.60,
     top_cr = 15.01,
     warm = 7,
+    siblings = { "observatory-titan" },
+    similar = {
+      "observatory-trappist-computed",
+      "observatory-carbon",
+      "observatory-betelgeuse-computed",
+      "observatory-blackdwarf",
+      "observatory-eventhorizon",
+    },
   },
   {
     name = "observatory-enceladus",
@@ -437,6 +698,14 @@ return {
     text_cr = 12.32,
     top_cr = 16.86,
     warm = 1,
+    siblings = { "observatory-enceladus-computed" },
+    similar = {
+      "observatory-shadow",
+      "observatory-plate",
+      "observatory-venus",
+      "observatory-luna",
+      "observatory-nightsky",
+    },
   },
   {
     name = "observatory-enceladus-computed",
@@ -450,6 +719,14 @@ return {
     text_cr = 12.20,
     top_cr = 16.86,
     warm = 0,
+    siblings = { "observatory-enceladus" },
+    similar = {
+      "observatory-neptune-computed",
+      "observatory-uranus-computed",
+      "observatory-kepler292b",
+      "observatory-neptune",
+      "observatory-kilonova",
+    },
   },
   {
     name = "observatory-iapetus",
@@ -463,6 +740,14 @@ return {
     text_cr = 12.96,
     top_cr = 15.08,
     warm = 4,
+    siblings = { "observatory-iapetus-computed" },
+    similar = {
+      "observatory-meteor",
+      "observatory-crab",
+      "observatory-arcturus",
+      "observatory-hd157172b",
+      "observatory-kepler90h",
+    },
   },
   {
     name = "observatory-iapetus-computed",
@@ -476,6 +761,14 @@ return {
     text_cr = 11.09,
     top_cr = 16.92,
     warm = 4,
+    siblings = { "observatory-iapetus" },
+    similar = {
+      "observatory-cooling",
+      "observatory-kilonova-computed",
+      "observatory-straggler",
+      "observatory-rigel",
+      "observatory-nightsky",
+    },
   },
   {
     name = "observatory-uranus",
@@ -489,6 +782,14 @@ return {
     text_cr = 12.43,
     top_cr = 16.90,
     warm = 0,
+    siblings = { "observatory-uranus-computed" },
+    similar = {
+      "observatory-neptune",
+      "observatory-kepler292b",
+      "observatory-kilonova",
+      "observatory-hd189733",
+      "observatory-earth",
+    },
   },
   {
     name = "observatory-uranus-computed",
@@ -502,6 +803,14 @@ return {
     text_cr = 12.29,
     top_cr = 16.85,
     warm = 0,
+    siblings = { "observatory-uranus" },
+    similar = {
+      "observatory-kepler292b",
+      "observatory-kilonova",
+      "observatory-shadow",
+      "observatory-enceladus-computed",
+      "observatory-plate",
+    },
   },
   {
     name = "observatory-neptune",
@@ -515,6 +824,14 @@ return {
     text_cr = 12.32,
     top_cr = 16.88,
     warm = 0,
+    siblings = { "observatory-neptune-computed" },
+    similar = {
+      "observatory-uranus",
+      "observatory-methuselah",
+      "observatory-hd189733",
+      "observatory-uranus-computed",
+      "observatory-kepler292b",
+    },
   },
   {
     name = "observatory-neptune-computed",
@@ -528,6 +845,14 @@ return {
     text_cr = 12.53,
     top_cr = 16.89,
     warm = 0,
+    siblings = { "observatory-neptune" },
+    similar = {
+      "observatory-enceladus-computed",
+      "observatory-kepler292b",
+      "observatory-sirius",
+      "observatory-uranus-computed",
+      "observatory-ganymede-computed",
+    },
   },
   {
     name = "observatory-triton",
@@ -541,6 +866,14 @@ return {
     text_cr = 12.40,
     top_cr = 16.92,
     warm = 1,
+    siblings = { "observatory-triton-computed" },
+    similar = {
+      "observatory-enaiposha",
+      "observatory-luna",
+      "observatory-arrokoth",
+      "observatory-ganymede",
+      "observatory-deepfield",
+    },
   },
   {
     name = "observatory-triton-computed",
@@ -554,6 +887,14 @@ return {
     text_cr = 12.49,
     top_cr = 16.88,
     warm = 5,
+    siblings = { "observatory-triton" },
+    similar = {
+      "observatory-luna",
+      "observatory-shadow",
+      "observatory-orion",
+      "observatory-cepheid",
+      "observatory-plate",
+    },
   },
   {
     name = "observatory-pluto",
@@ -567,6 +908,14 @@ return {
     text_cr = 13.63,
     top_cr = 16.87,
     warm = 4,
+    siblings = { "observatory-pluto-computed" },
+    similar = {
+      "observatory-callisto",
+      "observatory-ganymede",
+      "observatory-saturn",
+      "observatory-rings",
+      "observatory-titan",
+    },
   },
   {
     name = "observatory-pluto-computed",
@@ -580,6 +929,14 @@ return {
     text_cr = 11.34,
     top_cr = 16.96,
     warm = 5,
+    siblings = { "observatory-pluto" },
+    similar = {
+      "observatory-venus-computed",
+      "observatory-callisto",
+      "observatory-luna",
+      "observatory-sweeps10",
+      "observatory-rings",
+    },
   },
   {
     name = "observatory-charon",
@@ -593,6 +950,14 @@ return {
     text_cr = 12.40,
     top_cr = 16.91,
     warm = 4,
+    siblings = { "observatory-charon-computed" },
+    similar = {
+      "observatory-mercury",
+      "observatory-arrokoth",
+      "observatory-triton",
+      "observatory-brightestofalltime",
+      "observatory-tatooine",
+    },
   },
   {
     name = "observatory-charon-computed",
@@ -606,6 +971,14 @@ return {
     text_cr = 11.25,
     top_cr = 16.93,
     warm = 2,
+    siblings = { "observatory-charon" },
+    similar = {
+      "observatory-sirius",
+      "observatory-mercury-computed",
+      "observatory-catseye",
+      "observatory-ganymede-computed",
+      "observatory-ceres",
+    },
   },
   {
     name = "observatory-ceres",
@@ -619,6 +992,14 @@ return {
     text_cr = 11.96,
     top_cr = 16.98,
     warm = 1,
+    siblings = { "observatory-ceres-computed" },
+    similar = {
+      "observatory-sirius",
+      "observatory-catseye",
+      "observatory-milkyway",
+      "observatory-hoag-computed",
+      "observatory-mercury-computed",
+    },
   },
   {
     name = "observatory-ceres-computed",
@@ -632,6 +1013,14 @@ return {
     text_cr = 11.65,
     top_cr = 16.91,
     warm = 5,
+    siblings = { "observatory-ceres" },
+    similar = {
+      "observatory-callisto-computed",
+      "observatory-v838monocerotis-computed",
+      "observatory-mercury-computed",
+      "observatory-ganymede-computed",
+      "observatory-magnitude",
+    },
   },
   {
     name = "observatory-rings",
@@ -645,6 +1034,14 @@ return {
     text_cr = 13.52,
     top_cr = 16.95,
     warm = 3,
+    siblings = {},
+    similar = {
+      "observatory-kepler1328b",
+      "observatory-pluto",
+      "observatory-callisto",
+      "observatory-titan",
+      "observatory-io",
+    },
   },
   {
     name = "observatory-arrokoth",
@@ -658,6 +1055,14 @@ return {
     text_cr = 12.40,
     top_cr = 16.85,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-kepler1275b",
+      "observatory-mars",
+      "observatory-dimidium",
+      "observatory-cepheid",
+      "observatory-sweeps10",
+    },
   },
   {
     name = "observatory-albireo",
@@ -671,6 +1076,14 @@ return {
     text_cr = 11.05,
     top_cr = 14.23,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-boomerang-computed",
+      "observatory-sirius",
+      "observatory-charon-computed",
+      "observatory-hoag-computed",
+      "observatory-galaxy",
+    },
   },
   {
     name = "observatory-alphacentauri",
@@ -684,6 +1097,14 @@ return {
     text_cr = 10.87,
     top_cr = 16.65,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-carbon",
+      "observatory-betelgeuse-computed",
+      "observatory-blackdwarf",
+      "observatory-trappist-computed",
+      "observatory-titan-computed",
+    },
   },
   {
     name = "observatory-betelgeuse",
@@ -697,6 +1118,14 @@ return {
     text_cr = 12.40,
     top_cr = 16.89,
     warm = 7,
+    siblings = { "observatory-betelgeuse-computed" },
+    similar = {
+      "observatory-kepler90h",
+      "observatory-kepler1275b",
+      "observatory-eventhorizon",
+      "observatory-dimidium",
+      "observatory-titan",
+    },
   },
   {
     name = "observatory-betelgeuse-computed",
@@ -710,6 +1139,14 @@ return {
     text_cr = 10.87,
     top_cr = 16.94,
     warm = 6,
+    siblings = { "observatory-betelgeuse" },
+    similar = {
+      "observatory-carbon",
+      "observatory-alphacentauri",
+      "observatory-trappist-computed",
+      "observatory-titan-computed",
+      "observatory-blackdwarf",
+    },
   },
   {
     name = "observatory-nervia",
@@ -723,6 +1160,14 @@ return {
     text_cr = 12.57,
     top_cr = 16.82,
     warm = 5,
+    siblings = { "observatory-nervia-computed" },
+    similar = {
+      "observatory-io",
+      "observatory-mars",
+      "observatory-rings",
+      "observatory-kepler1275b",
+      "observatory-dimidium",
+    },
   },
   {
     name = "observatory-nervia-computed",
@@ -736,6 +1181,14 @@ return {
     text_cr = 12.07,
     top_cr = 16.84,
     warm = 7,
+    siblings = { "observatory-nervia" },
+    similar = {
+      "observatory-cepheid",
+      "observatory-trappist-computed",
+      "observatory-kilonova-computed",
+      "observatory-pluto-computed",
+      "observatory-luna",
+    },
   },
   {
     name = "observatory-carbon",
@@ -749,6 +1202,14 @@ return {
     text_cr = 11.86,
     top_cr = 16.52,
     warm = 6,
+    siblings = {},
+    similar = {
+      "observatory-betelgeuse-computed",
+      "observatory-alphacentauri",
+      "observatory-titan-computed",
+      "observatory-blackdwarf",
+      "observatory-trappist-computed",
+    },
   },
   {
     name = "observatory-cepheid",
@@ -762,6 +1223,14 @@ return {
     text_cr = 10.87,
     top_cr = 16.92,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-luna",
+      "observatory-trappist-computed",
+      "observatory-kepler1328b",
+      "observatory-arrokoth",
+      "observatory-kilonova-computed",
+    },
   },
   {
     name = "observatory-etacarinae",
@@ -775,6 +1244,14 @@ return {
     text_cr = 12.35,
     top_cr = 15.58,
     warm = 5,
+    siblings = { "observatory-etacarinae-computed" },
+    similar = {
+      "observatory-kepler438b",
+      "observatory-kepler1275b",
+      "observatory-orion",
+      "observatory-kepler367b",
+      "observatory-mars-computed",
+    },
   },
   {
     name = "observatory-etacarinae-computed",
@@ -788,6 +1265,14 @@ return {
     text_cr = 11.26,
     top_cr = 15.66,
     warm = 6,
+    siblings = { "observatory-etacarinae" },
+    similar = {
+      "observatory-blackdwarf",
+      "observatory-mars",
+      "observatory-cepheid",
+      "observatory-trappist-computed",
+      "observatory-sweeps10",
+    },
   },
   {
     name = "observatory-magnitude",
@@ -801,6 +1286,14 @@ return {
     text_cr = 10.57,
     top_cr = 16.94,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-crux",
+      "observatory-albedo",
+      "observatory-milkywayparanal",
+      "observatory-callisto-computed",
+      "observatory-ceres-computed",
+    },
   },
   {
     name = "observatory-sirius",
@@ -814,6 +1307,14 @@ return {
     text_cr = 12.92,
     top_cr = 16.79,
     warm = 0,
+    siblings = {},
+    similar = {
+      "observatory-ceres",
+      "observatory-charon-computed",
+      "observatory-mercury-computed",
+      "observatory-v838monocerotis-computed",
+      "observatory-neptune-computed",
+    },
   },
   {
     name = "observatory-v838monocerotis",
@@ -827,6 +1328,14 @@ return {
     text_cr = 12.43,
     top_cr = 17.01,
     warm = 4,
+    siblings = { "observatory-v838monocerotis-computed" },
+    similar = {
+      "observatory-tycho",
+      "observatory-kepler438b",
+      "observatory-browndwarf",
+      "observatory-mintome",
+      "observatory-etacarinae",
+    },
   },
   {
     name = "observatory-v838monocerotis-computed",
@@ -840,6 +1349,14 @@ return {
     text_cr = 11.89,
     top_cr = 16.65,
     warm = 3,
+    siblings = { "observatory-v838monocerotis" },
+    similar = {
+      "observatory-mercury-computed",
+      "observatory-ceres-computed",
+      "observatory-sirius",
+      "observatory-callisto-computed",
+      "observatory-charon-computed",
+    },
   },
   {
     name = "observatory-boyajian",
@@ -853,6 +1370,14 @@ return {
     text_cr = 11.67,
     top_cr = 13.77,
     warm = 2,
+    siblings = {},
+    similar = {
+      "observatory-ganymede-computed",
+      "observatory-venus",
+      "observatory-trifid",
+      "observatory-methuselah",
+      "observatory-galaxy",
+    },
   },
   {
     name = "observatory-przybylski",
@@ -866,6 +1391,14 @@ return {
     text_cr = 13.69,
     top_cr = 15.26,
     warm = 1,
+    siblings = {},
+    similar = {
+      "observatory-iapetus",
+      "observatory-arcturus",
+      "observatory-meteor",
+      "observatory-comet",
+      "observatory-lagrange",
+    },
   },
   {
     name = "observatory-ss433",
@@ -879,6 +1412,14 @@ return {
     text_cr = 13.01,
     top_cr = 15.98,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-mira",
+      "observatory-bluedwarf",
+      "observatory-ceres-computed",
+      "observatory-callisto-computed",
+      "observatory-europa-computed",
+    },
   },
   {
     name = "observatory-browndwarf",
@@ -892,6 +1433,14 @@ return {
     text_cr = 11.92,
     top_cr = 16.95,
     warm = 6,
+    siblings = { "observatory-browndwarf-computed" },
+    similar = {
+      "observatory-mintome",
+      "observatory-tycho",
+      "observatory-kepler438b",
+      "observatory-v838monocerotis",
+      "observatory-wolfrayet",
+    },
   },
   {
     name = "observatory-browndwarf-computed",
@@ -905,6 +1454,14 @@ return {
     text_cr = 11.02,
     top_cr = 16.93,
     warm = 2,
+    siblings = { "observatory-browndwarf" },
+    similar = {
+      "observatory-trifid",
+      "observatory-hd189733",
+      "observatory-ceres",
+      "observatory-neptune-computed",
+      "observatory-sirius",
+    },
   },
   {
     name = "observatory-wolfrayet",
@@ -918,6 +1475,14 @@ return {
     text_cr = 12.41,
     top_cr = 14.56,
     warm = 4,
+    siblings = { "observatory-wolfrayet-computed" },
+    similar = {
+      "observatory-trifid",
+      "observatory-tycho",
+      "observatory-mintome",
+      "observatory-voorwerp",
+      "observatory-browndwarf",
+    },
   },
   {
     name = "observatory-wolfrayet-computed",
@@ -931,6 +1496,14 @@ return {
     text_cr = 11.61,
     top_cr = 16.48,
     warm = 1,
+    siblings = { "observatory-wolfrayet" },
+    similar = {
+      "observatory-eclipse",
+      "observatory-cooling",
+      "observatory-iapetus-computed",
+      "observatory-etacarinae-computed",
+      "observatory-nightsky",
+    },
   },
   {
     name = "observatory-crux",
@@ -944,6 +1517,14 @@ return {
     text_cr = 10.43,
     top_cr = 15.50,
     warm = 3,
+    siblings = {},
+    similar = {
+      "observatory-hd40307f",
+      "observatory-milkyway-computed",
+      "observatory-magnitude",
+      "observatory-boomerang-computed",
+      "observatory-hoag-computed",
+    },
   },
   {
     name = "observatory-arcturus",
@@ -957,6 +1538,14 @@ return {
     text_cr = 10.63,
     top_cr = 16.91,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-iapetus",
+      "observatory-cepheid",
+      "observatory-etacarinae-computed",
+      "observatory-phi",
+      "observatory-trappist-computed",
+    },
   },
   {
     name = "observatory-vega",
@@ -970,6 +1559,14 @@ return {
     text_cr = 10.96,
     top_cr = 16.94,
     warm = 2,
+    siblings = {},
+    similar = {
+      "observatory-rigel",
+      "observatory-eclipse",
+      "observatory-straggler",
+      "observatory-bimodal",
+      "observatory-milkyway-computed",
+    },
   },
   {
     name = "observatory-rigel",
@@ -983,6 +1580,14 @@ return {
     text_cr = 11.17,
     top_cr = 16.92,
     warm = 3,
+    siblings = {},
+    similar = {
+      "observatory-iapetus-computed",
+      "observatory-trifid-computed",
+      "observatory-crab-computed",
+      "observatory-cooling",
+      "observatory-straggler",
+    },
   },
   {
     name = "observatory-deneb",
@@ -996,6 +1601,14 @@ return {
     text_cr = 11.56,
     top_cr = 16.94,
     warm = 3,
+    siblings = {},
+    similar = {
+      "observatory-pluto-computed",
+      "observatory-rigel",
+      "observatory-orion-computed",
+      "observatory-kepler438b",
+      "observatory-venus-computed",
+    },
   },
   {
     name = "observatory-mira",
@@ -1009,6 +1622,14 @@ return {
     text_cr = 10.34,
     top_cr = 16.82,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-ss433",
+      "observatory-bluedwarf",
+      "observatory-jupiter-computed",
+      "observatory-europa-computed",
+      "observatory-cepheid",
+    },
   },
   {
     name = "observatory-bluedwarf",
@@ -1022,6 +1643,14 @@ return {
     text_cr = 12.84,
     top_cr = 16.25,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-ss433",
+      "observatory-galaxy",
+      "observatory-mira",
+      "observatory-cepheid",
+      "observatory-hoag-computed",
+    },
   },
   {
     name = "observatory-cooling",
@@ -1035,6 +1664,14 @@ return {
     text_cr = 11.02,
     top_cr = 16.88,
     warm = 3,
+    siblings = {},
+    similar = {
+      "observatory-iapetus-computed",
+      "observatory-nightsky",
+      "observatory-eclipse",
+      "observatory-luna-computed",
+      "observatory-cosmicbackground-computed",
+    },
   },
   {
     name = "observatory-blackdwarf",
@@ -1048,6 +1685,14 @@ return {
     text_cr = 11.75,
     top_cr = 15.94,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-alphacentauri",
+      "observatory-etacarinae-computed",
+      "observatory-eventhorizon-computed",
+      "observatory-carbon",
+      "observatory-trappist-computed",
+    },
   },
   {
     name = "observatory-straggler",
@@ -1061,6 +1706,14 @@ return {
     text_cr = 10.78,
     top_cr = 16.85,
     warm = 3,
+    siblings = { "observatory-bimodal" },
+    similar = {
+      "observatory-iapetus-computed",
+      "observatory-nightsky",
+      "observatory-rigel",
+      "observatory-eclipse",
+      "observatory-vega",
+    },
   },
   {
     name = "observatory-trappist",
@@ -1074,6 +1727,14 @@ return {
     text_cr = 13.07,
     top_cr = 16.92,
     warm = 1,
+    siblings = { "observatory-trappist-computed" },
+    similar = {
+      "observatory-saturn",
+      "observatory-ganymede",
+      "observatory-luna",
+      "observatory-deepfield",
+      "observatory-callisto",
+    },
   },
   {
     name = "observatory-trappist-computed",
@@ -1087,6 +1748,14 @@ return {
     text_cr = 10.78,
     top_cr = 16.88,
     warm = 7,
+    siblings = { "observatory-trappist" },
+    similar = {
+      "observatory-betelgeuse-computed",
+      "observatory-kilonova-computed",
+      "observatory-extinction",
+      "observatory-cepheid",
+      "observatory-titan-computed",
+    },
   },
   {
     name = "observatory-tres2",
@@ -1100,6 +1769,14 @@ return {
     text_cr = 10.09,
     top_cr = 10.94,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-mars",
+      "observatory-carbon",
+      "observatory-sweeps10",
+      "observatory-kepler1275b",
+      "observatory-trappist-computed",
+    },
   },
   {
     name = "observatory-hd189733",
@@ -1113,6 +1790,14 @@ return {
     text_cr = 11.12,
     top_cr = 17.00,
     warm = 0,
+    siblings = {},
+    similar = {
+      "observatory-browndwarf-computed",
+      "observatory-neptune",
+      "observatory-ceres",
+      "observatory-neptune-computed",
+      "observatory-milkyway",
+    },
   },
   {
     name = "observatory-eburonia",
@@ -1126,6 +1811,14 @@ return {
     text_cr = 12.26,
     top_cr = 16.89,
     warm = 3,
+    siblings = {},
+    similar = {
+      "observatory-tycho",
+      "observatory-kepler438b",
+      "observatory-etacarinae",
+      "observatory-v838monocerotis",
+      "observatory-browndwarf",
+    },
   },
   {
     name = "observatory-kepler56c",
@@ -1139,6 +1832,14 @@ return {
     text_cr = 12.41,
     top_cr = 16.95,
     warm = 8,
+    siblings = {},
+    similar = {
+      "observatory-titan-computed",
+      "observatory-eventhorizon",
+      "observatory-betelgeuse",
+      "observatory-kepler90h",
+      "observatory-carbon",
+    },
   },
   {
     name = "observatory-kepler292b",
@@ -1152,6 +1853,14 @@ return {
     text_cr = 13.61,
     top_cr = 16.91,
     warm = 0,
+    siblings = { "observatory-kepler1275b", "observatory-kepler367b" },
+    similar = {
+      "observatory-uranus-computed",
+      "observatory-kilonova",
+      "observatory-neptune-computed",
+      "observatory-enceladus-computed",
+      "observatory-cosmicbackground",
+    },
   },
   {
     name = "observatory-kepler20b",
@@ -1165,6 +1874,14 @@ return {
     text_cr = 12.62,
     top_cr = 16.92,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-blackdwarf",
+      "observatory-alphacentauri",
+      "observatory-venus-computed",
+      "observatory-carbon",
+      "observatory-sweeps10",
+    },
   },
   {
     name = "observatory-hd40307f",
@@ -1178,6 +1895,14 @@ return {
     text_cr = 12.90,
     top_cr = 16.40,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-crux",
+      "observatory-hoag-computed",
+      "observatory-ganymede-computed",
+      "observatory-catseye",
+      "observatory-milkyway-computed",
+    },
   },
   {
     name = "observatory-kepler90h",
@@ -1191,6 +1916,14 @@ return {
     text_cr = 12.41,
     top_cr = 16.87,
     warm = 7,
+    siblings = {},
+    similar = {
+      "observatory-betelgeuse",
+      "observatory-hd157172b",
+      "observatory-titan",
+      "observatory-kuiper",
+      "observatory-kepler1328b",
+    },
   },
   {
     name = "observatory-mintome",
@@ -1204,6 +1937,14 @@ return {
     text_cr = 12.58,
     top_cr = 16.86,
     warm = 5,
+    siblings = { "observatory-hd157172b" },
+    similar = {
+      "observatory-browndwarf",
+      "observatory-tycho",
+      "observatory-wolfrayet",
+      "observatory-voorwerp",
+      "observatory-v838monocerotis",
+    },
   },
   {
     name = "observatory-hd157172b",
@@ -1217,6 +1958,14 @@ return {
     text_cr = 12.66,
     top_cr = 15.04,
     warm = 5,
+    siblings = { "observatory-mintome" },
+    similar = {
+      "observatory-kepler90h",
+      "observatory-titan",
+      "observatory-kuiper",
+      "observatory-betelgeuse",
+      "observatory-saturn",
+    },
   },
   {
     name = "observatory-gliese3323b",
@@ -1230,6 +1979,14 @@ return {
     text_cr = 13.19,
     top_cr = 15.61,
     warm = 2,
+    siblings = {},
+    similar = {
+      "observatory-luna",
+      "observatory-callisto",
+      "observatory-trappist",
+      "observatory-triton",
+      "observatory-jupiter-computed",
+    },
   },
   {
     name = "observatory-kepler1275b",
@@ -1243,6 +2000,14 @@ return {
     text_cr = 12.40,
     top_cr = 16.86,
     warm = 4,
+    siblings = { "observatory-kepler292b", "observatory-kepler367b", "observatory-dimidium" },
+    similar = {
+      "observatory-arrokoth",
+      "observatory-mars",
+      "observatory-etacarinae",
+      "observatory-betelgeuse",
+      "observatory-nervia",
+    },
   },
   {
     name = "observatory-kepler1328b",
@@ -1256,6 +2021,14 @@ return {
     text_cr = 13.61,
     top_cr = 16.90,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-rings",
+      "observatory-pluto",
+      "observatory-cepheid",
+      "observatory-callisto",
+      "observatory-europa",
+    },
   },
   {
     name = "observatory-kepler438b",
@@ -1269,6 +2042,14 @@ return {
     text_cr = 12.40,
     top_cr = 16.62,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-etacarinae",
+      "observatory-boomerang",
+      "observatory-browndwarf",
+      "observatory-v838monocerotis",
+      "observatory-tycho",
+    },
   },
   {
     name = "observatory-kepler367b",
@@ -1282,6 +2063,14 @@ return {
     text_cr = 12.45,
     top_cr = 16.90,
     warm = 6,
+    siblings = { "observatory-kepler292b", "observatory-kepler1275b" },
+    similar = {
+      "observatory-etacarinae",
+      "observatory-helix",
+      "observatory-v838monocerotis",
+      "observatory-dimidium",
+      "observatory-hoag",
+    },
   },
   {
     name = "observatory-sweeps10",
@@ -1295,6 +2084,14 @@ return {
     text_cr = 12.48,
     top_cr = 16.90,
     warm = 6,
+    siblings = {},
+    similar = {
+      "observatory-mars",
+      "observatory-venus-computed",
+      "observatory-arrokoth",
+      "observatory-rings",
+      "observatory-kepler1275b",
+    },
   },
   {
     name = "observatory-enaiposha",
@@ -1308,6 +2105,14 @@ return {
     text_cr = 12.35,
     top_cr = 16.90,
     warm = 2,
+    siblings = {},
+    similar = {
+      "observatory-triton",
+      "observatory-luna",
+      "observatory-milkywayparanal",
+      "observatory-triton-computed",
+      "observatory-browndwarf",
+    },
   },
   {
     name = "observatory-dimidium",
@@ -1321,6 +2126,14 @@ return {
     text_cr = 12.40,
     top_cr = 16.95,
     warm = 4,
+    siblings = { "observatory-kepler1275b" },
+    similar = {
+      "observatory-arrokoth",
+      "observatory-mars",
+      "observatory-nervia",
+      "observatory-sweeps10",
+      "observatory-betelgeuse",
+    },
   },
   {
     name = "observatory-tatooine",
@@ -1334,6 +2147,14 @@ return {
     text_cr = 12.42,
     top_cr = 16.93,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-saturn",
+      "observatory-pluto",
+      "observatory-ganymede",
+      "observatory-rings",
+      "observatory-betelgeuse",
+    },
   },
   {
     name = "observatory-osiris",
@@ -1347,6 +2168,14 @@ return {
     text_cr = 12.21,
     top_cr = 16.90,
     warm = 7,
+    siblings = {},
+    similar = {
+      "observatory-pluto",
+      "observatory-europa",
+      "observatory-kuiper",
+      "observatory-titan",
+      "observatory-kepler90h",
+    },
   },
   {
     name = "observatory-methuselah",
@@ -1360,6 +2189,14 @@ return {
     text_cr = 12.36,
     top_cr = 16.74,
     warm = 2,
+    siblings = {},
+    similar = {
+      "observatory-catseye",
+      "observatory-ganymede-computed",
+      "observatory-neptune",
+      "observatory-uranus-computed",
+      "observatory-hd40307f",
+    },
   },
   {
     name = "observatory-catseye",
@@ -1373,6 +2210,14 @@ return {
     text_cr = 12.49,
     top_cr = 16.92,
     warm = 2,
+    siblings = { "observatory-catseye-computed" },
+    similar = {
+      "observatory-milkyway",
+      "observatory-methuselah",
+      "observatory-ceres",
+      "observatory-charon-computed",
+      "observatory-ganymede-computed",
+    },
   },
   {
     name = "observatory-catseye-computed",
@@ -1386,6 +2231,14 @@ return {
     text_cr = 10.49,
     top_cr = 16.93,
     warm = 4,
+    siblings = { "observatory-catseye" },
+    similar = {
+      "observatory-enceladus",
+      "observatory-uranus-computed",
+      "observatory-luna-computed",
+      "observatory-ganymede-computed",
+      "observatory-cosmicbackgroundlegacy",
+    },
   },
   {
     name = "observatory-crab",
@@ -1399,6 +2252,14 @@ return {
     text_cr = 12.41,
     top_cr = 16.91,
     warm = 2,
+    siblings = { "observatory-crab-computed" },
+    similar = {
+      "observatory-kepler90h",
+      "observatory-betelgeuse",
+      "observatory-nervia",
+      "observatory-dimidium",
+      "observatory-kepler1275b",
+    },
   },
   {
     name = "observatory-crab-computed",
@@ -1412,6 +2273,14 @@ return {
     text_cr = 12.11,
     top_cr = 16.91,
     warm = 2,
+    siblings = { "observatory-crab" },
+    similar = {
+      "observatory-rigel",
+      "observatory-iapetus-computed",
+      "observatory-nervia-computed",
+      "observatory-trifid-computed",
+      "observatory-nightsky",
+    },
   },
   {
     name = "observatory-helix",
@@ -1425,6 +2294,14 @@ return {
     text_cr = 12.32,
     top_cr = 16.89,
     warm = 6,
+    siblings = { "observatory-helix-computed" },
+    similar = {
+      "observatory-arrokoth",
+      "observatory-nightsky",
+      "observatory-kepler367b",
+      "observatory-albedo",
+      "observatory-europa",
+    },
   },
   {
     name = "observatory-helix-computed",
@@ -1438,6 +2315,14 @@ return {
     text_cr = 11.62,
     top_cr = 15.60,
     warm = 4,
+    siblings = { "observatory-helix" },
+    similar = {
+      "observatory-iapetus-computed",
+      "observatory-voorwerp-computed",
+      "observatory-enceladus",
+      "observatory-mars",
+      "observatory-cepheid",
+    },
   },
   {
     name = "observatory-trifid",
@@ -1451,6 +2336,14 @@ return {
     text_cr = 11.71,
     top_cr = 16.94,
     warm = 4,
+    siblings = { "observatory-trifid-computed" },
+    similar = {
+      "observatory-wolfrayet",
+      "observatory-browndwarf-computed",
+      "observatory-venus",
+      "observatory-catseye",
+      "observatory-galaxy",
+    },
   },
   {
     name = "observatory-trifid-computed",
@@ -1464,6 +2357,14 @@ return {
     text_cr = 13.82,
     top_cr = 13.91,
     warm = 3,
+    siblings = { "observatory-trifid" },
+    similar = {
+      "observatory-rigel",
+      "observatory-cooling",
+      "observatory-crab-computed",
+      "observatory-supernova1987a",
+      "observatory-kilonova-computed",
+    },
   },
   {
     name = "observatory-boomerang",
@@ -1477,6 +2378,14 @@ return {
     text_cr = 13.68,
     top_cr = 14.44,
     warm = 7,
+    siblings = { "observatory-boomerang-computed" },
+    similar = {
+      "observatory-kepler438b",
+      "observatory-etacarinae",
+      "observatory-v838monocerotis",
+      "observatory-browndwarf",
+      "observatory-tycho",
+    },
   },
   {
     name = "observatory-boomerang-computed",
@@ -1490,6 +2399,14 @@ return {
     text_cr = 11.13,
     top_cr = 16.94,
     warm = 2,
+    siblings = { "observatory-boomerang" },
+    similar = {
+      "observatory-hoag-computed",
+      "observatory-albireo",
+      "observatory-milkyway-computed",
+      "observatory-crux",
+      "observatory-callisto-computed",
+    },
   },
   {
     name = "observatory-orion",
@@ -1503,6 +2420,14 @@ return {
     text_cr = 11.79,
     top_cr = 16.89,
     warm = 6,
+    siblings = { "observatory-orion-computed" },
+    similar = {
+      "observatory-etacarinae",
+      "observatory-deepfieldwebb",
+      "observatory-triton-computed",
+      "observatory-supernova1987a",
+      "observatory-luna",
+    },
   },
   {
     name = "observatory-orion-computed",
@@ -1516,6 +2441,14 @@ return {
     text_cr = 11.17,
     top_cr = 16.92,
     warm = 3,
+    siblings = { "observatory-orion" },
+    similar = {
+      "observatory-hertzsprungrussell",
+      "observatory-rigel",
+      "observatory-boomerang-computed",
+      "observatory-milkyway-computed",
+      "observatory-deneb",
+    },
   },
   {
     name = "observatory-bimodal",
@@ -1529,6 +2462,14 @@ return {
     text_cr = 10.53,
     top_cr = 16.26,
     warm = 4,
+    siblings = { "observatory-straggler" },
+    similar = {
+      "observatory-nightsky",
+      "observatory-iapetus-computed",
+      "observatory-rigel",
+      "observatory-eclipse",
+      "observatory-cooling",
+    },
   },
   {
     name = "observatory-hoag",
@@ -1542,6 +2483,14 @@ return {
     text_cr = 12.44,
     top_cr = 16.93,
     warm = 5,
+    siblings = { "observatory-hoag-computed" },
+    similar = {
+      "observatory-io",
+      "observatory-kuiper",
+      "observatory-jupiter",
+      "observatory-dimidium",
+      "observatory-kepler367b",
+    },
   },
   {
     name = "observatory-hoag-computed",
@@ -1555,6 +2504,14 @@ return {
     text_cr = 11.44,
     top_cr = 16.89,
     warm = 4,
+    siblings = { "observatory-hoag" },
+    similar = {
+      "observatory-hd40307f",
+      "observatory-ganymede-computed",
+      "observatory-boomerang-computed",
+      "observatory-callisto-computed",
+      "observatory-catseye",
+    },
   },
   {
     name = "observatory-voorwerp",
@@ -1568,6 +2525,14 @@ return {
     text_cr = 13.58,
     top_cr = 16.90,
     warm = 4,
+    siblings = { "observatory-voorwerp-computed" },
+    similar = {
+      "observatory-mintome",
+      "observatory-tycho",
+      "observatory-wolfrayet",
+      "observatory-browndwarf",
+      "observatory-v838monocerotis",
+    },
   },
   {
     name = "observatory-voorwerp-computed",
@@ -1581,6 +2546,14 @@ return {
     text_cr = 13.19,
     top_cr = 15.41,
     warm = 3,
+    siblings = { "observatory-voorwerp" },
+    similar = {
+      "observatory-helix-computed",
+      "observatory-pluto-computed",
+      "observatory-crab-computed",
+      "observatory-iapetus-computed",
+      "observatory-nervia-computed",
+    },
   },
   {
     name = "observatory-galaxy",
@@ -1594,6 +2567,14 @@ return {
     text_cr = 10.63,
     top_cr = 17.01,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-hoag-computed",
+      "observatory-bluedwarf",
+      "observatory-trifid",
+      "observatory-boomerang-computed",
+      "observatory-venus",
+    },
   },
   {
     name = "observatory-milkyway",
@@ -1607,6 +2588,14 @@ return {
     text_cr = 12.52,
     top_cr = 16.93,
     warm = 1,
+    siblings = { "observatory-milkyway-computed", "observatory-milkywayparanal" },
+    similar = {
+      "observatory-catseye",
+      "observatory-ceres",
+      "observatory-sirius",
+      "observatory-hd40307f",
+      "observatory-wolfrayet",
+    },
   },
   {
     name = "observatory-milkyway-computed",
@@ -1620,6 +2609,14 @@ return {
     text_cr = 13.65,
     top_cr = 15.92,
     warm = 4,
+    siblings = { "observatory-milkyway", "observatory-milkywayparanal" },
+    similar = {
+      "observatory-crux",
+      "observatory-hd40307f",
+      "observatory-cooling",
+      "observatory-boomerang-computed",
+      "observatory-hoag-computed",
+    },
   },
   {
     name = "observatory-milkywayparanal",
@@ -1633,6 +2630,14 @@ return {
     text_cr = 10.03,
     top_cr = 16.93,
     warm = 4,
+    siblings = { "observatory-milkyway", "observatory-milkyway-computed" },
+    similar = {
+      "observatory-nightsky",
+      "observatory-luna",
+      "observatory-magnitude",
+      "observatory-shadow",
+      "observatory-albedo",
+    },
   },
   {
     name = "observatory-deepfield",
@@ -1646,6 +2651,14 @@ return {
     text_cr = 12.43,
     top_cr = 16.88,
     warm = 5,
+    siblings = { "observatory-deepfield-computed", "observatory-deepfieldwebb" },
+    similar = {
+      "observatory-ganymede",
+      "observatory-titan",
+      "observatory-brightestofalltime",
+      "observatory-saturn",
+      "observatory-pluto",
+    },
   },
   {
     name = "observatory-deepfield-computed",
@@ -1659,6 +2672,14 @@ return {
     text_cr = 11.60,
     top_cr = 16.50,
     warm = 4,
+    siblings = { "observatory-deepfield", "observatory-deepfieldwebb" },
+    similar = {
+      "observatory-carbon",
+      "observatory-tres2",
+      "observatory-venus-computed",
+      "observatory-alphacentauri",
+      "observatory-titan-computed",
+    },
   },
   {
     name = "observatory-deepfieldwebb",
@@ -1672,6 +2693,14 @@ return {
     text_cr = 11.18,
     top_cr = 16.85,
     warm = 5,
+    siblings = { "observatory-deepfield", "observatory-deepfield-computed" },
+    similar = {
+      "observatory-orion",
+      "observatory-supernova1987a",
+      "observatory-luna",
+      "observatory-arrokoth",
+      "observatory-ganymede",
+    },
   },
   {
     name = "observatory-eventhorizon",
@@ -1685,6 +2714,14 @@ return {
     text_cr = 12.45,
     top_cr = 16.99,
     warm = 7,
+    siblings = { "observatory-eventhorizon-computed" },
+    similar = {
+      "observatory-betelgeuse",
+      "observatory-titan-computed",
+      "observatory-trappist-computed",
+      "observatory-kepler1328b",
+      "observatory-carbon",
+    },
   },
   {
     name = "observatory-eventhorizon-computed",
@@ -1698,6 +2735,14 @@ return {
     text_cr = 11.19,
     top_cr = 17.00,
     warm = 8,
+    siblings = { "observatory-eventhorizon" },
+    similar = {
+      "observatory-blackdwarf",
+      "observatory-betelgeuse-computed",
+      "observatory-titan-computed",
+      "observatory-trappist-computed",
+      "observatory-carbon",
+    },
   },
   {
     name = "observatory-jet",
@@ -1711,6 +2756,14 @@ return {
     text_cr = 12.38,
     top_cr = 16.88,
     warm = 7,
+    siblings = {},
+    similar = {
+      "observatory-brightestofalltime",
+      "observatory-helix",
+      "observatory-kepler367b",
+      "observatory-deepfield",
+      "observatory-titan",
+    },
   },
   {
     name = "observatory-shadow",
@@ -1724,6 +2777,14 @@ return {
     text_cr = 12.81,
     top_cr = 17.94,
     warm = 0,
+    siblings = { "observatory-plate" },
+    similar = {
+      "observatory-enceladus",
+      "observatory-venus",
+      "observatory-luna",
+      "observatory-uranus-computed",
+      "observatory-triton-computed",
+    },
   },
   {
     name = "observatory-cosmicbackground",
@@ -1737,6 +2798,14 @@ return {
     text_cr = 13.61,
     top_cr = 16.93,
     warm = 3,
+    siblings = { "observatory-cosmicbackground-computed", "observatory-cosmicbackgroundlegacy" },
+    similar = {
+      "observatory-kilonova",
+      "observatory-kepler292b",
+      "observatory-uranus-computed",
+      "observatory-mercury",
+      "observatory-pulsar",
+    },
   },
   {
     name = "observatory-cosmicbackground-computed",
@@ -1750,6 +2819,14 @@ return {
     text_cr = 15.35,
     top_cr = 13.21,
     warm = 3,
+    siblings = { "observatory-cosmicbackground", "observatory-cosmicbackgroundlegacy" },
+    similar = {
+      "observatory-eclipse",
+      "observatory-luna-computed",
+      "observatory-nightsky",
+      "observatory-cooling",
+      "observatory-magnitude",
+    },
   },
   {
     name = "observatory-cosmicbackgroundlegacy",
@@ -1763,6 +2840,14 @@ return {
     text_cr = 12.45,
     top_cr = 16.90,
     warm = 5,
+    siblings = { "observatory-cosmicbackground", "observatory-cosmicbackground-computed" },
+    similar = {
+      "observatory-cassiopeiawebb",
+      "observatory-europa",
+      "observatory-uranus-computed",
+      "observatory-enceladus",
+      "observatory-trappist",
+    },
   },
   {
     name = "observatory-kilonova",
@@ -1776,6 +2861,14 @@ return {
     text_cr = 12.25,
     top_cr = 16.86,
     warm = 1,
+    siblings = { "observatory-kilonova-computed" },
+    similar = {
+      "observatory-kepler292b",
+      "observatory-uranus-computed",
+      "observatory-cosmicbackground",
+      "observatory-uranus",
+      "observatory-mercury",
+    },
   },
   {
     name = "observatory-kilonova-computed",
@@ -1789,6 +2882,14 @@ return {
     text_cr = 12.36,
     top_cr = 16.91,
     warm = 4,
+    siblings = { "observatory-kilonova" },
+    similar = {
+      "observatory-extinction",
+      "observatory-trappist-computed",
+      "observatory-cepheid",
+      "observatory-iapetus-computed",
+      "observatory-mars",
+    },
   },
   {
     name = "observatory-supernova1987a",
@@ -1802,6 +2903,14 @@ return {
     text_cr = 13.45,
     top_cr = 16.94,
     warm = 3,
+    siblings = {},
+    similar = {
+      "observatory-orion",
+      "observatory-kepler438b",
+      "observatory-mars",
+      "observatory-deepfieldwebb",
+      "observatory-etacarinae",
+    },
   },
   {
     name = "observatory-cassiopeia",
@@ -1815,6 +2924,14 @@ return {
     text_cr = 13.64,
     top_cr = 15.46,
     warm = 3,
+    siblings = { "observatory-cassiopeiawebb" },
+    similar = {
+      "observatory-mercury-computed",
+      "observatory-charon-computed",
+      "observatory-browndwarf",
+      "observatory-galaxy",
+      "observatory-v838monocerotis-computed",
+    },
   },
   {
     name = "observatory-cassiopeiawebb",
@@ -1828,6 +2945,14 @@ return {
     text_cr = 12.47,
     top_cr = 16.89,
     warm = 6,
+    siblings = { "observatory-cassiopeia" },
+    similar = {
+      "observatory-mercury",
+      "observatory-cosmicbackgroundlegacy",
+      "observatory-luna",
+      "observatory-triton",
+      "observatory-cepheid",
+    },
   },
   {
     name = "observatory-tycho",
@@ -1841,6 +2966,14 @@ return {
     text_cr = 13.19,
     top_cr = 16.98,
     warm = 6,
+    siblings = {},
+    similar = {
+      "observatory-mintome",
+      "observatory-browndwarf",
+      "observatory-wolfrayet",
+      "observatory-v838monocerotis",
+      "observatory-voorwerp",
+    },
   },
   {
     name = "observatory-nova",
@@ -1854,6 +2987,14 @@ return {
     text_cr = 12.78,
     top_cr = 16.92,
     warm = 3,
+    siblings = {},
+    similar = {
+      "observatory-nervia-computed",
+      "observatory-kilonova-computed",
+      "observatory-supernova1987a",
+      "observatory-luna",
+      "observatory-v838monocerotis",
+    },
   },
   {
     name = "observatory-brightestofalltime",
@@ -1867,6 +3008,14 @@ return {
     text_cr = 12.39,
     top_cr = 16.90,
     warm = 6,
+    siblings = {},
+    similar = {
+      "observatory-deepfield",
+      "observatory-arrokoth",
+      "observatory-tatooine",
+      "observatory-ganymede",
+      "observatory-betelgeuse",
+    },
   },
   {
     name = "observatory-balmer",
@@ -1880,6 +3029,14 @@ return {
     text_cr = 15.31,
     top_cr = 12.60,
     warm = 1,
+    siblings = {},
+    similar = {
+      "observatory-cosmicbackground-computed",
+      "observatory-nova",
+      "observatory-triton-computed",
+      "observatory-nightsky",
+      "observatory-orion",
+    },
   },
   {
     name = "observatory-doppler",
@@ -1893,6 +3050,14 @@ return {
     text_cr = 15.45,
     top_cr = 14.40,
     warm = 2,
+    siblings = {},
+    similar = {
+      "observatory-comet",
+      "observatory-nightsky",
+      "observatory-etacarinae-computed",
+      "observatory-hertzsprungrussell",
+      "observatory-eclipse",
+    },
   },
   {
     name = "observatory-pulsar",
@@ -1906,6 +3071,14 @@ return {
     text_cr = 19.40,
     top_cr = 17.58,
     warm = 2,
+    siblings = {},
+    similar = {
+      "observatory-kilonova",
+      "observatory-cosmicbackground",
+      "observatory-neptune-computed",
+      "observatory-kepler292b",
+      "observatory-mercury",
+    },
   },
   {
     name = "observatory-fraunhofer",
@@ -1919,6 +3092,14 @@ return {
     text_cr = 12.79,
     top_cr = 13.35,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-ss433",
+      "observatory-cassiopeia",
+      "observatory-galaxy",
+      "observatory-bluedwarf",
+      "observatory-charon-computed",
+    },
   },
   {
     name = "observatory-meteor",
@@ -1932,6 +3113,14 @@ return {
     text_cr = 13.47,
     top_cr = 16.86,
     warm = 3,
+    siblings = {},
+    similar = {
+      "observatory-iapetus",
+      "observatory-crab",
+      "observatory-kepler90h",
+      "observatory-hd157172b",
+      "observatory-arcturus",
+    },
   },
   {
     name = "observatory-hertzsprungrussell",
@@ -1945,6 +3134,14 @@ return {
     text_cr = 10.68,
     top_cr = 16.94,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-nightsky",
+      "observatory-orion-computed",
+      "observatory-cepheid",
+      "observatory-kilonova-computed",
+      "observatory-eclipse",
+    },
   },
   {
     name = "observatory-extinction",
@@ -1958,6 +3155,14 @@ return {
     text_cr = 10.55,
     top_cr = 16.90,
     warm = 5,
+    siblings = {},
+    similar = {
+      "observatory-kilonova-computed",
+      "observatory-trappist-computed",
+      "observatory-cepheid",
+      "observatory-blackdwarf",
+      "observatory-alphacentauri",
+    },
   },
   {
     name = "observatory-kuiper",
@@ -1971,6 +3176,14 @@ return {
     text_cr = 11.19,
     top_cr = 16.97,
     warm = 8,
+    siblings = {},
+    similar = {
+      "observatory-kepler1328b",
+      "observatory-kepler90h",
+      "observatory-io",
+      "observatory-pluto",
+      "observatory-rings",
+    },
   },
   {
     name = "observatory-plate",
@@ -1984,6 +3197,14 @@ return {
     text_cr = 15.31,
     top_cr = 21.00,
     warm = 0,
+    siblings = { "observatory-shadow" },
+    similar = {
+      "observatory-enceladus",
+      "observatory-venus",
+      "observatory-luna",
+      "observatory-uranus-computed",
+      "observatory-triton-computed",
+    },
   },
   {
     name = "observatory-albedo",
@@ -1997,6 +3218,14 @@ return {
     text_cr = 12.21,
     top_cr = 15.83,
     warm = 6,
+    siblings = {},
+    similar = {
+      "observatory-magnitude",
+      "observatory-nightsky",
+      "observatory-milkywayparanal",
+      "observatory-luna-computed",
+      "observatory-helix",
+    },
   },
   {
     name = "observatory-dichroic",
@@ -2010,6 +3239,14 @@ return {
     text_cr = 15.42,
     top_cr = 12.58,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-pluto-computed",
+      "observatory-luna",
+      "observatory-triton-computed",
+      "observatory-jupiter-computed",
+      "observatory-balmer",
+    },
   },
   {
     name = "observatory-horizon",
@@ -2023,6 +3260,14 @@ return {
     text_cr = 15.42,
     top_cr = 13.43,
     warm = 2,
+    siblings = {},
+    similar = {
+      "observatory-ganymede-computed",
+      "observatory-hd40307f",
+      "observatory-luna-computed",
+      "observatory-cosmicbackground-computed",
+      "observatory-milkyway-computed",
+    },
   },
   {
     name = "observatory-lagrange",
@@ -2036,6 +3281,14 @@ return {
     text_cr = 15.42,
     top_cr = 12.68,
     warm = 3,
+    siblings = {},
+    similar = {
+      "observatory-phi",
+      "observatory-przybylski",
+      "observatory-arcturus",
+      "observatory-iapetus",
+      "observatory-doppler",
+    },
   },
   {
     name = "observatory-phi",
@@ -2049,6 +3302,14 @@ return {
     text_cr = 15.42,
     top_cr = 12.66,
     warm = 4,
+    siblings = {},
+    similar = {
+      "observatory-arcturus",
+      "observatory-iapetus",
+      "observatory-lagrange",
+      "observatory-wolfrayet-computed",
+      "observatory-przybylski",
+    },
   },
   {
     name = "observatory-syzygy",
@@ -2062,5 +3323,13 @@ return {
     text_cr = 15.42,
     top_cr = 12.51,
     warm = 3,
+    siblings = {},
+    similar = {
+      "observatory-ceres-computed",
+      "observatory-mercury-computed",
+      "observatory-ceres",
+      "observatory-dichroic",
+      "observatory-cassiopeia",
+    },
   },
 }
