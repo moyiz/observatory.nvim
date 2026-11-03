@@ -19,7 +19,8 @@ local function read_palette(name)
   if not ok then
     return nil, ("observatory: no palette for %q"):format(name)
   end
-  return palette
+  -- `require` caches the module, and this table is handed to user code.
+  return vim.deepcopy(palette)
 end
 
 ---A scheme's palette, keyed by role: `bg`, `text`, `comment`, `kw`, `str`,
