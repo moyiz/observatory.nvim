@@ -41,6 +41,8 @@ function M.get(c, o)
     Question = { fg = c.hint },
     ErrorMsg = { fg = c.err, bold = bold },
     WarningMsg = { fg = c.warn },
+    -- Neovim 0.12. OkMsg is a hardcoded light green rather than a link.
+    OkMsg = { fg = c.ok },
     MsgArea = { fg = c.text },
     MsgSeparator = { fg = c.border, bg = c.bg_float },
     Title = { fg = c.title, bold = bold },
@@ -57,6 +59,9 @@ function M.get(c, o)
     PmenuKindSel = { fg = c.typ, bg = c.bg_hl },
     PmenuExtra = { fg = c.comment, bg = c.bg_float },
     PmenuExtraSel = { fg = c.dim, bg = c.bg_hl },
+    -- Neovim 0.12, for 'pumborder'; the default link to Pmenu draws the border
+    -- in the text color.
+    PmenuBorder = { fg = c.border, bg = c.bg_float },
     PmenuSbar = { bg = c.bg_float },
     PmenuThumb = { bg = c.border },
     PmenuMatch = { fg = c.match, bg = c.bg_float, bold = bold },
