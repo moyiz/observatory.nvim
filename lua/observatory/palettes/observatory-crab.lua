@@ -14,23 +14,24 @@
 -- sulfur and hydrogen to gold and tan -- and inside it sits a pale blue haze
 -- that is not gas emission at all but synchrotron light, electrons from the
 -- pulsar spiralling at nearly light speed in its magnetic field. The palette
--- keeps the split: the blue-white interior is the single largest thing in the
--- frame at 31 per cent, so it carries strings, and the warm filaments arrive
--- as the accents laid over them, which is exactly how the picture is built.
+-- keeps the split: the gold sulfur is the single largest thing in the frame,
+-- the blue-white interior and the synchrotron haze around it are the cool
+-- half, and the two families never meet in between, which is exactly how the
+-- picture is built.
 --
--- Roles follow area, and the frame is unusually even -- no color beyond the
--- interior takes more than a fifth -- so the palette spreads across nine
--- units rather than leaning on two.
+-- Roles follow area, and the frame is unusually even -- no color takes much
+-- more than a fifth of it -- so the palette spreads across eight units rather
+-- than leaning on two.
 --
 -- What is in the frame, and the roles it takes:
 --
---   oxygen        hue 171  16.91 contrast  16.5% of frame   numbers
---   sulfur       hue 205  13.89 contrast  12.3% of frame   operators
---   webbing       hue 198  10.29 contrast   9.9% of frame   macros, imports
---   synchrotron   hue  51   7.65 contrast  22.7% of frame   properties
---   filaments     hue 177   7.54 contrast   7.4% of frame   modules
---   interior      hue 104   5.96 contrast  18.7% of frame   keywords, types
---   wind          hue  31   5.62 contrast  10.8% of frame   escapes
+--   interior      hue 171  16.91 contrast  16.5% of frame   keywords, types
+--   synchrotron   hue 205  13.89 contrast  12.3% of frame   escapes
+--   haze          hue 198  10.29 contrast   9.9% of frame   macros, imports
+--   sulfur        hue  51   7.65 contrast  22.7% of frame   operators
+--   edge          hue 177   7.54 contrast   7.4% of frame   modules
+--   oxygen        hue 104   5.96 contrast  18.7% of frame   numbers
+--   hydrogen      hue  31   5.62 contrast  10.8% of frame   properties
 --   dust          hue  63   4.71 contrast   1.7% of frame   strings, functions
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
@@ -80,15 +81,15 @@ return {
 
   -- syntax roles
   str = "#787c24",
-  num = "#b3f3e9",
-  typ = "#729167",
+  num = "#729167",
+  typ = "#b3f3e9",
   mod = "#5fa7a3",
-  prop = "#a89d5e",
+  prop = "#b1783d",
   func = "#787c24",
-  kw = "#729167",
-  op = "#aad8f8",
+  kw = "#b3f3e9",
+  op = "#a89d5e",
   macro = "#6cc0e3",
-  esc = "#b1783d",
+  esc = "#aad8f8",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
@@ -97,19 +98,19 @@ return {
   hint = "#787c24",
   ok = "#29b16d",
   accent = "#787c24",
-  cursearch = "#729167",
+  cursearch = "#b3f3e9",
   subst = "#787c24",
   match = "#edc24a",
   title = "#787c24",
-  dir = "#729167",
-  label = "#729167",
-  tag = "#729167",
-  h1 = "#729167",
+  dir = "#b3f3e9",
+  label = "#b3f3e9",
+  tag = "#b3f3e9",
+  h1 = "#b3f3e9",
   h2 = "#787c24",
   h3 = "#787c24",
-  h4 = "#729167",
+  h4 = "#b3f3e9",
   h5 = "#5fa7a3",
-  h6 = "#b3f3e9",
+  h6 = "#729167",
 
   -- diff and virtual-text backdrops
   diff_add = "#062315",
@@ -125,12 +126,12 @@ return {
   -- and for anything that wants to sort or filter these.
   units = {
     { key = "dust", hue = 63, chroma = 47.1, cr = 4.71 },
-    { key = "oxygen", hue = 171, chroma = 22.1, cr = 16.91 },
-    { key = "interior", hue = 104, chroma = 26.9, cr = 5.96 },
-    { key = "filaments", hue = 177, chroma = 24.1, cr = 7.54 },
-    { key = "synchrotron", hue = 51, chroma = 34.7, cr = 7.65 },
-    { key = "sulfur", hue = 205, chroma = 21.8, cr = 13.89 },
-    { key = "webbing", hue = 198, chroma = 29.9, cr = 10.29 },
-    { key = "wind", hue = 31, chroma = 43.9, cr = 5.62 },
+    { key = "oxygen", hue = 104, chroma = 26.9, cr = 5.96 },
+    { key = "interior", hue = 171, chroma = 22.1, cr = 16.91 },
+    { key = "edge", hue = 177, chroma = 24.1, cr = 7.54 },
+    { key = "hydrogen", hue = 31, chroma = 43.9, cr = 5.62 },
+    { key = "sulfur", hue = 51, chroma = 34.7, cr = 7.65 },
+    { key = "haze", hue = 198, chroma = 29.9, cr = 10.29 },
+    { key = "synchrotron", hue = 205, chroma = 21.8, cr = 13.89 },
   },
 }
