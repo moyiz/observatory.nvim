@@ -42,8 +42,8 @@
 --   halpha       hue   0    9.72 contrast   keywords
 --   dwarf        hue 221    8.66 contrast   modules
 --   hei          hue  54    6.91 contrast   macros, imports
---   nii          hue   0    6.02 contrast   numbers, operators
---   knot_head    hue  32    4.90 contrast   strings, escapes
+--   nii          hue   0    6.09 contrast   numbers, operators
+--   knot_head    hue  33    6.02 contrast   strings, escapes
 --
 -- Hues here are fixed by the source, since they are the part that
 -- represents the world. Saturation and contrast were then solved within a
@@ -57,6 +57,11 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 26.1 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so knot_head was lifted from 4.90 to 6.02 contrast, with nii moved up
+-- beside it to keep the ladder in order.
 
 return {
   name = "observatory-helix-computed",
@@ -82,26 +87,26 @@ return {
   lnr_cur = "#90aca2",
 
   -- syntax roles
-  str = "#9f713c",
-  num = "#db6464",
+  str = "#a3845f",
+  num = "#dc6565",
   typ = "#92d3f7",
   mod = "#86a6ea",
   prop = "#9cefc9",
   func = "#9cefc9",
   kw = "#e59e9e",
-  op = "#db6464",
+  op = "#dc6565",
   macro = "#a1962c",
-  esc = "#9f713c",
+  esc = "#a3845f",
 
   -- interface duties, following the syntax colors
   err = "#ef3c42",
   warn = "#e9ae0f",
   info = "#86a6ea",
-  hint = "#9f713c",
+  hint = "#a3845f",
   ok = "#2ebd75",
   accent = "#9cefc9",
   cursearch = "#e59e9e",
-  subst = "#9f713c",
+  subst = "#a3845f",
   match = "#e9ae0f",
   title = "#9cefc9",
   dir = "#92d3f7",
@@ -109,10 +114,10 @@ return {
   tag = "#e59e9e",
   h1 = "#e59e9e",
   h2 = "#9cefc9",
-  h3 = "#9f713c",
+  h3 = "#a3845f",
   h4 = "#92d3f7",
   h5 = "#86a6ea",
-  h6 = "#db6464",
+  h6 = "#dc6565",
 
   -- diff and virtual-text backdrops
   diff_add = "#062315",
@@ -127,8 +132,8 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "knot_head", hue = 32, chroma = 38.2, cr = 4.90 },
-    { key = "nii", hue = 0, chroma = 51.9, cr = 6.02 },
+    { key = "knot_head", hue = 33, chroma = 25.3, cr = 6.02 },
+    { key = "nii", hue = 0, chroma = 51.9, cr = 6.09 },
     { key = "heii", hue = 201, chroma = 26.8, cr = 12.88 },
     { key = "dwarf", hue = 221, chroma = 38.2, cr = 8.66 },
     { key = "oiii", hue = 153, chroma = 34.9, cr = 15.60 },

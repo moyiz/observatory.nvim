@@ -25,7 +25,7 @@
 --   glare         hue  45  16.86 contrast  12.2% of frame   properties
 --   stripe        hue 105  10.40 contrast  24.1% of frame   functions, keywords, escapes
 --   shade         hue 240   7.13 contrast   5.1% of frame   types, macros, imports
---   ice           hue  60   5.93 contrast  58.6% of frame   strings, numbers, operators, modules
+--   ice           hue  60   6.01 contrast  58.6% of frame   strings, numbers, operators, modules
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
 -- makes a palette recognisable as its subject. Each color's purity was then
@@ -40,7 +40,7 @@
 -- binary search for an exact contrast ratio against #000000. What differs is
 -- purity, which is solved rather than maximised -- each accent carries the
 -- chroma its own patch of the frame carries, as far as the display allows --
--- and the closest pair of adjacent-capable roles sits at 11.6 Delta E.
+-- and the closest pair of adjacent-capable roles sits at 11.8 Delta E.
 --
 -- The frame is faint: its colors average 2 chroma, where a palette
 -- needs something nearer twenty-six to keep ten kinds of token apart.
@@ -55,11 +55,15 @@
 -- separation floor, and two colors a reader cannot distinguish are one
 -- color. The folded share went to the neighbour, so the proportions of
 -- the frame are still what the roles follow.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so ice was lifted from 5.93 to 6.01 contrast.
 
 return {
   name = "observatory-enceladus",
   about = "white ice, and the fractures that vent it",
-  floor = 11.6,
+  floor = 11.8,
 
   -- backgrounds, borders and listchars
   bg = "#000000",
@@ -80,26 +84,26 @@ return {
   lnr_cur = "#95a9b2",
 
   -- syntax roles
-  str = "#89897c",
-  num = "#89897c",
+  str = "#8a8a7c",
+  num = "#8a8a7c",
   typ = "#96969b",
-  mod = "#89897c",
+  mod = "#8a8a7c",
   prop = "#efe6cc",
   func = "#aebaaa",
   kw = "#aebaaa",
-  op = "#89897c",
+  op = "#8a8a7c",
   macro = "#96969b",
   esc = "#aebaaa",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
-  info = "#89897c",
-  hint = "#89897c",
+  info = "#8a8a7c",
+  hint = "#8a8a7c",
   ok = "#29b16d",
   accent = "#aebaaa",
   cursearch = "#aebaaa",
-  subst = "#89897c",
+  subst = "#8a8a7c",
   match = "#edc24a",
   title = "#aebaaa",
   dir = "#96969b",
@@ -107,10 +111,10 @@ return {
   tag = "#aebaaa",
   h1 = "#aebaaa",
   h2 = "#aebaaa",
-  h3 = "#89897c",
+  h3 = "#8a8a7c",
   h4 = "#96969b",
-  h5 = "#89897c",
-  h6 = "#89897c",
+  h5 = "#8a8a7c",
+  h6 = "#8a8a7c",
 
   -- diff and virtual-text backdrops
   diff_add = "#062315",
@@ -125,7 +129,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "ice", hue = 60, chroma = 7.4, cr = 5.93 },
+    { key = "ice", hue = 60, chroma = 7.9, cr = 6.01 },
     { key = "shade", hue = 240, chroma = 2.8, cr = 7.13 },
     { key = "glare", hue = 45, chroma = 13.8, cr = 16.86 },
     { key = "stripe", hue = 105, chroma = 9.8, cr = 10.40 },

@@ -237,7 +237,7 @@ Eight planets, nine moons, two dwarf planets, one contact binary and one ring sy
 | -------------------------------- | --------------------------------------------------------------- | -------- | ---- | --- | --- |
 | `observatory-mercury`            | the enhanced-color globe: tan crust, blue minerals, gold plains | image    | 9.5  | 8   | 234 |
 | `observatory-mercury-computed`   | the grayest planet, mapped by reflectance unit                  | measured | 11.3 | 8   | 197 |
-| `observatory-venus`              | cream cloud in every direction, and nothing else                | image    | 10.1 | 4   | 170 |
+| `observatory-venus`              | cream cloud in every direction, and nothing else                | image    | 10.1 | 4   | 169 |
 | `observatory-venus-computed`     | the cloud deck above, the surface nobody sees below             | measured | 15.5 | 8   | 143 |
 | `observatory-earth`              | ocean, vegetation, desert, ice                                  | image    | 9.6  | 6   | 182 |
 | `observatory-earth-computed`     | the only world that needs no help finding colors                | measured | 11.6 | 9   | 196 |
@@ -247,7 +247,7 @@ Eight planets, nine moons, two dwarf planets, one contact binary and one ring sy
 | `observatory-mars-computed`      | rust, with the blue its sunsets actually are                    | measured | 14.4 | 8   | 205 |
 | `observatory-jupiter`            | zones, belts and the Great Red Spot                             | image    | 17.3 | 5   | 185 |
 | `observatory-jupiter-computed`   | zones, belts, the red spot and the blue poles                   | measured | 12.0 | 8   | 186 |
-| `observatory-io`                 | sulfur, ochre and frost, and no blue anywhere                   | image    | 17.7 | 6   | 18  |
+| `observatory-io`                 | sulfur, ochre and frost, and no blue anywhere                   | image    | 17.7 | 6   | 17  |
 | `observatory-io-computed`        | sulfur yellow, with frost as the only cool thing on it          | measured | 11.5 | 7   | 193 |
 | `observatory-europa`             | ice, and the rust-brown cracks across it                        | image    | 17.2 | 5   | 44  |
 | `observatory-europa-computed`    | water ice, and whatever the ocean brought up                    | measured | 11.0 | 8   | 194 |
@@ -262,7 +262,7 @@ Eight planets, nine moons, two dwarf planets, one contact binary and one ring sy
 | `observatory-enceladus`          | white ice, and the fractures that vent it                       | image    | 11.6 | 4   | 195 |
 | `observatory-enceladus-computed` | the brightest surface in the solar system                       | measured | 14.1 | 8   | 28  |
 | `observatory-iapetus`            | two-tone: snow on one face, tar on the other                    | image    | 17.1 | 6   | 141 |
-| `observatory-iapetus-computed`   | two hemispheres, and nothing in between                         | measured | 15.2 | 7   | 198 |
+| `observatory-iapetus-computed`   | two hemispheres, and nothing in between                         | measured | 15.2 | 7   | 199 |
 | `observatory-uranus`             | featureless pale cyan, and that is the observation              | image    | 16.2 | 4   | 40  |
 | `observatory-uranus-computed`    | the most featureless palette here, and honestly so              | measured | 13.2 | 7   | 14  |
 | `observatory-neptune`            | azure, a shade deeper than Uranus and no bluer                  | image    | 10.4 | 4   | 3   |
@@ -382,8 +382,8 @@ Temperatures, color indices and light curves, which is most of what a star gives
 | `observatory-nervia-computed`          | the star Eburonia orbits, by its own temperatures               | measured | 12.3 | 8   | 97  |
 | `observatory-carbon`                   | the reddest stars there are, in purity not hue                  | measured | 16.5 | 6   | 5   |
 | `observatory-cepheid`                  | a light curve, and no color to speak of                         | measured | 15.4 | 5   | 3   |
-| `observatory-etacarinae`               | two lobes of debris from a star that survived its own explosion | image    | 16.1 | 6   | 104 |
-| `observatory-etacarinae-computed`      | the Homunculus, and the star inside it                          | measured | 20.7 | 7   | 185 |
+| `observatory-etacarinae`               | two lobes of debris from a star that survived its own explosion | image    | 16.1 | 6   | 103 |
+| `observatory-etacarinae-computed`      | the Homunculus, and the star inside it                          | measured | 20.7 | 7   | 186 |
 | `observatory-magnitude`                | the eight brightest stars, with Vega at zero                    | measured | 15.8 | 8   | 171 |
 | `observatory-sirius`                   | brighter is cooler, for once                                    | measured | 11.2 | 6   | 3   |
 | `observatory-v838monocerotis`          | a light echo, which is not an explosion but its shadow on dust  | image    | 16.9 | 8   | 180 |
@@ -613,7 +613,7 @@ Whole stellar populations, which average out paler than any single star; one clo
 
 | Scheme                           |                                                              | from     | ΔE   | n   | hue |
 | -------------------------------- | ------------------------------------------------------------ | -------- | ---- | --- | --- |
-| `observatory-bimodal`            | galaxies come in two colors, and the gap is not green        | image    | 18.8 | 7   | 152 |
+| `observatory-bimodal`            | galaxies come in two colors, and the gap is not green        | image    | 18.8 | 7   | 153 |
 | `observatory-hoag`               | a gold core inside a detached ring, and nothing in between   | image    | 9.4  | 7   | 217 |
 | `observatory-hoag-computed`      | an old core, a young ring, and nothing in between            | measured | 15.6 | 7   | 166 |
 | `observatory-voorwerp`           | a green ghost lit by a quasar that has already gone out      | image    | 17.7 | 5   | 145 |
@@ -674,7 +674,7 @@ Things that happened, or are still happening. Two of these are the same black ho
 | `observatory-supernova1987a`            | the nearest supernova in four centuries, ringed                    | image    | 17.8 | 5   | 195 |
 | `observatory-cassiopeia`                | a remnant in X-rays, which makes it violet                         | image    | 17.9 | 8   | 234 |
 | `observatory-cassiopeiawebb`            | the same remnant in the infrared, which makes it teal and rust     | image    | 9.5  | 8   | 208 |
-| `observatory-tycho`                     | the star that proved the heavens change, in crimson and periwinkle | image    | 16.9 | 8   | 96  |
+| `observatory-tycho`                     | the star that proved the heavens change, in crimson and periwinkle | image    | 16.9 | 8   | 97  |
 | `observatory-nova`                      | a white dwarf's surface igniting, hour by week                     | measured | 17.8 | 8   | 233 |
 | `observatory-brightestofalltime`        | the brightest burst ever recorded, in dust echoes                  | image    | 9.7  | 6   | 40  |
 

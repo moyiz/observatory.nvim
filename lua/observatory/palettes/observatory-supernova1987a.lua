@@ -31,7 +31,7 @@
 --   star          hue 180  16.94 contrast   5.4% of frame   macros, imports
 --   halo          hue  15  13.46 contrast  27.1% of frame   properties, types
 --   keyhole       hue 216   7.58 contrast  18.7% of frame   functions, modules, escapes
---   ring          hue   3   5.71 contrast  33.7% of frame   strings
+--   ring          hue   3   6.01 contrast  33.7% of frame   strings
 --   outer         hue   3   4.72 contrast  15.0% of frame   keywords, numbers, operators
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
@@ -62,6 +62,10 @@
 -- separation floor, and two colors a reader cannot distinguish are one
 -- color. The folded share went to the neighbour, so the proportions of
 -- the frame are still what the roles follow.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so ring was lifted from 5.71 to 6.01 contrast.
 
 return {
   name = "observatory-supernova1987a",
@@ -87,7 +91,7 @@ return {
   lnr_cur = "#b9a09f",
 
   -- syntax roles
-  str = "#c56c67",
+  str = "#c9706b",
   num = "#ca4f48",
   typ = "#f3c5b5",
   mod = "#849dc2",
@@ -102,11 +106,11 @@ return {
   err = "#f0060e",
   warn = "#edc24a",
   info = "#849dc2",
-  hint = "#c56c67",
+  hint = "#c9706b",
   ok = "#29b16d",
   accent = "#849dc2",
   cursearch = "#ca4f48",
-  subst = "#c56c67",
+  subst = "#c9706b",
   match = "#edc24a",
   title = "#849dc2",
   dir = "#f3c5b5",
@@ -114,7 +118,7 @@ return {
   tag = "#ca4f48",
   h1 = "#ca4f48",
   h2 = "#849dc2",
-  h3 = "#c56c67",
+  h3 = "#c9706b",
   h4 = "#f3c5b5",
   h5 = "#849dc2",
   h6 = "#ca4f48",
@@ -132,7 +136,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "ring", hue = 3, chroma = 39.3, cr = 5.71 },
+    { key = "ring", hue = 3, chroma = 39.1, cr = 6.01 },
     { key = "outer", hue = 3, chroma = 56.8, cr = 4.72 },
     { key = "halo", hue = 15, chroma = 20.0, cr = 13.46 },
     { key = "keyhole", hue = 216, chroma = 21.9, cr = 7.58 },

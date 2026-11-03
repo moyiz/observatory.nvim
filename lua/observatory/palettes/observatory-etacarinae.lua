@@ -25,7 +25,7 @@
 --   glare         hue 346  15.58 contrast  22.7% of frame   properties
 --   ember         hue 276  15.14 contrast   5.3% of frame   escapes
 --   lobes         hue  13  10.76 contrast  34.3% of frame   keywords, types, numbers, operators
---   dust          hue  15   5.72 contrast  10.1% of frame   strings, functions
+--   dust          hue  15   6.02 contrast  10.1% of frame   strings, functions
 --   shell         hue  19   5.51 contrast  17.6% of frame   macros, imports
 --   waist         hue  14   4.71 contrast  10.0% of frame   modules
 --
@@ -50,6 +50,10 @@
 -- between the colors and every proportion of the frame is the picture's;
 -- only the overall saturation is the display's, in the way that a print of
 -- a photograph has its own.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so dust was lifted from 5.72 to 6.02 contrast.
 
 return {
   name = "observatory-etacarinae",
@@ -75,12 +79,12 @@ return {
   lnr_cur = "#b7a19c",
 
   -- syntax roles
-  str = "#bb735b",
+  str = "#bf775e",
   num = "#e1aea0",
   typ = "#e1aea0",
   mod = "#bf593b",
   prop = "#fed3dd",
-  func = "#bb735b",
+  func = "#bf775e",
   kw = "#e1aea0",
   op = "#e1aea0",
   macro = "#d85d22",
@@ -90,19 +94,19 @@ return {
   err = "#f24e54",
   warn = "#edc24a",
   info = "#bf593b",
-  hint = "#bb735b",
+  hint = "#bf775e",
   ok = "#29b16d",
-  accent = "#bb735b",
+  accent = "#bf775e",
   cursearch = "#e1aea0",
-  subst = "#bb735b",
+  subst = "#bf775e",
   match = "#edc24a",
-  title = "#bb735b",
+  title = "#bf775e",
   dir = "#e1aea0",
   label = "#e1aea0",
   tag = "#e1aea0",
   h1 = "#e1aea0",
-  h2 = "#bb735b",
-  h3 = "#bb735b",
+  h2 = "#bf775e",
+  h3 = "#bf775e",
   h4 = "#e1aea0",
   h5 = "#bf593b",
   h6 = "#e1aea0",
@@ -120,7 +124,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "dust", hue = 15, chroma = 36.1, cr = 5.72 },
+    { key = "dust", hue = 15, chroma = 36.1, cr = 6.02 },
     { key = "lobes", hue = 13, chroma = 22.0, cr = 10.76 },
     { key = "waist", hue = 14, chroma = 53.3, cr = 4.71 },
     { key = "glare", hue = 346, chroma = 16.6, cr = 15.58 },

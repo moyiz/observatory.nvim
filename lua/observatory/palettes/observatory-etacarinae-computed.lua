@@ -27,7 +27,7 @@
 --   skirt        hue  40    9.53 contrast   modules
 --   weigelt      hue  20    9.25 contrast   types
 --   n_ii         hue 356    8.80 contrast   keywords, macros, imports
---   filament     hue  45    4.83 contrast   strings, escapes
+--   filament     hue  46    6.00 contrast   strings, escapes
 --   dustlane     hue  24    4.78 contrast   numbers, operators
 --
 -- Hues here are fixed by the source, since they are the part that
@@ -42,6 +42,10 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 20.7 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so filament was lifted from 4.83 to 6.00 contrast.
 
 return {
   name = "observatory-etacarinae-computed",
@@ -67,7 +71,7 @@ return {
   lnr_cur = "#b3a496",
 
   -- syntax roles
-  str = "#8e772f",
+  str = "#a3862a",
   num = "#a76a41",
   typ = "#eb986f",
   mod = "#c9ab6d",
@@ -76,17 +80,17 @@ return {
   kw = "#ec8d93",
   op = "#a76a41",
   macro = "#ec8d93",
-  esc = "#8e772f",
+  esc = "#a3862a",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
   info = "#c9ab6d",
-  hint = "#8e772f",
+  hint = "#a3862a",
   ok = "#29b16d",
   accent = "#f2d6b5",
   cursearch = "#ec8d93",
-  subst = "#8e772f",
+  subst = "#a3862a",
   match = "#edc24a",
   title = "#f2d6b5",
   dir = "#eb986f",
@@ -94,7 +98,7 @@ return {
   tag = "#ec8d93",
   h1 = "#ec8d93",
   h2 = "#f2d6b5",
-  h3 = "#8e772f",
+  h3 = "#a3862a",
   h4 = "#eb986f",
   h5 = "#c9ab6d",
   h6 = "#a76a41",
@@ -112,7 +116,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "filament", hue = 45, chroma = 41.7, cr = 4.83 },
+    { key = "filament", hue = 46, chroma = 51.0, cr = 6.00 },
     { key = "dustlane", hue = 24, chroma = 38.6, cr = 4.78 },
     { key = "weigelt", hue = 20, chroma = 43.6, cr = 9.25 },
     { key = "skirt", hue = 40, chroma = 36.0, cr = 9.53 },

@@ -25,9 +25,9 @@
 --   gap           hue  58  16.93 contrast  32.9% of frame   keywords, types, numbers
 --   ring          hue  45  10.30 contrast   8.4% of frame   operators
 --   dust          hue  38   7.48 contrast   3.5% of frame   functions
---   void          hue 201   6.05 contrast  18.9% of frame   macros, imports
---   knots         hue 240   5.71 contrast  21.6% of frame   properties, modules
---   core          hue  30   5.64 contrast  12.3% of frame   strings
+--   void          hue 201   6.20 contrast  18.9% of frame   macros, imports
+--   knots         hue 240   6.09 contrast  21.6% of frame   properties, modules
+--   core          hue  31   6.00 contrast  12.3% of frame   strings
 --   outer         hue 352   4.69 contrast   2.4% of frame   escapes
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
@@ -58,6 +58,11 @@
 -- separation floor, and two colors a reader cannot distinguish are one
 -- color. The folded share went to the neighbour, so the proportions of
 -- the frame are still what the roles follow.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so core was lifted from 5.64 to 6.00 contrast, with knots and void
+-- moved up beside it to keep the ladder in order.
 
 return {
   name = "observatory-hoag",
@@ -83,26 +88,26 @@ return {
   lnr_cur = "#9caa95",
 
   -- syntax roles
-  str = "#9d7f60",
+  str = "#a18465",
   num = "#efec77",
   typ = "#efec77",
-  mod = "#8282a8",
-  prop = "#8282a8",
+  mod = "#8787ac",
+  prop = "#8787ac",
   func = "#bc944e",
   kw = "#efec77",
   op = "#dcb030",
-  macro = "#5d90ac",
+  macro = "#5e92ae",
   esc = "#9d6970",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
-  info = "#8282a8",
-  hint = "#9d7f60",
+  info = "#8787ac",
+  hint = "#a18465",
   ok = "#29b16d",
   accent = "#bc944e",
   cursearch = "#efec77",
-  subst = "#9d7f60",
+  subst = "#a18465",
   match = "#edc24a",
   title = "#bc944e",
   dir = "#efec77",
@@ -110,9 +115,9 @@ return {
   tag = "#efec77",
   h1 = "#efec77",
   h2 = "#bc944e",
-  h3 = "#9d7f60",
+  h3 = "#a18465",
   h4 = "#efec77",
-  h5 = "#8282a8",
+  h5 = "#8787ac",
   h6 = "#efec77",
 
   -- diff and virtual-text backdrops
@@ -128,12 +133,12 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "core", hue = 30, chroma = 22.4, cr = 5.64 },
+    { key = "core", hue = 31, chroma = 21.9, cr = 6.00 },
     { key = "gap", hue = 58, chroma = 58.2, cr = 16.93 },
-    { key = "knots", hue = 240, chroma = 21.8, cr = 5.71 },
+    { key = "knots", hue = 240, chroma = 21.1, cr = 6.09 },
     { key = "dust", hue = 38, chroma = 42.8, cr = 7.48 },
     { key = "ring", hue = 45, chroma = 66.8, cr = 10.30 },
-    { key = "void", hue = 201, chroma = 22.1, cr = 6.05 },
+    { key = "void", hue = 201, chroma = 22.3, cr = 6.20 },
     { key = "outer", hue = 352, chroma = 22.3, cr = 4.69 },
   },
 }

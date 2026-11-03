@@ -30,9 +30,9 @@
 --   haze          hue 198  10.29 contrast   9.9% of frame   macros, imports
 --   sulfur        hue  51   7.65 contrast  22.7% of frame   operators
 --   edge          hue 177   7.54 contrast   7.4% of frame   modules
---   oxygen        hue 104   5.96 contrast  18.7% of frame   numbers
---   hydrogen      hue  31   5.62 contrast  10.8% of frame   properties
---   dust          hue  63   4.71 contrast   1.7% of frame   strings, functions
+--   oxygen        hue 105   6.18 contrast  18.7% of frame   numbers
+--   hydrogen      hue  31   6.10 contrast  10.8% of frame   properties
+--   dust          hue  63   6.05 contrast   1.7% of frame   strings, functions
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
 -- makes a palette recognisable as its subject. Each color's purity was then
@@ -55,6 +55,11 @@
 -- between the colors and every proportion of the frame is the picture's;
 -- only the overall saturation is the display's, in the way that a print of
 -- a photograph has its own.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so dust was lifted from 4.71 to 6.05 contrast, with hydrogen and oxygen
+-- moved up beside it to keep the ladder in order.
 
 return {
   name = "observatory-crab",
@@ -80,12 +85,12 @@ return {
   lnr_cur = "#aba690",
 
   -- syntax roles
-  str = "#787c24",
-  num = "#729167",
+  str = "#8a8f2f",
+  num = "#749469",
   typ = "#b3f3e9",
   mod = "#5fa7a3",
-  prop = "#b1783d",
-  func = "#787c24",
+  prop = "#b87e42",
+  func = "#8a8f2f",
   kw = "#b3f3e9",
   op = "#a89d5e",
   macro = "#6cc0e3",
@@ -95,22 +100,22 @@ return {
   err = "#f24e54",
   warn = "#edc24a",
   info = "#5fa7a3",
-  hint = "#787c24",
+  hint = "#8a8f2f",
   ok = "#29b16d",
-  accent = "#787c24",
+  accent = "#8a8f2f",
   cursearch = "#b3f3e9",
-  subst = "#787c24",
+  subst = "#8a8f2f",
   match = "#edc24a",
-  title = "#787c24",
+  title = "#8a8f2f",
   dir = "#b3f3e9",
   label = "#b3f3e9",
   tag = "#b3f3e9",
   h1 = "#b3f3e9",
-  h2 = "#787c24",
-  h3 = "#787c24",
+  h2 = "#8a8f2f",
+  h3 = "#8a8f2f",
   h4 = "#b3f3e9",
   h5 = "#5fa7a3",
-  h6 = "#729167",
+  h6 = "#749469",
 
   -- diff and virtual-text backdrops
   diff_add = "#062315",
@@ -125,11 +130,11 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "dust", hue = 63, chroma = 47.1, cr = 4.71 },
-    { key = "oxygen", hue = 104, chroma = 26.9, cr = 5.96 },
+    { key = "dust", hue = 63, chroma = 50.6, cr = 6.05 },
+    { key = "oxygen", hue = 105, chroma = 27.5, cr = 6.18 },
     { key = "interior", hue = 171, chroma = 22.1, cr = 16.91 },
     { key = "edge", hue = 177, chroma = 24.1, cr = 7.54 },
-    { key = "hydrogen", hue = 31, chroma = 43.9, cr = 5.62 },
+    { key = "hydrogen", hue = 31, chroma = 44.2, cr = 6.10 },
     { key = "sulfur", hue = 51, chroma = 34.7, cr = 7.65 },
     { key = "haze", hue = 198, chroma = 29.9, cr = 10.29 },
     { key = "synchrotron", hue = 205, chroma = 21.8, cr = 13.89 },

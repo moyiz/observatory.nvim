@@ -25,7 +25,7 @@
 --   chasma       hue 208    7.02 contrast   operators
 --   stain        hue  26    6.19 contrast   modules
 --   organa       hue 196    6.05 contrast   types
---   serenity     hue 212    5.11 contrast   strings, escapes
+--   serenity     hue 212    6.00 contrast   strings, escapes
 --   shadow       hue 215    4.79 contrast   numbers
 --
 -- Hues here are fixed by the source, since they are the part that
@@ -40,6 +40,10 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 14.7 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so serenity was lifted from 5.11 to 6.00 contrast.
 
 return {
   name = "observatory-charon-computed",
@@ -65,7 +69,7 @@ return {
   lnr_cur = "#9ba7b5",
 
   -- syntax roles
-  str = "#377fd0",
+  str = "#308aee",
   num = "#617a9e",
   typ = "#5c91a5",
   mod = "#ba7e4f",
@@ -74,17 +78,17 @@ return {
   kw = "#e3a78e",
   op = "#639acb",
   macro = "#e3a78e",
-  esc = "#377fd0",
+  esc = "#308aee",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
   info = "#ba7e4f",
-  hint = "#377fd0",
+  hint = "#308aee",
   ok = "#29b16d",
   accent = "#b6d8eb",
   cursearch = "#e3a78e",
-  subst = "#377fd0",
+  subst = "#308aee",
   match = "#edc24a",
   title = "#b6d8eb",
   dir = "#5c91a5",
@@ -92,7 +96,7 @@ return {
   tag = "#e3a78e",
   h1 = "#e3a78e",
   h2 = "#b6d8eb",
-  h3 = "#377fd0",
+  h3 = "#308aee",
   h4 = "#5c91a5",
   h5 = "#ba7e4f",
   h6 = "#617a9e",
@@ -110,7 +114,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "serenity", hue = 212, chroma = 48.5, cr = 5.11 },
+    { key = "serenity", hue = 212, chroma = 58.4, cr = 6.00 },
     { key = "shadow", hue = 215, chroma = 22.2, cr = 4.79 },
     { key = "organa", hue = 196, chroma = 20.1, cr = 6.05 },
     { key = "stain", hue = 26, chroma = 39.3, cr = 6.19 },

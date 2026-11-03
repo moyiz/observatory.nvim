@@ -24,7 +24,7 @@
 --   plain         hue  28  16.93 contrast  21.7% of frame   functions, macros, imports
 --   dust          hue  31  12.30 contrast  27.4% of frame   properties, types
 --   ochre         hue  28  11.53 contrast  15.7% of frame   keywords, numbers, operators, escapes
---   rust          hue  30   5.56 contrast  31.9% of frame   strings
+--   rust          hue  30   6.01 contrast  31.9% of frame   strings
 --   syrtis        hue 214   4.70 contrast   3.3% of frame   modules
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
@@ -53,6 +53,10 @@
 -- separation floor allows, so the ladder was spread to 12 points of
 -- lightness between rungs rather than the three the picture asked for.
 -- The order is still the picture's; the spacing is not.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so rust was lifted from 5.56 to 6.01 contrast.
 
 return {
   name = "observatory-mars",
@@ -78,7 +82,7 @@ return {
   lnr_cur = "#b3a396",
 
   -- syntax roles
-  str = "#a87a4d",
+  str = "#ae8053",
   num = "#f8b174",
   typ = "#e4c099",
   mod = "#5e799d",
@@ -93,11 +97,11 @@ return {
   err = "#f24e54",
   warn = "#edc24a",
   info = "#5e799d",
-  hint = "#a87a4d",
+  hint = "#ae8053",
   ok = "#29b16d",
   accent = "#f9e3d0",
   cursearch = "#f8b174",
-  subst = "#a87a4d",
+  subst = "#ae8053",
   match = "#edc24a",
   title = "#f9e3d0",
   dir = "#e4c099",
@@ -105,7 +109,7 @@ return {
   tag = "#f8b174",
   h1 = "#f8b174",
   h2 = "#f9e3d0",
-  h3 = "#a87a4d",
+  h3 = "#ae8053",
   h4 = "#e4c099",
   h5 = "#5e799d",
   h6 = "#f8b174",
@@ -123,7 +127,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "rust", hue = 30, chroma = 34.0, cr = 5.56 },
+    { key = "rust", hue = 30, chroma = 33.6, cr = 6.01 },
     { key = "ochre", hue = 28, chroma = 45.6, cr = 11.53 },
     { key = "dust", hue = 31, chroma = 25.5, cr = 12.30 },
     { key = "syrtis", hue = 214, chroma = 22.5, cr = 4.70 },

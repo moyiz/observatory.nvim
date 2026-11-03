@@ -26,7 +26,7 @@
 --   spurs         hue  41  16.93 contrast   4.0% of frame   numbers, macros, imports
 --   dust          hue 218  13.17 contrast   8.3% of frame   properties
 --   core          hue 258   6.88 contrast   5.1% of frame   types, operators, escapes
---   arms          hue 221   4.71 contrast  82.6% of frame   strings, functions, keywords, modules
+--   arms          hue 220   6.02 contrast  82.6% of frame   strings, functions, keywords, modules
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
 -- makes a palette recognisable as its subject. Each color's purity was then
@@ -56,6 +56,10 @@
 -- separation floor, and two colors a reader cannot distinguish are one
 -- color. The folded share went to the neighbour, so the proportions of
 -- the frame are still what the roles follow.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so arms was lifted from 4.71 to 6.02 contrast.
 
 return {
   name = "observatory-milkyway",
@@ -81,13 +85,13 @@ return {
   lnr_cur = "#9da7b8",
 
   -- syntax roles
-  str = "#5e77ac",
+  str = "#6b89c6",
   num = "#f8e5bd",
   typ = "#9a8db8",
-  mod = "#5e77ac",
+  mod = "#6b89c6",
   prop = "#b9cef2",
-  func = "#5e77ac",
-  kw = "#5e77ac",
+  func = "#6b89c6",
+  kw = "#6b89c6",
   op = "#9a8db8",
   macro = "#f8e5bd",
   esc = "#9a8db8",
@@ -95,22 +99,22 @@ return {
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
-  info = "#5e77ac",
-  hint = "#5e77ac",
+  info = "#6b89c6",
+  hint = "#6b89c6",
   ok = "#29b16d",
-  accent = "#5e77ac",
-  cursearch = "#5e77ac",
-  subst = "#5e77ac",
+  accent = "#6b89c6",
+  cursearch = "#6b89c6",
+  subst = "#6b89c6",
   match = "#edc24a",
-  title = "#5e77ac",
+  title = "#6b89c6",
   dir = "#9a8db8",
-  label = "#5e77ac",
-  tag = "#5e77ac",
-  h1 = "#5e77ac",
-  h2 = "#5e77ac",
-  h3 = "#5e77ac",
+  label = "#6b89c6",
+  tag = "#6b89c6",
+  h1 = "#6b89c6",
+  h2 = "#6b89c6",
+  h3 = "#6b89c6",
   h4 = "#9a8db8",
-  h5 = "#5e77ac",
+  h5 = "#6b89c6",
   h6 = "#f8e5bd",
 
   -- diff and virtual-text backdrops
@@ -126,7 +130,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "arms", hue = 221, chroma = 31.6, cr = 4.71 },
+    { key = "arms", hue = 220, chroma = 35.5, cr = 6.02 },
     { key = "spurs", hue = 41, chroma = 21.9, cr = 16.93 },
     { key = "core", hue = 258, chroma = 24.8, cr = 6.88 },
     { key = "dust", hue = 218, chroma = 20.1, cr = 13.17 },

@@ -26,7 +26,7 @@
 --   star          hue   7  10.99 contrast   4.3% of frame   macros, imports
 --   lilac         hue 266   7.62 contrast  12.9% of frame   keywords
 --   violet        hue 282   7.52 contrast  14.0% of frame   operators, modules
---   deep          hue   5   5.62 contrast   6.4% of frame   strings, functions
+--   deep          hue   5   6.00 contrast   6.4% of frame   strings, functions
 --   orchid        hue 248   4.67 contrast  31.5% of frame   types, numbers
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
@@ -50,6 +50,10 @@
 -- separation floor, and two colors a reader cannot distinguish are one
 -- color. The folded share went to the neighbour, so the proportions of
 -- the frame are still what the roles follow.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so deep was lifted from 5.62 to 6.00 contrast.
 
 return {
   name = "observatory-eburonia",
@@ -75,12 +79,12 @@ return {
   lnr_cur = "#b2a0b4",
 
   -- syntax roles
-  str = "#f4402f",
+  str = "#fb4533",
   num = "#7462e9",
   typ = "#7462e9",
   mod = "#c97beb",
   prop = "#f1b4f5",
-  func = "#f4402f",
+  func = "#fb4533",
   kw = "#ab90cf",
   op = "#c97beb",
   macro = "#fca59a",
@@ -90,19 +94,19 @@ return {
   err = "#f24e54",
   warn = "#edc24a",
   info = "#c97beb",
-  hint = "#f4402f",
+  hint = "#fb4533",
   ok = "#29b16d",
-  accent = "#f4402f",
+  accent = "#fb4533",
   cursearch = "#ab90cf",
-  subst = "#f4402f",
+  subst = "#fb4533",
   match = "#edc24a",
-  title = "#f4402f",
+  title = "#fb4533",
   dir = "#7462e9",
   label = "#ab90cf",
   tag = "#ab90cf",
   h1 = "#ab90cf",
-  h2 = "#f4402f",
-  h3 = "#f4402f",
+  h2 = "#fb4533",
+  h3 = "#fb4533",
   h4 = "#7462e9",
   h5 = "#c97beb",
   h6 = "#7462e9",
@@ -120,7 +124,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "deep", hue = 5, chroma = 83.9, cr = 5.62 },
+    { key = "deep", hue = 5, chroma = 84.6, cr = 6.00 },
     { key = "orchid", hue = 248, chroma = 78.3, cr = 4.67 },
     { key = "violet", hue = 282, chroma = 66.3, cr = 7.52 },
     { key = "indigo", hue = 296, chroma = 40.4, cr = 12.59 },

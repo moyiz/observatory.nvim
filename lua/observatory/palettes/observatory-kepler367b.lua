@@ -25,8 +25,8 @@
 --   scorch        hue  28  11.01 contrast   6.4% of frame   escapes
 --   shadow        hue 272   7.98 contrast  49.8% of frame   properties
 --   twilight      hue  15   7.66 contrast  11.5% of frame   modules
---   rust          hue 353   5.82 contrast   9.6% of frame   numbers, operators
---   corona        hue  14   4.69 contrast   6.5% of frame   strings, functions
+--   rust          hue 353   6.07 contrast   9.6% of frame   numbers, operators
+--   corona        hue  14   6.00 contrast   6.5% of frame   strings, functions
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
 -- makes a palette recognisable as its subject. Each color's purity was then
@@ -54,6 +54,11 @@
 -- separation floor allows, so the ladder was spread to 7 points of
 -- lightness between rungs rather than the three the picture asked for.
 -- The order is still the picture's; the spacing is not.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so corona was lifted from 4.69 to 6.00 contrast, with rust moved up
+-- beside it to keep the ladder in order.
 
 return {
   name = "observatory-kepler367b",
@@ -79,14 +84,14 @@ return {
   lnr_cur = "#a2a5bb",
 
   -- syntax roles
-  str = "#a26957",
-  num = "#ad797f",
+  str = "#b57b69",
+  num = "#b17c82",
   typ = "#fce5a6",
   mod = "#e28363",
   prop = "#ac98bd",
-  func = "#a26957",
+  func = "#b57b69",
   kw = "#fce5a6",
-  op = "#ad797f",
+  op = "#b17c82",
   macro = "#fbcf8b",
   esc = "#faaa66",
 
@@ -94,22 +99,22 @@ return {
   err = "#f24e54",
   warn = "#edc24a",
   info = "#e28363",
-  hint = "#a26957",
+  hint = "#b57b69",
   ok = "#29b16d",
-  accent = "#a26957",
+  accent = "#b57b69",
   cursearch = "#fce5a6",
-  subst = "#a26957",
+  subst = "#b57b69",
   match = "#edc24a",
-  title = "#a26957",
+  title = "#b57b69",
   dir = "#fce5a6",
   label = "#fce5a6",
   tag = "#fce5a6",
   h1 = "#fce5a6",
-  h2 = "#a26957",
-  h3 = "#a26957",
+  h2 = "#b57b69",
+  h3 = "#b57b69",
   h4 = "#fce5a6",
   h5 = "#e28363",
-  h6 = "#ad797f",
+  h6 = "#b17c82",
 
   -- diff and virtual-text backdrops
   diff_add = "#062315",
@@ -124,8 +129,8 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "corona", hue = 14, chroma = 28.5, cr = 4.69 },
-    { key = "rust", hue = 353, chroma = 21.7, cr = 5.82 },
+    { key = "corona", hue = 14, chroma = 27.9, cr = 6.00 },
+    { key = "rust", hue = 353, chroma = 22.1, cr = 6.07 },
     { key = "ember", hue = 44, chroma = 33.6, cr = 16.90 },
     { key = "twilight", hue = 15, chroma = 47.0, cr = 7.66 },
     { key = "shadow", hue = 272, chroma = 21.9, cr = 7.98 },

@@ -45,8 +45,8 @@
 --   blue_1_30    hue 236   11.38 contrast   types
 --   red_2_70     hue  25    9.15 contrast   keywords, macros, imports
 --   valley_1_90  hue 350    7.57 contrast   operators
---   blue_1_60    hue 262    5.31 contrast   modules, numbers
---   red_2_30     hue  22    4.90 contrast   strings, escapes
+--   blue_1_60    hue 262    5.48 contrast   modules, numbers
+--   red_2_30     hue  21    5.43 contrast   strings, escapes
 --
 -- Hues here are fixed by the source, since they are the part that
 -- represents the world. Saturation and contrast were then solved within a
@@ -60,6 +60,12 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 18.8 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so red_2_30 was lifted from 4.90 to 5.43 contrast, as far as the
+-- separation floor allows, with blue_1_60 moved up beside it to keep the ladder
+-- in order.
 
 return {
   name = "observatory-bimodal",
@@ -85,26 +91,26 @@ return {
   lnr_cur = "#a4a4ba",
 
   -- syntax roles
-  str = "#ac6a45",
-  num = "#916dd1",
+  str = "#a17963",
+  num = "#946fd4",
   typ = "#b7bbf0",
-  mod = "#916dd1",
+  mod = "#946fd4",
   prop = "#e5c4ad",
   func = "#dde1fd",
   kw = "#db9e73",
   op = "#be8f97",
   macro = "#db9e73",
-  esc = "#ac6a45",
+  esc = "#a17963",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
-  info = "#916dd1",
-  hint = "#ac6a45",
+  info = "#946fd4",
+  hint = "#a17963",
   ok = "#29b16d",
   accent = "#dde1fd",
   cursearch = "#db9e73",
-  subst = "#ac6a45",
+  subst = "#a17963",
   match = "#edc24a",
   title = "#dde1fd",
   dir = "#b7bbf0",
@@ -112,10 +118,10 @@ return {
   tag = "#db9e73",
   h1 = "#db9e73",
   h2 = "#dde1fd",
-  h3 = "#ac6a45",
+  h3 = "#a17963",
   h4 = "#b7bbf0",
-  h5 = "#916dd1",
-  h6 = "#916dd1",
+  h5 = "#946fd4",
+  h6 = "#946fd4",
 
   -- diff and virtual-text backdrops
   diff_add = "#062315",
@@ -130,8 +136,8 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "red_2_30", hue = 22, chroma = 38.9, cr = 4.90 },
-    { key = "blue_1_60", hue = 262, chroma = 58.6, cr = 5.31 },
+    { key = "red_2_30", hue = 21, chroma = 22.0, cr = 5.43 },
+    { key = "blue_1_60", hue = 262, chroma = 59.1, cr = 5.48 },
     { key = "blue_1_30", hue = 236, chroma = 28.5, cr = 11.38 },
     { key = "red_2_50", hue = 25, chroma = 17.9, cr = 12.83 },
     { key = "blue_1_00", hue = 232, chroma = 14.6, cr = 16.26 },

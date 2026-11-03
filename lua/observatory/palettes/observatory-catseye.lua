@@ -27,8 +27,8 @@
 --   outer         hue 256  16.92 contrast  24.1% of frame   functions, numbers, escapes
 --   jets          hue 230  12.71 contrast  14.1% of frame   properties
 --   halo          hue 356  11.00 contrast   6.0% of frame   keywords, macros, imports
---   rim           hue 327   5.95 contrast   3.1% of frame   types
---   shells        hue 220   4.70 contrast  52.7% of frame   strings, operators, modules
+--   rim           hue 326   6.06 contrast   3.1% of frame   types
+--   shells        hue 220   6.01 contrast  52.7% of frame   strings, operators, modules
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
 -- makes a palette recognisable as its subject. Each color's purity was then
@@ -63,6 +63,11 @@
 -- separation floor allows, so the ladder was spread to 9 points of
 -- lightness between rungs rather than the three the picture asked for.
 -- The order is still the picture's; the spacing is not.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so shells was lifted from 4.70 to 6.01 contrast, with rim moved up
+-- beside it to keep the ladder in order.
 
 return {
   name = "observatory-catseye",
@@ -88,36 +93,36 @@ return {
   lnr_cur = "#98a8b4",
 
   -- syntax roles
-  str = "#5c77ad",
+  str = "#6d89c2",
   num = "#eae3fe",
-  typ = "#a77c94",
-  mod = "#5c77ad",
+  typ = "#a97d96",
+  mod = "#6d89c2",
   prop = "#bdc7fa",
   func = "#eae3fe",
   kw = "#eeaaae",
-  op = "#5c77ad",
+  op = "#6d89c2",
   macro = "#eeaaae",
   esc = "#eae3fe",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
-  info = "#5c77ad",
-  hint = "#5c77ad",
+  info = "#6d89c2",
+  hint = "#6d89c2",
   ok = "#29b16d",
   accent = "#eae3fe",
   cursearch = "#eeaaae",
-  subst = "#5c77ad",
+  subst = "#6d89c2",
   match = "#edc24a",
   title = "#eae3fe",
-  dir = "#a77c94",
+  dir = "#a97d96",
   label = "#eeaaae",
   tag = "#eeaaae",
   h1 = "#eeaaae",
   h2 = "#eae3fe",
-  h3 = "#5c77ad",
-  h4 = "#a77c94",
-  h5 = "#5c77ad",
+  h3 = "#6d89c2",
+  h4 = "#a97d96",
+  h5 = "#6d89c2",
   h6 = "#eae3fe",
 
   -- diff and virtual-text backdrops
@@ -133,9 +138,9 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "shells", hue = 220, chroma = 32.2, cr = 4.70 },
+    { key = "shells", hue = 220, chroma = 33.2, cr = 6.01 },
     { key = "outer", hue = 256, chroma = 14.2, cr = 16.92 },
-    { key = "rim", hue = 327, chroma = 21.6, cr = 5.95 },
+    { key = "rim", hue = 326, chroma = 22.2, cr = 6.06 },
     { key = "jets", hue = 230, chroma = 27.2, cr = 12.71 },
     { key = "halo", hue = 356, chroma = 26.7, cr = 11.00 },
   },

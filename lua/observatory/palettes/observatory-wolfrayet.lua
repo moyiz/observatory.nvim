@@ -26,8 +26,8 @@
 --   dust          hue 344  12.64 contrast  18.7% of frame   properties, modules
 --   star          hue   0   8.13 contrast   8.2% of frame   operators
 --   field         hue 216   7.51 contrast  11.0% of frame   keywords, macros, imports
---   shell         hue 340   5.78 contrast  46.6% of frame   escapes
---   clumps        hue 293   4.66 contrast   1.5% of frame   strings, functions
+--   shell         hue 341   5.95 contrast  46.6% of frame   escapes
+--   clumps        hue 293   5.90 contrast   1.5% of frame   strings, functions
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
 -- makes a palette recognisable as its subject. Each color's purity was then
@@ -50,6 +50,12 @@
 -- between the colors and every proportion of the frame is the picture's;
 -- only the overall saturation is the display's, in the way that a print of
 -- a photograph has its own.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so clumps was lifted from 4.66 to 5.90 contrast, as far as the
+-- separation floor allows, with shell moved up beside it to keep the ladder in
+-- order.
 
 return {
   name = "observatory-wolfrayet",
@@ -75,34 +81,34 @@ return {
   lnr_cur = "#b99fa9",
 
   -- syntax roles
-  str = "#8a6d8e",
+  str = "#a17ba6",
   num = "#fec6f1",
   typ = "#fec6f1",
   mod = "#edbcc9",
   prop = "#edbcc9",
-  func = "#8a6d8e",
+  func = "#a17ba6",
   kw = "#849cc1",
   op = "#d48f8f",
   macro = "#849cc1",
-  esc = "#be6e88",
+  esc = "#c1708a",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
   info = "#edbcc9",
-  hint = "#8a6d8e",
+  hint = "#a17ba6",
   ok = "#29b16d",
-  accent = "#8a6d8e",
+  accent = "#a17ba6",
   cursearch = "#849cc1",
-  subst = "#8a6d8e",
+  subst = "#a17ba6",
   match = "#edc24a",
-  title = "#8a6d8e",
+  title = "#a17ba6",
   dir = "#fec6f1",
   label = "#849cc1",
   tag = "#849cc1",
   h1 = "#849cc1",
-  h2 = "#8a6d8e",
-  h3 = "#8a6d8e",
+  h2 = "#a17ba6",
+  h3 = "#a17ba6",
   h4 = "#fec6f1",
   h5 = "#edbcc9",
   h6 = "#fec6f1",
@@ -120,11 +126,11 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "clumps", hue = 293, chroma = 22.3, cr = 4.66 },
+    { key = "clumps", hue = 293, chroma = 28.3, cr = 5.90 },
     { key = "glow", hue = 314, chroma = 30.0, cr = 14.56 },
     { key = "dust", hue = 344, chroma = 19.6, cr = 12.64 },
     { key = "field", hue = 216, chroma = 21.8, cr = 7.51 },
     { key = "star", hue = 0, chroma = 28.3, cr = 8.13 },
-    { key = "shell", hue = 340, chroma = 34.9, cr = 5.78 },
+    { key = "shell", hue = 341, chroma = 35.2, cr = 5.95 },
   },
 }

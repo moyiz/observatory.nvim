@@ -24,12 +24,12 @@
 -- What is in the frame, and the roles it takes:
 --
 --   lobes         hue  15  14.44 contrast  27.9% of frame   properties, modules
---   rim           hue  32   9.26 contrast   5.2% of frame   operators
+--   rim           hue  32   9.27 contrast   5.2% of frame   operators
 --   dust          hue  17   8.71 contrast   2.7% of frame   functions
 --   outflow       hue  82   7.72 contrast  15.4% of frame   keywords
 --   throat        hue   2   6.01 contrast  11.6% of frame   escapes
---   veil          hue  28   5.71 contrast  12.2% of frame   numbers, macros, imports
---   bowtie        hue 340   4.73 contrast  16.9% of frame   strings
+--   veil          hue  28   5.78 contrast  12.2% of frame   numbers, macros, imports
+--   bowtie        hue 340   5.73 contrast  16.9% of frame   strings
 --   mauve         hue 355   4.68 contrast   8.1% of frame   types
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
@@ -53,6 +53,12 @@
 -- between the colors and every proportion of the frame is the picture's;
 -- only the overall saturation is the display's, in the way that a print of
 -- a photograph has its own.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so bowtie was lifted from 4.73 to 5.73 contrast, as far as the
+-- separation floor allows, with rim and veil moved up beside it to keep the
+-- ladder in order.
 
 return {
   name = "observatory-boomerang",
@@ -78,26 +84,26 @@ return {
   lnr_cur = "#b7a19c",
 
   -- syntax roles
-  str = "#bd5578",
-  num = "#af7a4b",
+  str = "#d65c85",
+  num = "#b07b4c",
   typ = "#ca4c56",
   mod = "#faccbd",
   prop = "#faccbd",
   func = "#ea906d",
   kw = "#92a375",
-  op = "#caa67d",
-  macro = "#af7a4b",
+  op = "#caa67e",
+  macro = "#b07b4c",
   esc = "#bb7775",
 
   -- interface duties, following the syntax colors
   err = "#f0060e",
   warn = "#edc24a",
   info = "#faccbd",
-  hint = "#bd5578",
+  hint = "#d65c85",
   ok = "#29b16d",
   accent = "#ea906d",
   cursearch = "#92a375",
-  subst = "#bd5578",
+  subst = "#d65c85",
   match = "#edc24a",
   title = "#ea906d",
   dir = "#ca4c56",
@@ -105,10 +111,10 @@ return {
   tag = "#92a375",
   h1 = "#92a375",
   h2 = "#ea906d",
-  h3 = "#bd5578",
+  h3 = "#d65c85",
   h4 = "#ca4c56",
   h5 = "#faccbd",
-  h6 = "#af7a4b",
+  h6 = "#b07b4c",
 
   -- diff and virtual-text backdrops
   diff_add = "#062315",
@@ -123,13 +129,13 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "bowtie", hue = 340, chroma = 45.4, cr = 4.73 },
-    { key = "veil", hue = 28, chroma = 37.1, cr = 5.71 },
+    { key = "bowtie", hue = 340, chroma = 51.9, cr = 5.73 },
+    { key = "veil", hue = 28, chroma = 37.1, cr = 5.78 },
     { key = "mauve", hue = 355, chroma = 54.9, cr = 4.68 },
     { key = "lobes", hue = 15, chroma = 19.5, cr = 14.44 },
     { key = "dust", hue = 17, chroma = 44.9, cr = 8.71 },
     { key = "outflow", hue = 82, chroma = 26.2, cr = 7.72 },
-    { key = "rim", hue = 32, chroma = 27.3, cr = 9.26 },
+    { key = "rim", hue = 32, chroma = 26.8, cr = 9.27 },
     { key = "throat", hue = 2, chroma = 29.1, cr = 6.01 },
   },
 }

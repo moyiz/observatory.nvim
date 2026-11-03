@@ -31,8 +31,8 @@
 --   hii          hue 343   11.01 contrast   functions
 --   ob_arm       hue 220    9.42 contrast   keywords, macros, imports
 --   bulge        hue  27    7.57 contrast   types
---   dust_lane    hue  20    4.79 contrast   numbers, operators
---   outer_disc   hue 219    4.75 contrast   strings, escapes
+--   dust_lane    hue  20    6.03 contrast   numbers, operators
+--   outer_disc   hue 219    5.99 contrast   strings, escapes
 --
 -- Hues here are fixed by the source, since they are the part that
 -- represents the world. Saturation and contrast were then solved within a
@@ -46,6 +46,11 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 17.0 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so outer_disc was lifted from 4.75 to 5.99 contrast, with dust_lane
+-- moved up beside it to keep the ladder in order.
 
 return {
   name = "observatory-galaxy",
@@ -71,26 +76,26 @@ return {
   lnr_cur = "#b0a493",
 
   -- syntax roles
-  str = "#5678b5",
-  num = "#b96034",
+  str = "#6489cc",
+  num = "#cb7245",
   typ = "#c98f5e",
   mod = "#d3d8f4",
   prop = "#eee6de",
   func = "#ebaabc",
   kw = "#96aedf",
-  op = "#b96034",
+  op = "#cb7245",
   macro = "#96aedf",
-  esc = "#5678b5",
+  esc = "#6489cc",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
   info = "#d3d8f4",
-  hint = "#5678b5",
+  hint = "#6489cc",
   ok = "#29b16d",
   accent = "#ebaabc",
   cursearch = "#96aedf",
-  subst = "#5678b5",
+  subst = "#6489cc",
   match = "#edc24a",
   title = "#ebaabc",
   dir = "#c98f5e",
@@ -98,10 +103,10 @@ return {
   tag = "#96aedf",
   h1 = "#96aedf",
   h2 = "#ebaabc",
-  h3 = "#5678b5",
+  h3 = "#6489cc",
   h4 = "#c98f5e",
   h5 = "#d3d8f4",
-  h6 = "#b96034",
+  h6 = "#cb7245",
 
   -- diff and virtual-text backdrops
   diff_add = "#062315",
@@ -116,8 +121,8 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "outer_disc", hue = 219, chroma = 36.4, cr = 4.75 },
-    { key = "dust_lane", hue = 20, chroma = 51.9, cr = 4.79 },
+    { key = "outer_disc", hue = 219, chroma = 39.1, cr = 5.99 },
+    { key = "dust_lane", hue = 20, chroma = 50.5, cr = 6.03 },
     { key = "bulge", hue = 27, chroma = 38.4, cr = 7.57 },
     { key = "young_disc", hue = 231, chroma = 14.7, cr = 14.90 },
     { key = "nucleus", hue = 30, chroma = 5.0, cr = 17.01 },

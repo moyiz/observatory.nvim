@@ -28,7 +28,7 @@
 --   olivine      hue  74    8.60 contrast   modules
 --   sunset       hue 208    7.42 contrast   types
 --   shadow       hue  11    7.17 contrast   operators
---   sand         hue  24    5.95 contrast   strings, escapes
+--   sand         hue  24    6.03 contrast   strings, escapes
 --   basalt       hue 216    5.36 contrast   numbers
 --
 -- Hues here are fixed by the source, since they are the part that
@@ -43,6 +43,10 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 14.4 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so sand was lifted from 5.95 to 6.03 contrast.
 
 return {
   name = "observatory-mars-computed",
@@ -68,7 +72,7 @@ return {
   lnr_cur = "#b4a298",
 
   -- syntax roles
-  str = "#b67b55",
+  str = "#b77c56",
   num = "#6882aa",
   typ = "#5f9fd6",
   mod = "#9bae5b",
@@ -77,17 +81,17 @@ return {
   kw = "#f99976",
   op = "#9e9593",
   macro = "#f99976",
-  esc = "#b67b55",
+  esc = "#b77c56",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
   info = "#9bae5b",
-  hint = "#b67b55",
+  hint = "#b77c56",
   ok = "#29b16d",
   accent = "#f7d1b3",
   cursearch = "#f99976",
-  subst = "#b67b55",
+  subst = "#b77c56",
   match = "#edc24a",
   title = "#f7d1b3",
   dir = "#5f9fd6",
@@ -95,7 +99,7 @@ return {
   tag = "#f99976",
   h1 = "#f99976",
   h2 = "#f7d1b3",
-  h3 = "#b67b55",
+  h3 = "#b77c56",
   h4 = "#5f9fd6",
   h5 = "#9bae5b",
   h6 = "#6882aa",
@@ -113,7 +117,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "sand", hue = 24, chroma = 35.4, cr = 5.95 },
+    { key = "sand", hue = 24, chroma = 35.3, cr = 6.03 },
     { key = "basalt", hue = 216, chroma = 24.2, cr = 5.36 },
     { key = "sunset", hue = 208, chroma = 34.6, cr = 7.42 },
     { key = "olivine", hue = 74, chroma = 44.7, cr = 8.60 },

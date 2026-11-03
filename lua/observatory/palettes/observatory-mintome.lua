@@ -23,7 +23,7 @@
 --   sun           hue  55  16.86 contrast   2.3% of frame   macros, imports, modules
 --   band          hue 337  16.08 contrast  32.7% of frame   functions, keywords, operators, escapes
 --   zone          hue 338  12.57 contrast  26.1% of frame   properties, types
---   interior      hue 337   5.92 contrast  35.8% of frame   strings
+--   interior      hue 338   6.03 contrast  35.8% of frame   strings
 --   dark          hue  52   4.70 contrast   3.0% of frame   numbers
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
@@ -47,6 +47,10 @@
 -- separation floor, and two colors a reader cannot distinguish are one
 -- color. The folded share went to the neighbour, so the proportions of
 -- the frame are still what the roles follow.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so interior was lifted from 5.92 to 6.03 contrast.
 
 return {
   name = "observatory-mintome",
@@ -72,7 +76,7 @@ return {
   lnr_cur = "#b99faa",
 
   -- syntax roles
-  str = "#bf708e",
+  str = "#c1718f",
   num = "#7e7853",
   typ = "#fcb4cf",
   mod = "#ece8bf",
@@ -87,11 +91,11 @@ return {
   err = "#f24e54",
   warn = "#edc24a",
   info = "#ece8bf",
-  hint = "#bf708e",
+  hint = "#c1718f",
   ok = "#29b16d",
   accent = "#fed7e6",
   cursearch = "#fed7e6",
-  subst = "#bf708e",
+  subst = "#c1718f",
   match = "#edc24a",
   title = "#fed7e6",
   dir = "#fcb4cf",
@@ -99,7 +103,7 @@ return {
   tag = "#fed7e6",
   h1 = "#fed7e6",
   h2 = "#fed7e6",
-  h3 = "#bf708e",
+  h3 = "#c1718f",
   h4 = "#fcb4cf",
   h5 = "#ece8bf",
   h6 = "#7e7853",
@@ -117,7 +121,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "interior", hue = 337, chroma = 35.2, cr = 5.92 },
+    { key = "interior", hue = 338, chroma = 35.5, cr = 6.03 },
     { key = "dark", hue = 52, chroma = 21.5, cr = 4.70 },
     { key = "zone", hue = 338, chroma = 30.2, cr = 12.57 },
     { key = "sun", hue = 55, chroma = 21.1, cr = 16.86 },

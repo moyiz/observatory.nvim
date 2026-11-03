@@ -24,7 +24,7 @@
 --   highland      hue  54  16.86 contrast   5.5% of frame   keywords, operators
 --   lowland       hue  36  13.80 contrast   4.8% of frame   types, macros, imports
 --   crust         hue  26   7.40 contrast  52.2% of frame   functions, properties, numbers, modules, escapes
---   night         hue  23   4.70 contrast  37.4% of frame   strings
+--   night         hue  23   6.02 contrast  37.4% of frame   strings
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
 -- makes a palette recognisable as its subject. Each color's purity was then
@@ -59,6 +59,10 @@
 -- separation floor allows, so the ladder was spread to 12 points of
 -- lightness between rungs rather than the three the picture asked for.
 -- The order is still the picture's; the spacing is not.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so night was lifted from 4.70 to 6.02 contrast.
 
 return {
   name = "observatory-kepler1275b",
@@ -84,7 +88,7 @@ return {
   lnr_cur = "#b5a398",
 
   -- syntax roles
-  str = "#a56943",
+  str = "#bb7a51",
   num = "#c18f6a",
   typ = "#e7cea9",
   mod = "#c18f6a",
@@ -99,11 +103,11 @@ return {
   err = "#f24e54",
   warn = "#edc24a",
   info = "#c18f6a",
-  hint = "#a56943",
+  hint = "#bb7a51",
   ok = "#29b16d",
   accent = "#c18f6a",
   cursearch = "#ede8bb",
-  subst = "#a56943",
+  subst = "#bb7a51",
   match = "#edc24a",
   title = "#c18f6a",
   dir = "#e7cea9",
@@ -111,7 +115,7 @@ return {
   tag = "#ede8bb",
   h1 = "#ede8bb",
   h2 = "#c18f6a",
-  h3 = "#a56943",
+  h3 = "#bb7a51",
   h4 = "#e7cea9",
   h5 = "#c18f6a",
   h6 = "#c18f6a",
@@ -129,7 +133,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "night", hue = 23, chroma = 37.0, cr = 4.70 },
+    { key = "night", hue = 23, chroma = 38.9, cr = 6.02 },
     { key = "crust", hue = 26, chroma = 30.6, cr = 7.40 },
     { key = "lowland", hue = 36, chroma = 21.9, cr = 13.80 },
     { key = "highland", hue = 54, chroma = 23.2, cr = 16.86 },

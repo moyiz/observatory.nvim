@@ -24,7 +24,7 @@
 --   sunlit        hue  33  16.93 contrast   3.9% of frame   keywords
 --   haze          hue  24  14.81 contrast  11.4% of frame   types, numbers, macros, imports, escapes
 --   deck          hue  26  12.41 contrast  49.0% of frame   functions, properties, operators, modules
---   shade         hue 223   4.68 contrast  35.7% of frame   strings
+--   shade         hue 224   6.00 contrast  35.7% of frame   strings
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
 -- makes a palette recognisable as its subject. Each color's purity was then
@@ -59,6 +59,10 @@
 -- separation floor allows, so the ladder was spread to 5 points of
 -- lightness between rungs rather than the three the picture asked for.
 -- The order is still the picture's; the spacing is not.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so shade was lifted from 4.68 to 6.00 contrast.
 
 return {
   name = "observatory-venus",
@@ -84,7 +88,7 @@ return {
   lnr_cur = "#b1a393",
 
   -- syntax roles
-  str = "#737781",
+  str = "#858994",
   num = "#dbd8d6",
   typ = "#dbd8d6",
   mod = "#d5c4b7",
@@ -99,11 +103,11 @@ return {
   err = "#f24e54",
   warn = "#edc24a",
   info = "#d5c4b7",
-  hint = "#737781",
+  hint = "#858994",
   ok = "#29b16d",
   accent = "#d5c4b7",
   cursearch = "#f7e4cd",
-  subst = "#737781",
+  subst = "#858994",
   match = "#edc24a",
   title = "#d5c4b7",
   dir = "#dbd8d6",
@@ -111,7 +115,7 @@ return {
   tag = "#f7e4cd",
   h1 = "#f7e4cd",
   h2 = "#d5c4b7",
-  h3 = "#737781",
+  h3 = "#858994",
   h4 = "#dbd8d6",
   h5 = "#d5c4b7",
   h6 = "#dbd8d6",
@@ -129,7 +133,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "shade", hue = 223, chroma = 6.0, cr = 4.68 },
+    { key = "shade", hue = 224, chroma = 6.4, cr = 6.00 },
     { key = "haze", hue = 24, chroma = 1.5, cr = 14.81 },
     { key = "deck", hue = 26, chroma = 9.5, cr = 12.41 },
     { key = "sunlit", hue = 33, chroma = 13.9, cr = 16.93 },

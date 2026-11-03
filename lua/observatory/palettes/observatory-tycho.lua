@@ -33,9 +33,9 @@
 --   rim           hue 257  11.00 contrast  11.1% of frame   numbers, operators
 --   iron          hue 337  10.27 contrast  16.1% of frame   keywords, types
 --   shock         hue 274   7.62 contrast  10.7% of frame   macros, imports
---   edge          hue 354   5.78 contrast   7.7% of frame   functions
---   silicon       hue 354   5.45 contrast  11.7% of frame   modules
---   cavity        hue 330   4.75 contrast  13.4% of frame   strings
+--   edge          hue 354   6.13 contrast   7.7% of frame   functions
+--   silicon       hue 353   6.08 contrast  11.7% of frame   modules
+--   cavity        hue 330   6.01 contrast  13.4% of frame   strings
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
 -- makes a palette recognisable as its subject. Each color's purity was then
@@ -56,6 +56,11 @@
 -- separation floor allows, so the ladder was spread to 7 points of
 -- lightness between rungs rather than the three the picture asked for.
 -- The order is still the picture's; the spacing is not.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so cavity was lifted from 4.75 to 6.01 contrast, with edge and silicon
+-- moved up beside it to keep the ladder in order.
 
 return {
   name = "observatory-tycho",
@@ -81,12 +86,12 @@ return {
   lnr_cur = "#ba9fa6",
 
   -- syntax roles
-  str = "#ae5e86",
+  str = "#c66c99",
   num = "#c2b5e2",
   typ = "#f49bbd",
-  mod = "#d55966",
+  mod = "#df616f",
   prop = "#fdbeca",
-  func = "#bc7179",
+  func = "#c0767e",
   kw = "#f49bbd",
   op = "#c2b5e2",
   macro = "#b58bd5",
@@ -95,22 +100,22 @@ return {
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
-  info = "#d55966",
-  hint = "#ae5e86",
+  info = "#df616f",
+  hint = "#c66c99",
   ok = "#29b16d",
-  accent = "#bc7179",
+  accent = "#c0767e",
   cursearch = "#f49bbd",
-  subst = "#ae5e86",
+  subst = "#c66c99",
   match = "#edc24a",
-  title = "#bc7179",
+  title = "#c0767e",
   dir = "#f49bbd",
   label = "#f49bbd",
   tag = "#f49bbd",
   h1 = "#f49bbd",
-  h2 = "#bc7179",
-  h3 = "#ae5e86",
+  h2 = "#c0767e",
+  h3 = "#c66c99",
   h4 = "#f49bbd",
-  h5 = "#d55966",
+  h5 = "#df616f",
   h6 = "#c2b5e2",
 
   -- diff and virtual-text backdrops
@@ -126,12 +131,12 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "cavity", hue = 330, chroma = 38.3, cr = 4.75 },
+    { key = "cavity", hue = 330, chroma = 42.1, cr = 6.01 },
     { key = "rim", hue = 257, chroma = 24.8, cr = 11.00 },
     { key = "iron", hue = 337, chroma = 37.8, cr = 10.27 },
-    { key = "silicon", hue = 354, chroma = 52.9, cr = 5.45 },
+    { key = "silicon", hue = 353, chroma = 53.2, cr = 6.08 },
     { key = "ejecta", hue = 349, chroma = 24.5, cr = 13.39 },
-    { key = "edge", hue = 354, chroma = 31.7, cr = 5.78 },
+    { key = "edge", hue = 354, chroma = 31.0, cr = 6.13 },
     { key = "shock", hue = 274, chroma = 43.7, cr = 7.62 },
     { key = "stripes", hue = 313, chroma = 15.1, cr = 16.98 },
   },

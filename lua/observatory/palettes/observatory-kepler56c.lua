@@ -25,8 +25,8 @@
 --   star          hue  50  10.90 contrast  31.8% of frame   numbers, macros, imports
 --   flare         hue  41   9.06 contrast  16.0% of frame   functions
 --   glare         hue  33   7.49 contrast  13.6% of frame   properties
---   haze          hue  27   5.99 contrast   8.4% of frame   keywords
---   ember         hue  35   5.85 contrast   7.9% of frame   strings
+--   haze          hue  27   6.10 contrast   8.4% of frame   keywords
+--   ember         hue  35   6.02 contrast   7.9% of frame   strings
 --   unit_7        hue  17   4.68 contrast   6.5% of frame   modules
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
@@ -43,6 +43,11 @@
 -- purity, which is solved rather than maximised -- each accent carries the
 -- chroma its own patch of the frame carries, as far as the display allows --
 -- and the closest pair of adjacent-capable roles sits at 9.2 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so ember was lifted from 5.85 to 6.02 contrast, with haze moved up
+-- beside it to keep the ladder in order.
 
 return {
   name = "observatory-kepler56c",
@@ -68,13 +73,13 @@ return {
   lnr_cur = "#aca690",
 
   -- syntax roles
-  str = "#c47406",
+  str = "#c77608",
   num = "#dcb808",
   typ = "#fedfe9",
   mod = "#d34711",
   prop = "#e48207",
   func = "#e29d07",
-  kw = "#dc6708",
+  kw = "#dd690b",
   op = "#fedfe9",
   macro = "#dcb808",
   esc = "#e8d6a8",
@@ -83,19 +88,19 @@ return {
   err = "#f24e54",
   warn = "#edc24a",
   info = "#d34711",
-  hint = "#c47406",
+  hint = "#c77608",
   ok = "#29b16d",
   accent = "#e29d07",
-  cursearch = "#dc6708",
-  subst = "#c47406",
+  cursearch = "#dd690b",
+  subst = "#c77608",
   match = "#edc24a",
   title = "#e29d07",
   dir = "#fedfe9",
-  label = "#dc6708",
-  tag = "#dc6708",
-  h1 = "#dc6708",
+  label = "#dd690b",
+  tag = "#dd690b",
+  h1 = "#dd690b",
   h2 = "#e29d07",
-  h3 = "#c47406",
+  h3 = "#c77608",
   h4 = "#fedfe9",
   h5 = "#d34711",
   h6 = "#dcb808",
@@ -113,13 +118,13 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "ember", hue = 35, chroma = 67.1, cr = 5.85 },
+    { key = "ember", hue = 35, chroma = 67.5, cr = 6.02 },
     { key = "star", hue = 50, chroma = 76.9, cr = 10.90 },
     { key = "limb", hue = 341, chroma = 12.3, cr = 16.95 },
     { key = "unit_7", hue = 17, chroma = 77.6, cr = 4.68 },
     { key = "glare", hue = 33, chroma = 75.7, cr = 7.49 },
     { key = "flare", hue = 41, chroma = 74.7, cr = 9.06 },
-    { key = "haze", hue = 27, chroma = 76.3, cr = 5.99 },
+    { key = "haze", hue = 27, chroma = 75.9, cr = 6.10 },
     { key = "unit_8", hue = 43, chroma = 25.0, cr = 14.62 },
   },
 }

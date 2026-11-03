@@ -27,8 +27,8 @@
 --   emission      hue 343  13.34 contrast  26.8% of frame   functions, properties
 --   hydrogen      hue 344  11.02 contrast  16.5% of frame   operators, macros, imports
 --   haze          hue 218  10.32 contrast  25.8% of frame   keywords, types, numbers
---   lanes         hue 352   6.01 contrast   3.1% of frame   escapes
---   core          hue 214   4.70 contrast   9.1% of frame   strings
+--   lanes         hue 352   6.09 contrast   3.1% of frame   escapes
+--   core          hue 214   6.00 contrast   9.1% of frame   strings
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
 -- makes a palette recognisable as its subject. Each color's purity was then
@@ -63,6 +63,11 @@
 -- separation floor allows, so the ladder was spread to 7 points of
 -- lightness between rungs rather than the three the picture asked for.
 -- The order is still the picture's; the spacing is not.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so core was lifted from 4.70 to 6.00 contrast, with lanes moved up
+-- beside it to keep the ladder in order.
 
 return {
   name = "observatory-trifid",
@@ -88,7 +93,7 @@ return {
   lnr_cur = "#b99fa8",
 
   -- syntax roles
-  str = "#5e799d",
+  str = "#708baf",
   num = "#a0b7de",
   typ = "#a0b7de",
   mod = "#f9e0ef",
@@ -97,17 +102,17 @@ return {
   kw = "#a0b7de",
   op = "#fca2ba",
   macro = "#fca2ba",
-  esc = "#d06a77",
+  esc = "#d16b78",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
   info = "#f9e0ef",
-  hint = "#5e799d",
+  hint = "#708baf",
   ok = "#29b16d",
   accent = "#f8bfcf",
   cursearch = "#a0b7de",
-  subst = "#5e799d",
+  subst = "#708baf",
   match = "#edc24a",
   title = "#f8bfcf",
   dir = "#a0b7de",
@@ -115,7 +120,7 @@ return {
   tag = "#a0b7de",
   h1 = "#a0b7de",
   h2 = "#f8bfcf",
-  h3 = "#5e799d",
+  h3 = "#708baf",
   h4 = "#a0b7de",
   h5 = "#f9e0ef",
   h6 = "#a0b7de",
@@ -133,11 +138,11 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "core", hue = 214, chroma = 22.5, cr = 4.70 },
+    { key = "core", hue = 214, chroma = 22.0, cr = 6.00 },
     { key = "haze", hue = 218, chroma = 22.2, cr = 10.32 },
     { key = "reflection", hue = 324, chroma = 11.8, cr = 16.94 },
     { key = "emission", hue = 343, chroma = 22.8, cr = 13.34 },
     { key = "hydrogen", hue = 344, chroma = 36.4, cr = 11.02 },
-    { key = "lanes", hue = 352, chroma = 43.0, cr = 6.01 },
+    { key = "lanes", hue = 352, chroma = 43.0, cr = 6.09 },
   },
 }

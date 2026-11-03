@@ -25,8 +25,8 @@
 --   sulfur       hue  55  14.20 contrast  33.3% of frame   modules
 --   frost         hue  52  13.59 contrast  31.2% of frame   properties, types
 --   flow          hue  43  10.63 contrast   4.3% of frame   keywords
---   vent          hue  40   7.51 contrast   3.2% of frame   escapes
---   caldera       hue  37   4.72 contrast   1.0% of frame   strings, functions
+--   vent          hue  40   6.94 contrast   3.2% of frame   escapes
+--   caldera       hue  38   6.03 contrast   1.0% of frame   strings, functions
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
 -- makes a palette recognisable as its subject. Each color's purity was then
@@ -47,6 +47,10 @@
 -- separation floor allows, so the ladder was spread to 5 points of
 -- lightness between rungs rather than the three the picture asked for.
 -- The order is still the picture's; the spacing is not.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so caldera was lifted from 4.72 to 6.03 contrast.
 
 return {
   name = "observatory-io",
@@ -72,34 +76,34 @@ return {
   lnr_cur = "#aaa690",
 
   -- syntax roles
-  str = "#8c744d",
+  str = "#9e865e",
   num = "#f6e978",
   typ = "#d7d1aa",
   mod = "#ded78c",
   prop = "#d7d1aa",
-  func = "#8c744d",
+  func = "#9e865e",
   kw = "#dab453",
   op = "#f6e978",
   macro = "#f6e978",
-  esc = "#b79656",
+  esc = "#b38f48",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#f2bc28",
   info = "#ded78c",
-  hint = "#8c744d",
+  hint = "#9e865e",
   ok = "#29b16d",
-  accent = "#8c744d",
+  accent = "#9e865e",
   cursearch = "#dab453",
-  subst = "#8c744d",
+  subst = "#9e865e",
   match = "#f2bc28",
-  title = "#8c744d",
+  title = "#9e865e",
   dir = "#d7d1aa",
   label = "#dab453",
   tag = "#dab453",
   h1 = "#dab453",
-  h2 = "#8c744d",
-  h3 = "#8c744d",
+  h2 = "#9e865e",
+  h3 = "#9e865e",
   h4 = "#d7d1aa",
   h5 = "#ded78c",
   h6 = "#f6e978",
@@ -117,11 +121,11 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "caldera", hue = 37, chroma = 25.3, cr = 4.72 },
+    { key = "caldera", hue = 38, chroma = 25.1, cr = 6.03 },
     { key = "ochre", hue = 54, chroma = 56.8, cr = 16.85 },
     { key = "frost", hue = 52, chroma = 20.6, cr = 13.59 },
     { key = "sulfur", hue = 55, chroma = 38.8, cr = 14.20 },
     { key = "flow", hue = 43, chroma = 53.5, cr = 10.63 },
-    { key = "vent", hue = 40, chroma = 38.4, cr = 7.51 },
+    { key = "vent", hue = 40, chroma = 42.6, cr = 6.94 },
   },
 }

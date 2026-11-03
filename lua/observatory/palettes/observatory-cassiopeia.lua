@@ -36,7 +36,7 @@
 --   iron          hue 352  10.89 contrast   9.0% of frame   keywords
 --   rim           hue 283   8.03 contrast   6.4% of frame   modules
 --   shell         hue 246   7.65 contrast  15.6% of frame   types, numbers
---   hard          hue 252   5.69 contrast  12.2% of frame   strings
+--   hard          hue 252   6.01 contrast  12.2% of frame   strings
 --   outer         hue 288   4.70 contrast   5.4% of frame   escapes
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
@@ -60,6 +60,10 @@
 -- between the colors and every proportion of the frame is the picture's;
 -- only the overall saturation is the display's, in the way that a print of
 -- a photograph has its own.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so hard was lifted from 5.69 to 6.01 contrast.
 
 return {
   name = "observatory-cassiopeia",
@@ -85,7 +89,7 @@ return {
   lnr_cur = "#b3a396",
 
   -- syntax roles
-  str = "#8a72eb",
+  str = "#8e76f1",
   num = "#9b94db",
   typ = "#9b94db",
   mod = "#ac9ab3",
@@ -100,11 +104,11 @@ return {
   err = "#f24e54",
   warn = "#edc24a",
   info = "#ac9ab3",
-  hint = "#8a72eb",
+  hint = "#8e76f1",
   ok = "#29b16d",
   accent = "#fad7b6",
   cursearch = "#e5acb4",
-  subst = "#8a72eb",
+  subst = "#8e76f1",
   match = "#edc24a",
   title = "#fad7b6",
   dir = "#9b94db",
@@ -112,7 +116,7 @@ return {
   tag = "#e5acb4",
   h1 = "#e5acb4",
   h2 = "#fad7b6",
-  h3 = "#8a72eb",
+  h3 = "#8e76f1",
   h4 = "#9b94db",
   h5 = "#ac9ab3",
   h6 = "#9b94db",
@@ -130,7 +134,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "hard", hue = 252, chroma = 69.4, cr = 5.69 },
+    { key = "hard", hue = 252, chroma = 70.2, cr = 6.01 },
     { key = "shell", hue = 246, chroma = 39.7, cr = 7.65 },
     { key = "rim", hue = 283, chroma = 15.5, cr = 8.03 },
     { key = "interior", hue = 29, chroma = 22.1, cr = 15.46 },

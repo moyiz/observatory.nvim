@@ -42,8 +42,8 @@
 --   rim          hue 208   10.12 contrast   modules, types
 --   cassini      hue  20    7.31 contrast   keywords, macros, imports
 --   transition   hue  34    6.38 contrast   operators
---   ridge        hue  10    5.47 contrast   numbers
---   regio        hue  26    4.79 contrast   strings, escapes
+--   ridge        hue   9    6.09 contrast   numbers
+--   regio        hue  26    6.00 contrast   strings, escapes
 --
 -- Hues here are fixed by the source, since they are the part that
 -- represents the world. Saturation and contrast were then solved within a
@@ -57,6 +57,11 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 15.2 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so regio was lifted from 4.79 to 6.00 contrast, with ridge moved up
+-- beside it to keep the ladder in order.
 
 return {
   name = "observatory-iapetus-computed",
@@ -82,8 +87,8 @@ return {
   lnr_cur = "#7a919d",
 
   -- syntax roles
-  str = "#a16d45",
-  num = "#c66755",
+  str = "#b47d54",
+  num = "#ca7262",
   typ = "#8ab9e2",
   mod = "#8ab9e2",
   prop = "#e5e7e7",
@@ -91,17 +96,17 @@ return {
   kw = "#da8255",
   op = "#bc8235",
   macro = "#da8255",
-  esc = "#a16d45",
+  esc = "#b47d54",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
   info = "#8ab9e2",
-  hint = "#a16d45",
+  hint = "#b47d54",
   ok = "#29b16d",
   accent = "#badaee",
   cursearch = "#da8255",
-  subst = "#a16d45",
+  subst = "#b47d54",
   match = "#edc24a",
   title = "#badaee",
   dir = "#8ab9e2",
@@ -109,10 +114,10 @@ return {
   tag = "#da8255",
   h1 = "#da8255",
   h2 = "#badaee",
-  h3 = "#a16d45",
+  h3 = "#b47d54",
   h4 = "#8ab9e2",
   h5 = "#8ab9e2",
-  h6 = "#c66755",
+  h6 = "#ca7262",
 
   -- diff and virtual-text backdrops
   diff_add = "#062315",
@@ -127,8 +132,8 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "regio", hue = 26, chroma = 34.6, cr = 4.79 },
-    { key = "ridge", hue = 10, chroma = 45.3, cr = 5.47 },
+    { key = "regio", hue = 26, chroma = 35.0, cr = 6.00 },
+    { key = "ridge", hue = 9, chroma = 40.8, cr = 6.09 },
     { key = "rim", hue = 208, chroma = 26.0, cr = 10.12 },
     { key = "snow", hue = 180, chroma = 0.7, cr = 16.92 },
     { key = "trailing", hue = 203, chroma = 14.7, cr = 14.35 },

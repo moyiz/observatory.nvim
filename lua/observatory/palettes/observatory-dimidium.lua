@@ -29,7 +29,7 @@
 --
 --   shade         hue   0  16.95 contrast   6.8% of frame   keywords, macros, imports, modules
 --   band          hue  36   7.84 contrast  31.3% of frame   functions, types, numbers
---   cloud         hue  28   5.65 contrast  48.6% of frame   strings, operators, escapes
+--   cloud         hue  28   6.00 contrast  48.6% of frame   strings, operators, escapes
 --   haze          hue  45   4.73 contrast  13.3% of frame   properties
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
@@ -60,6 +60,10 @@
 -- separation floor, and two colors a reader cannot distinguish are one
 -- color. The folded share went to the neighbour, so the proportions of
 -- the frame are still what the roles follow.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue.
+-- Strings are the most common token on a screen and sat close to the comment
+-- rung, so cloud was lifted from 5.65 to 6.00 contrast.
 
 return {
   name = "observatory-dimidium",
@@ -85,26 +89,26 @@ return {
   lnr_cur = "#b3a396",
 
   -- syntax roles
-  str = "#af7949",
+  str = "#b57d4c",
   num = "#b69a6f",
   typ = "#b69a6f",
   mod = "#fee0e0",
   prop = "#837752",
   func = "#b69a6f",
   kw = "#fee0e0",
-  op = "#af7949",
+  op = "#b57d4c",
   macro = "#fee0e0",
-  esc = "#af7949",
+  esc = "#b57d4c",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
   info = "#fee0e0",
-  hint = "#af7949",
+  hint = "#b57d4c",
   ok = "#29b16d",
   accent = "#b69a6f",
   cursearch = "#fee0e0",
-  subst = "#af7949",
+  subst = "#b57d4c",
   match = "#edc24a",
   title = "#b69a6f",
   dir = "#b69a6f",
@@ -112,7 +116,7 @@ return {
   tag = "#fee0e0",
   h1 = "#fee0e0",
   h2 = "#b69a6f",
-  h3 = "#af7949",
+  h3 = "#b57d4c",
   h4 = "#b69a6f",
   h5 = "#fee0e0",
   h6 = "#b69a6f",
@@ -130,7 +134,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "cloud", hue = 28, chroma = 38.0, cr = 5.65 },
+    { key = "cloud", hue = 28, chroma = 38.8, cr = 6.00 },
     { key = "band", hue = 36, chroma = 26.8, cr = 7.84 },
     { key = "shade", hue = 0, chroma = 11.0, cr = 16.95 },
     { key = "haze", hue = 45, chroma = 22.1, cr = 4.73 },
