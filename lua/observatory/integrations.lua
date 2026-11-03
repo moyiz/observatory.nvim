@@ -473,7 +473,6 @@ end)
 -- snacks
 add("snacks", function(c, o)
   return {
-    SnacksBackdrop = { bg = c.bg },
     SnacksDashboardDesc = { fg = c.text },
     SnacksDashboardDir = { fg = c.comment },
     SnacksDashboardFooter = { fg = c.comment, italic = o.italic },
@@ -718,6 +717,7 @@ function M.get(c, o)
       end
     end
   end
+  require("observatory.groups").transparent(out, c, o)
   return out
 end
 

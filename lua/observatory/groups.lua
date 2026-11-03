@@ -239,18 +239,26 @@ function M.get(c, o)
     DiagnosticUnnecessary = { fg = c.lnr },
   }
 
-  -- Transparency clears the editor background and leaves floats,
-  -- selections and diff backdrops alone: a float with no
-  -- background of its own is unreadable over arbitrary content.
-  if o.transparent then
-    for _, spec in pairs(groups) do
-      if spec.bg == c.bg then
-        spec.bg = "NONE"
-      end
-    end
-  end
+  M.transparent(groups, c, o)
 
   return groups
+end
+
+---Transparency clears the editor background and leaves floats,
+---selections and diff backdrops alone: a float with no
+---background of its own is unreadable over arbitrary content.
+---@param groups table<string, table>
+---@param c table palette
+---@param o table resolved options
+function M.transparent(groups, c, o)
+  if not o.transparent then
+    return
+  end
+  for _, spec in pairs(groups) do
+    if spec.bg == c.bg then
+      spec.bg = "NONE"
+    end
+  end
 end
 
 return M
