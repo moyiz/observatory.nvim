@@ -86,6 +86,10 @@ require("observatory").setup {
 }
 ```
 
+With `transparent` on, the `~` filler lines past the end of a buffer are still
+painted `#000000`, which shows on a background that is not black. Hide them on
+any background with `vim.opt.fillchars:append { eob = " " }`.
+
 ### :wheel: Overrides
 
 Highlight groups of your own, keyed by the scheme they apply to:

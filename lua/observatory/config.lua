@@ -5,7 +5,9 @@ M.defaults = {
   --- backdrops with their own. Note that every scheme in this collection is
   --- built on a true black background and its contrast ratios are measured
   --- against #000000; turn this on and those measurements describe your
-  --- terminal's background rather than the scheme's.
+  --- terminal's background rather than the scheme's. The `~` past the end of
+  --- a buffer is hidden by painting it #000000, which a background other than
+  --- black will show; `vim.opt.fillchars:append { eob = " " }` hides it on any.
   transparent = false,
 
   --- Italics on comments and builtins.
