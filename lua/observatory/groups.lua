@@ -196,7 +196,8 @@ function M.get(c, o)
     -- empty table turns the semantic token off and lets the parser keep it.
     ["@lsp.type.comment"] = {},
     ["@lsp.type.modifier"] = { link = "@keyword.modifier" },
-    ["@lsp.mod.readonly"] = { link = "@constant" },
+    -- No @lsp.mod.readonly: TypeScript's server marks every `const` binding
+    -- readonly, and linking it to @constant painted most variables as numbers.
     ["@lsp.mod.deprecated"] = { strikethrough = true },
     LspReferenceWrite = { bg = c.bg_sel, underline = true },
     LspInlayHint = { fg = c.lnr, bg = c.bg_alt, italic = italic },
