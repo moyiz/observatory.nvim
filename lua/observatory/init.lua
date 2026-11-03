@@ -143,6 +143,8 @@ function M.load(name)
 
   if opts.terminal.enabled then
     require("observatory.terminal").apply(c, opts.terminal.method)
+  else
+    require("observatory.terminal").clear()
   end
 end
 

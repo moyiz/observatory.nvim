@@ -149,6 +149,19 @@ function M.apply(c, method)
     local bright = math.min(color.contrast(hex) * 1.45, 16.5)
     vim.g["terminal_color_" .. (slot + 8)] = color.at_contrast(hex, bright)
   end
+  M.applied = true
+end
+
+---Unset what `apply` set, so turning the option off between loads hands the
+---sixteen slots back to Neovim rather than leaving the last scheme's in them.
+function M.clear()
+  if not M.applied then
+    return
+  end
+  for slot = 0, 15 do
+    vim.g["terminal_color_" .. slot] = nil
+  end
+  M.applied = false
 end
 
 return M
