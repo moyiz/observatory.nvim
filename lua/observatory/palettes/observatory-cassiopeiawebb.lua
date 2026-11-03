@@ -36,7 +36,7 @@
 --   filament      hue  23  14.07 contrast   4.9% of frame   modules
 --   bright        hue 144  13.78 contrast   1.6% of frame   strings, functions
 --   interior      hue  15  10.84 contrast  19.1% of frame   types, numbers
---   knot          hue  17  10.46 contrast   5.1% of frame   macros, imports
+--   knot          hue  18  10.30 contrast   5.1% of frame   macros, imports
 --   shade         hue  10   6.04 contrast   7.2% of frame   escapes
 --   dust          hue 202   5.83 contrast  27.9% of frame   properties
 --   ground        hue 354   4.68 contrast   9.2% of frame   keywords
@@ -69,6 +69,11 @@
 -- separation floor, and two colors a reader cannot distinguish are one
 -- color. The folded share went to the neighbour, so the proportions of
 -- the frame are still what the roles follow.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which interior and knot, at 4.9, were not.
 
 return {
   name = "observatory-cassiopeiawebb",
@@ -102,7 +107,7 @@ return {
   func = "#addcc0",
   kw = "#9d696e",
   op = "#fde2c8",
-  macro = "#faa17d",
+  macro = "#fc9e77",
   esc = "#da6751",
 
   -- interface duties, following the syntax colors
@@ -145,7 +150,7 @@ return {
     { key = "dust", hue = 202, chroma = 21.9, cr = 5.83 },
     { key = "ground", hue = 354, chroma = 22.3, cr = 4.68 },
     { key = "shell", hue = 29, chroma = 16.9, cr = 16.89 },
-    { key = "knot", hue = 17, chroma = 43.7, cr = 10.46 },
+    { key = "knot", hue = 18, chroma = 46.8, cr = 10.30 },
     { key = "shade", hue = 10, chroma = 55.0, cr = 6.04 },
   },
 }

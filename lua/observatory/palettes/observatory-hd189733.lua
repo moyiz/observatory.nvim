@@ -28,7 +28,7 @@
 --
 --   azure         hue 194  17.00 contrast  11.0% of frame   keywords, operators
 --   crescent      hue 207  13.82 contrast  21.5% of frame   properties, macros, imports
---   terminator    hue 204  10.20 contrast   6.5% of frame   types
+--   terminator    hue 204  10.84 contrast   6.5% of frame   types
 --   glare         hue 210   9.27 contrast  12.2% of frame   functions
 --   disc          hue 216   7.71 contrast  40.8% of frame   strings, modules
 --   limb          hue 211   5.70 contrast   5.5% of frame   numbers
@@ -48,6 +48,11 @@
 -- purity, which is solved rather than maximised -- each accent carries the
 -- chroma its own patch of the frame carries, as far as the display allows --
 -- and the closest pair of adjacent-capable roles sits at 15.6 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which glare and terminator, at 5.3, were not.
 
 return {
   name = "observatory-hd189733",
@@ -75,7 +80,7 @@ return {
   -- syntax roles
   str = "#8a9ebd",
   num = "#4288d4",
-  typ = "#7abce9",
+  typ = "#7cc2f1",
   mod = "#8a9ebd",
   prop = "#b3d6f2",
   func = "#69b1fa",
@@ -95,13 +100,13 @@ return {
   subst = "#8a9ebd",
   match = "#edc24a",
   title = "#69b1fa",
-  dir = "#7abce9",
+  dir = "#7cc2f1",
   label = "#dfe9ec",
   tag = "#dfe9ec",
   h1 = "#dfe9ec",
   h2 = "#69b1fa",
   h3 = "#8a9ebd",
-  h4 = "#7abce9",
+  h4 = "#7cc2f1",
   h5 = "#8a9ebd",
   h6 = "#4288d4",
 
@@ -120,7 +125,7 @@ return {
   units = {
     { key = "disc", hue = 216, chroma = 18.3, cr = 7.71 },
     { key = "limb", hue = 211, chroma = 45.6, cr = 5.70 },
-    { key = "terminator", hue = 204, chroma = 30.3, cr = 10.20 },
+    { key = "terminator", hue = 204, chroma = 31.6, cr = 10.84 },
     { key = "crescent", hue = 207, chroma = 18.3, cr = 13.82 },
     { key = "glare", hue = 210, chroma = 43.1, cr = 9.27 },
     { key = "azure", hue = 194, chroma = 3.8, cr = 17.00 },

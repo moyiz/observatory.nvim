@@ -39,7 +39,7 @@
 --   av_20        hue 233   12.77 contrast   functions
 --   av_40        hue  26   11.30 contrast   types
 --   av_55        hue  27    8.60 contrast   strings, escapes
---   av_70        hue  28    7.61 contrast   keywords, macros, imports
+--   av_70        hue  28    7.79 contrast   keywords, macros, imports
 --   av_90        hue  29    4.76 contrast   numbers, operators
 --
 -- Hues here are fixed by the source, since they are the part that
@@ -54,6 +54,11 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 15.5 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which av_55 and av_70, at 5.8, were not.
 
 return {
   name = "observatory-extinction",
@@ -85,9 +90,9 @@ return {
   mod = "#ebdacb",
   prop = "#e1e7f1",
   func = "#c4c8e8",
-  kw = "#df863a",
+  kw = "#e38737",
   op = "#be5d05",
-  macro = "#df863a",
+  macro = "#e38737",
   esc = "#db975e",
 
   -- interface duties, following the syntax colors
@@ -97,14 +102,14 @@ return {
   hint = "#db975e",
   ok = "#29b16d",
   accent = "#c4c8e8",
-  cursearch = "#df863a",
+  cursearch = "#e38737",
   subst = "#db975e",
   match = "#edc24a",
   title = "#c4c8e8",
   dir = "#e0b696",
-  label = "#df863a",
-  tag = "#df863a",
-  h1 = "#df863a",
+  label = "#e38737",
+  tag = "#e38737",
+  h1 = "#e38737",
   h2 = "#c4c8e8",
   h3 = "#db975e",
   h4 = "#e0b696",
@@ -130,6 +135,6 @@ return {
     { key = "av_30", hue = 28, chroma = 10.1, cr = 15.42 },
     { key = "av_00", hue = 218, chroma = 5.6, cr = 16.90 },
     { key = "av_20", hue = 233, chroma = 17.0, cr = 12.77 },
-    { key = "av_70", hue = 28, chroma = 60.5, cr = 7.61 },
+    { key = "av_70", hue = 28, chroma = 62.9, cr = 7.79 },
   },
 }

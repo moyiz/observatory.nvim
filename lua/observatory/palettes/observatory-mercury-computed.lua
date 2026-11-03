@@ -25,8 +25,8 @@
 --   hollow       hue 196   10.36 contrast   modules
 --   regolith     hue  30    9.02 contrast   types
 --   facula       hue  18    7.90 contrast   keywords, macros, imports
---   lrm          hue 234    6.63 contrast   strings, escapes
---   graphite     hue 228    6.58 contrast   numbers
+--   lrm          hue 233    6.84 contrast   strings, escapes
+--   graphite     hue 228    6.01 contrast   numbers
 --   basin        hue 237    4.74 contrast   operators
 --
 -- Hues here are fixed by the source, since they are the part that
@@ -41,6 +41,11 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 11.3 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which graphite and lrm, at 3.5, were not.
 
 return {
   name = "observatory-mercury-computed",
@@ -66,8 +71,8 @@ return {
   lnr_cur = "#99a0b5",
 
   -- syntax roles
-  str = "#828bd8",
-  num = "#808ec4",
+  str = "#838ddf",
+  num = "#7b87b9",
   typ = "#b9a795",
   mod = "#89bed2",
   prop = "#e5e7e9",
@@ -75,17 +80,17 @@ return {
   kw = "#e5865d",
   op = "#6b70c4",
   macro = "#e5865d",
-  esc = "#828bd8",
+  esc = "#838ddf",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
   info = "#89bed2",
-  hint = "#828bd8",
+  hint = "#838ddf",
   ok = "#29b16d",
   accent = "#dcc3a4",
   cursearch = "#e5865d",
-  subst = "#828bd8",
+  subst = "#838ddf",
   match = "#edc24a",
   title = "#dcc3a4",
   dir = "#b9a795",
@@ -93,10 +98,10 @@ return {
   tag = "#e5865d",
   h1 = "#e5865d",
   h2 = "#dcc3a4",
-  h3 = "#828bd8",
+  h3 = "#838ddf",
   h4 = "#b9a795",
   h5 = "#89bed2",
-  h6 = "#808ec4",
+  h6 = "#7b87b9",
 
   -- diff and virtual-text backdrops
   diff_add = "#062315",
@@ -111,8 +116,8 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "lrm", hue = 234, chroma = 43.5, cr = 6.63 },
-    { key = "graphite", hue = 228, chroma = 30.7, cr = 6.58 },
+    { key = "lrm", hue = 233, chroma = 46.1, cr = 6.84 },
+    { key = "graphite", hue = 228, chroma = 28.7, cr = 6.01 },
     { key = "regolith", hue = 30, chroma = 12.2, cr = 9.02 },
     { key = "hollow", hue = 196, chroma = 19.9, cr = 10.36 },
     { key = "ray", hue = 210, chroma = 1.3, cr = 16.94 },

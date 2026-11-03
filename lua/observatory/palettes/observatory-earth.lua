@@ -52,6 +52,11 @@
 -- between the colors and every proportion of the frame is the picture's;
 -- only the overall saturation is the display's, in the way that a print of
 -- a photograph has its own.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which ocean and shelf, at 6.0, were not.
 
 return {
   name = "observatory-earth",
@@ -80,7 +85,7 @@ return {
   str = "#c8ecfd",
   num = "#ba9b5e",
   typ = "#7b8b43",
-  mod = "#2c79ce",
+  mod = "#2b79ce",
   prop = "#3182f9",
   func = "#c8ecfd",
   kw = "#eea950",
@@ -91,7 +96,7 @@ return {
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
-  info = "#2c79ce",
+  info = "#2b79ce",
   hint = "#c8ecfd",
   ok = "#29b16d",
   accent = "#c8ecfd",
@@ -106,7 +111,7 @@ return {
   h2 = "#c8ecfd",
   h3 = "#c8ecfd",
   h4 = "#7b8b43",
-  h5 = "#2c79ce",
+  h5 = "#2b79ce",
   h6 = "#ba9b5e",
 
   -- diff and virtual-text backdrops

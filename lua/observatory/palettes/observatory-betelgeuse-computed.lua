@@ -37,7 +37,7 @@
 --   photosphere  hue  27   13.61 contrast   functions
 --   limb         hue  28   11.04 contrast   modules, types
 --   dimmed       hue  28    8.63 contrast   keywords, macros, imports
---   dust         hue  28    7.82 contrast   strings, escapes
+--   dust         hue  29    7.77 contrast   strings, escapes
 --   ejecta       hue  29    4.75 contrast   numbers, operators
 --
 -- Hues here are fixed by the source, since they are the part that
@@ -52,6 +52,11 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 17.8 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which dimmed and dust, at 5.9, were not.
 
 return {
   name = "observatory-betelgeuse-computed",
@@ -77,7 +82,7 @@ return {
   lnr_cur = "#b3a396",
 
   -- syntax roles
-  str = "#f97a08",
+  str = "#f97905",
   num = "#b1651d",
   typ = "#f6ac6c",
   mod = "#f6ac6c",
@@ -86,17 +91,17 @@ return {
   kw = "#ee8f3c",
   op = "#b1651d",
   macro = "#ee8f3c",
-  esc = "#f97a08",
+  esc = "#f97905",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
   info = "#f6ac6c",
-  hint = "#f97a08",
+  hint = "#f97905",
   ok = "#29b16d",
   accent = "#f3c8a4",
   cursearch = "#ee8f3c",
-  subst = "#f97a08",
+  subst = "#f97905",
   match = "#edc24a",
   title = "#f3c8a4",
   dir = "#f6ac6c",
@@ -104,7 +109,7 @@ return {
   tag = "#ee8f3c",
   h1 = "#ee8f3c",
   h2 = "#f3c8a4",
-  h3 = "#f97a08",
+  h3 = "#f97905",
   h4 = "#f6ac6c",
   h5 = "#f6ac6c",
   h6 = "#b1651d",
@@ -122,7 +127,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "dust", hue = 28, chroma = 83.4, cr = 7.82 },
+    { key = "dust", hue = 29, chroma = 83.9, cr = 7.77 },
     { key = "ejecta", hue = 29, chroma = 56.5, cr = 4.75 },
     { key = "limb", hue = 28, chroma = 48.1, cr = 11.04 },
     { key = "hotspot", hue = 28, chroma = 10.0, cr = 16.94 },

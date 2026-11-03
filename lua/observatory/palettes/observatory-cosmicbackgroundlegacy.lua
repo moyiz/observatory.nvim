@@ -31,7 +31,7 @@
 --   cold          hue 132  15.44 contrast  17.0% of frame   strings, functions
 --   hot           hue  43  14.37 contrast  12.8% of frame   operators
 --   cool          hue 193  12.51 contrast  18.2% of frame   properties
---   hottest       hue  33  11.36 contrast   7.6% of frame   modules
+--   hottest       hue  33  11.45 contrast   7.6% of frame   modules
 --   warm          hue  39  10.79 contrast  13.2% of frame   numbers
 --   deep          hue  23   4.69 contrast   5.9% of frame   escapes
 --
@@ -49,6 +49,11 @@
 -- purity, which is solved rather than maximised -- each accent carries the
 -- chroma its own patch of the frame carries, as far as the display allows --
 -- and the closest pair of adjacent-capable roles sits at 17.3 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which hottest and warm, at 5.7, were not.
 
 return {
   name = "observatory-cosmicbackgroundlegacy",
@@ -77,7 +82,7 @@ return {
   str = "#bee7c6",
   num = "#f9aa18",
   typ = "#ede9b2",
-  mod = "#fbaf53",
+  mod = "#fbb057",
   prop = "#7dd4ed",
   func = "#bee7c6",
   kw = "#ede9b2",
@@ -88,7 +93,7 @@ return {
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
-  info = "#fbaf53",
+  info = "#fbb057",
   hint = "#bee7c6",
   ok = "#29b16d",
   accent = "#bee7c6",
@@ -103,7 +108,7 @@ return {
   h2 = "#bee7c6",
   h3 = "#bee7c6",
   h4 = "#ede9b2",
-  h5 = "#fbaf53",
+  h5 = "#fbb057",
   h6 = "#f9aa18",
 
   -- diff and virtual-text backdrops
@@ -122,7 +127,7 @@ return {
     { key = "cold", hue = 132, chroma = 22.8, cr = 15.44 },
     { key = "warm", hue = 39, chroma = 78.0, cr = 10.79 },
     { key = "sage", hue = 56, chroma = 28.2, cr = 16.90 },
-    { key = "hottest", hue = 33, chroma = 60.1, cr = 11.36 },
+    { key = "hottest", hue = 33, chroma = 58.5, cr = 11.45 },
     { key = "cool", hue = 193, chroma = 28.4, cr = 12.51 },
     { key = "hot", hue = 43, chroma = 45.3, cr = 14.37 },
     { key = "cyan", hue = 180, chroma = 18.2, cr = 16.63 },

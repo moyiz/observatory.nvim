@@ -380,7 +380,7 @@ Temperatures, color indices and light curves, which is most of what a star gives
 | `observatory-betelgeuse-computed`      | a supergiant, and the dust that dimmed it                       | measured | 17.8 | 6   | 2   |
 | `observatory-nervia`                   | the star Eburonia orbits, which is very nearly the Sun          | image    | 17.0 | 5   | 2   |
 | `observatory-nervia-computed`          | the star Eburonia orbits, by its own temperatures               | measured | 12.3 | 8   | 97  |
-| `observatory-carbon`                   | the reddest stars there are, in purity not hue                  | measured | 16.5 | 6   | 6   |
+| `observatory-carbon`                   | the reddest stars there are, in purity not hue                  | measured | 16.5 | 6   | 5   |
 | `observatory-cepheid`                  | a light curve, and no color to speak of                         | measured | 15.4 | 5   | 3   |
 | `observatory-etacarinae`               | two lobes of debris from a star that survived its own explosion | image    | 16.1 | 6   | 104 |
 | `observatory-etacarinae-computed`      | the Homunculus, and the star inside it                          | measured | 20.7 | 7   | 185 |
@@ -673,7 +673,7 @@ Things that happened, or are still happening. Two of these are the same black ho
 | `observatory-kilonova-computed`         | a photosphere crossing the whole stellar locus in five days        | measured | 13.6 | 6   | 171 |
 | `observatory-supernova1987a`            | the nearest supernova in four centuries, ringed                    | image    | 17.8 | 5   | 195 |
 | `observatory-cassiopeia`                | a remnant in X-rays, which makes it violet                         | image    | 17.9 | 8   | 234 |
-| `observatory-cassiopeiawebb`            | the same remnant in the infrared, which makes it teal and rust     | image    | 9.5  | 8   | 207 |
+| `observatory-cassiopeiawebb`            | the same remnant in the infrared, which makes it teal and rust     | image    | 9.5  | 8   | 208 |
 | `observatory-tycho`                     | the star that proved the heavens change, in crimson and periwinkle | image    | 16.9 | 8   | 96  |
 | `observatory-nova`                      | a white dwarf's surface igniting, hour by week                     | measured | 17.8 | 8   | 233 |
 | `observatory-brightestofalltime`        | the brightest burst ever recorded, in dust echoes                  | image    | 9.7  | 6   | 40  |

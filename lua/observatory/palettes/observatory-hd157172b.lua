@@ -22,7 +22,7 @@
 --
 --   star          hue  59  15.04 contrast  27.3% of frame   numbers, macros, imports
 --   core          hue  59  13.98 contrast  21.7% of frame   strings, functions
---   photosphere   hue  57  12.86 contrast  25.5% of frame   properties, operators
+--   photosphere   hue  57  12.75 contrast  25.5% of frame   properties, operators
 --   rim           hue  63   6.97 contrast  14.3% of frame   types, modules
 --   halo          hue  56   4.75 contrast   6.7% of frame   keywords
 --   veil          hue  43   4.67 contrast   4.5% of frame   escapes
@@ -53,6 +53,11 @@
 -- separation floor allows, so the ladder was spread to 9 points of
 -- lightness between rungs rather than the three the picture asked for.
 -- The order is still the picture's; the spacing is not.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which core and photosphere, at 5.5, were not.
 
 return {
   name = "observatory-hd157172b",
@@ -82,10 +87,10 @@ return {
   num = "#e3e112",
   typ = "#959a3e",
   mod = "#959a3e",
-  prop = "#d2ce7d",
+  prop = "#d1cd7f",
   func = "#dad863",
   kw = "#7e7a41",
-  op = "#d2ce7d",
+  op = "#d1cd7f",
   macro = "#e3e112",
   esc = "#967114",
 
@@ -126,7 +131,7 @@ return {
     { key = "core", hue = 59, chroma = 58.7, cr = 13.98 },
     { key = "star", hue = 59, chroma = 86.6, cr = 15.04 },
     { key = "rim", hue = 63, chroma = 48.7, cr = 6.97 },
-    { key = "photosphere", hue = 57, chroma = 42.0, cr = 12.86 },
+    { key = "photosphere", hue = 57, chroma = 40.5, cr = 12.75 },
     { key = "halo", hue = 56, chroma = 32.4, cr = 4.75 },
     { key = "veil", hue = 43, chroma = 52.2, cr = 4.67 },
   },

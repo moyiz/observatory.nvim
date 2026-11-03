@@ -41,7 +41,7 @@
 --   photosphere  hue 220   16.94 contrast   properties
 --   n_ii         hue  68   13.60 contrast   functions
 --   he_i         hue  54   11.53 contrast   modules, types
---   wind_emission hue   0    7.82 contrast   strings, escapes
+--   wind_emission hue   0    7.84 contrast   strings, escapes
 --   wind_trough  hue   0    7.55 contrast   keywords, macros, imports
 --   k_calcium    hue 289    5.99 contrast   numbers
 --   fe_ii        hue 110    4.81 contrast   operators
@@ -58,6 +58,12 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 13.9 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which wind_emission and wind_trough, at 5.6,
+-- were not.
 
 return {
   name = "observatory-deneb",
@@ -83,7 +89,7 @@ return {
   lnr_cur = "#9fa6b6",
 
   -- syntax roles
-  str = "#f07b7b",
+  str = "#f27a7a",
   num = "#bd66d1",
   typ = "#d4c21e",
   mod = "#d4c21e",
@@ -92,17 +98,17 @@ return {
   kw = "#d68585",
   op = "#3c892d",
   macro = "#d68585",
-  esc = "#f07b7b",
+  esc = "#f27a7a",
 
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
   info = "#d4c21e",
-  hint = "#f07b7b",
+  hint = "#f27a7a",
   ok = "#29b16d",
   accent = "#c9d966",
   cursearch = "#d68585",
-  subst = "#f07b7b",
+  subst = "#f27a7a",
   match = "#edc24a",
   title = "#c9d966",
   dir = "#d4c21e",
@@ -110,7 +116,7 @@ return {
   tag = "#d68585",
   h1 = "#d68585",
   h2 = "#c9d966",
-  h3 = "#f07b7b",
+  h3 = "#f27a7a",
   h4 = "#d4c21e",
   h5 = "#d4c21e",
   h6 = "#bd66d1",
@@ -128,7 +134,7 @@ return {
   -- Accent sources: hue, chroma and contrast, for the docs
   -- and for anything that wants to sort or filter these.
   units = {
-    { key = "wind_emission", hue = 0, chroma = 49.5, cr = 7.82 },
+    { key = "wind_emission", hue = 0, chroma = 50.8, cr = 7.84 },
     { key = "k_calcium", hue = 289, chroma = 65.6, cr = 5.99 },
     { key = "he_i", hue = 54, chroma = 75.2, cr = 11.53 },
     { key = "photosphere", hue = 220, chroma = 4.4, cr = 16.94 },

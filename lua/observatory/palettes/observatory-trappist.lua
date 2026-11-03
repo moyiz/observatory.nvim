@@ -22,7 +22,7 @@
 --   crust         hue  39  16.92 contrast  84.1% of frame   strings, functions, types, operators
 --   dust          hue 180  13.24 contrast   9.6% of frame   properties
 --   terminator    hue 202   5.98 contrast   4.0% of frame   keywords, modules
---   shadow        hue 211   4.74 contrast   1.4% of frame   numbers
+--   shadow        hue 211   5.10 contrast   1.4% of frame   numbers
 --   sky           hue 213   4.73 contrast   0.9% of frame   macros, imports, escapes
 --
 -- Hues here are the picture's, taken from it unaltered, since they are what
@@ -53,6 +53,11 @@
 -- separation floor, and two colors a reader cannot distinguish are one
 -- color. The folded share went to the neighbour, so the proportions of
 -- the frame are still what the roles follow.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which shadow and sky, at 4.1, were not.
 
 return {
   name = "observatory-trappist",
@@ -79,7 +84,7 @@ return {
 
   -- syntax roles
   str = "#fce4b7",
-  num = "#2579d2",
+  num = "#0e7bef",
   typ = "#fce4b7",
   mod = "#5d8fab",
   prop = "#91dada",
@@ -108,7 +113,7 @@ return {
   h3 = "#fce4b7",
   h4 = "#fce4b7",
   h5 = "#5d8fab",
-  h6 = "#2579d2",
+  h6 = "#0e7bef",
 
   -- diff and virtual-text backdrops
   diff_add = "#062315",
@@ -124,7 +129,7 @@ return {
   -- and for anything that wants to sort or filter these.
   units = {
     { key = "crust", hue = 39, chroma = 25.0, cr = 16.92 },
-    { key = "shadow", hue = 211, chroma = 53.3, cr = 4.74 },
+    { key = "shadow", hue = 211, chroma = 67.8, cr = 5.10 },
     { key = "terminator", hue = 202, chroma = 21.9, cr = 5.98 },
     { key = "dust", hue = 180, chroma = 23.7, cr = 13.24 },
     { key = "sky", hue = 213, chroma = 33.3, cr = 4.73 },

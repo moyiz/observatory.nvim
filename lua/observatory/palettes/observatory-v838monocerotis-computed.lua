@@ -31,7 +31,7 @@
 --   outburst     hue  28   16.65 contrast   properties
 --   echo_2003    hue 209   12.23 contrast   modules
 --   echo_2002    hue  41    9.89 contrast   functions
---   echo_2004    hue 216    8.76 contrast   types
+--   echo_2004    hue 217    9.61 contrast   types
 --   echo_2006    hue 222    7.77 contrast   strings, escapes
 --   shell        hue  26    5.68 contrast   keywords, macros, imports
 --   void         hue 220    4.79 contrast   numbers, operators
@@ -48,6 +48,11 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 16.3 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which echo_2004 and echo_2006, at 4.3, were not.
 
 return {
   name = "observatory-v838monocerotis-computed",
@@ -75,7 +80,7 @@ return {
   -- syntax roles
   str = "#799ceb",
   num = "#4876d1",
-  typ = "#88a9dc",
+  typ = "#8fb1e7",
   mod = "#abc9e6",
   prop = "#fde0c6",
   func = "#bcb199",
@@ -95,13 +100,13 @@ return {
   subst = "#799ceb",
   match = "#edc24a",
   title = "#bcb199",
-  dir = "#88a9dc",
+  dir = "#8fb1e7",
   label = "#bf7236",
   tag = "#bf7236",
   h1 = "#bf7236",
   h2 = "#bcb199",
   h3 = "#799ceb",
-  h4 = "#88a9dc",
+  h4 = "#8fb1e7",
   h5 = "#abc9e6",
   h6 = "#4876d1",
 
@@ -120,7 +125,7 @@ return {
   units = {
     { key = "echo_2006", hue = 222, chroma = 44.5, cr = 7.77 },
     { key = "void", hue = 220, chroma = 53.4, cr = 4.79 },
-    { key = "echo_2004", hue = 216, chroma = 29.4, cr = 8.76 },
+    { key = "echo_2004", hue = 217, chroma = 30.8, cr = 9.61 },
     { key = "echo_2003", hue = 209, chroma = 18.0, cr = 12.23 },
     { key = "outburst", hue = 28, chroma = 17.5, cr = 16.65 },
     { key = "echo_2002", hue = 41, chroma = 13.7, cr = 9.89 },

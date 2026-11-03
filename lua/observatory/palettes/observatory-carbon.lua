@@ -30,7 +30,7 @@
 --
 --   bv_16        hue  28   16.52 contrast   properties
 --   bv_20        hue  28   13.63 contrast   functions
---   bv_25        hue  29   10.62 contrast   modules, types
+--   bv_25        hue  28   10.88 contrast   modules, types
 --   bv_32        hue  30    9.75 contrast   keywords, macros, imports
 --   bv_42        hue  30    8.08 contrast   strings, escapes
 --   bv_57        hue  25    4.82 contrast   numbers, operators
@@ -47,6 +47,11 @@
 -- is the most chromatic form of its hue that still meets that ratio under a
 -- per-role cap, and the closest pair of adjacent-capable roles sits at
 -- 16.5 Delta E.
+--
+-- After the solve, a last pass moved saturation and contrast, never hue. CIE76
+-- overstates how far apart some colors look, saturated blues most of all, so
+-- every pair of syntax colors and each of them against plain text is now also
+-- held 6.0 apart in CIEDE2000, which bv_25 and bv_32, at 5.0, were not.
 
 return {
   name = "observatory-carbon",
@@ -74,8 +79,8 @@ return {
   -- syntax roles
   str = "#f88006",
   num = "#c85708",
-  typ = "#f4a862",
-  mod = "#f4a862",
+  typ = "#f4ab69",
+  mod = "#f4ab69",
   prop = "#f8e0cb",
   func = "#fbc698",
   kw = "#fa9a3c",
@@ -86,7 +91,7 @@ return {
   -- interface duties, following the syntax colors
   err = "#f24e54",
   warn = "#edc24a",
-  info = "#f4a862",
+  info = "#f4ab69",
   hint = "#f88006",
   ok = "#29b16d",
   accent = "#fbc698",
@@ -94,14 +99,14 @@ return {
   subst = "#f88006",
   match = "#edc24a",
   title = "#fbc698",
-  dir = "#f4a862",
+  dir = "#f4ab69",
   label = "#fa9a3c",
   tag = "#fa9a3c",
   h1 = "#fa9a3c",
   h2 = "#fbc698",
   h3 = "#f88006",
-  h4 = "#f4a862",
-  h5 = "#f4a862",
+  h4 = "#f4ab69",
+  h5 = "#f4ab69",
   h6 = "#c85708",
 
   -- diff and virtual-text backdrops
@@ -119,7 +124,7 @@ return {
   units = {
     { key = "bv_42", hue = 30, chroma = 82.5, cr = 8.08 },
     { key = "bv_57", hue = 25, chroma = 71.9, cr = 4.82 },
-    { key = "bv_25", hue = 29, chroma = 51.4, cr = 10.62 },
+    { key = "bv_25", hue = 28, chroma = 48.6, cr = 10.88 },
     { key = "bv_16", hue = 28, chroma = 14.2, cr = 16.52 },
     { key = "bv_20", hue = 28, chroma = 32.9, cr = 13.63 },
     { key = "bv_32", hue = 30, chroma = 68.0, cr = 9.75 },
