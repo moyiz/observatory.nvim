@@ -6,7 +6,7 @@ planetary albedo, a light curve, a color index, a photographic characteristic
 curve, or an optimiser.
 
 > [!NOTE]
-> All color palettes where selected, measured and computed carefully by Opus 5,
+> All color palettes were selected, measured and computed carefully by Opus 5,
 > each one having its own constraints. See the head comments in each palette for
 > more info.
 
@@ -35,7 +35,7 @@ curve, or an optimiser.
 
 - 150+ colorschemes.
 - `#000000` background (optional transparency).
-- Opt-in integrations with 27+ plugins.
+- Opt-in integrations with 26 plugins.
 - Optional terminal colors supporting 3 modes.
 - A detailed and structured index for colorscheme filtering.
 
@@ -124,7 +124,7 @@ do not compete for ordering with the other plugins listening to that event; and
 
 ### :desktop_computer: Terminal colors
 
-This plugins supports setting `vim.g.terminal_color_0` through `15` for
+This plugin supports setting `vim.g.terminal_color_0` through `15` for
 `:terminal` buffers.
 
 Off by default. When you turn it on, the question is what to do about missing
